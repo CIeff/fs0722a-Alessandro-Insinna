@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+
+    <form method="post" action="inviamail.php">
+        <input type="text" name="nome"placeholder="inserisci il nome">
+        <input type="password"name="password" placeholder="password">
+        <input type="numero"name="numero" placeholder="numero"> <br><hr>
+
+        <label for="consenso">Accetto trattamento dati</label>
+        <input id ="consenso" name="consenso"type="checkbox">  <br> <hr>
+        
+        <select name="city">
+             <option value="">--</option>
+             <option value="roma">Roma</option>
+             <option value="milano">Milano</option>
+             <option value="napoli">Napoli</option>
+        </select> <br>
+
+
+        <textarea name="messaggio" id="" cols="30" rows="10"></textarea> <br><hr>
+        
+        <button>Invia</button>
+    </form>
+        
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
