@@ -1,0 +1,52 @@
+
+div
+    {
+        color:red;
+       
+    }
+div
+    { 
+        
+        color:green;
+    }    
+.testoblu
+    {
+        
+        color:blue;
+    }
+#header
+    {
+        
+        font-weight:bold;
+        color:purple;
+    }
+
+div div, div span
+    {
+        
+        background-color:bisque;
+    }
+#menu li
+    {
+        background-color: red;
+    }
+#menu li >  ul li
+    {
+        background-color: yellow;
+    }
+*
+    {
+        font-size:2rem;
+    }
+.quadratigialli div
+    {    
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+    }
+.quadratigialli.quadraticonbordo
+    {   
+        background-color: purple;
+        border: 1px solid black;
+
+    }

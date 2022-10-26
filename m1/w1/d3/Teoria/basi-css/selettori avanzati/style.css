@@ -1,0 +1,20 @@
+.check:checked + p
+    {
+       background-color: yellow;
+    }
+.bottone:checked + p
+    {
+        border:1px solid black;
+    }
+.mouse:hover 
+    {
+        background-color: rgb(133, 84, 25);
+    }
+.mouse2:hover a
+    {
+        color:rgb(189, 25, 161);
+    }
+table td::after
+    {
+        content:" -css"
+    }
