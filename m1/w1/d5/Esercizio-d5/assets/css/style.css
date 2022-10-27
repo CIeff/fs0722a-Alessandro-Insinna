@@ -1,0 +1,221 @@
+/* IMPOSTAZIONI GENERALI */
+:root
+    {
+        font-family: 'Poppins', sans-serif;
+    }
+.flex-container
+     {
+        display: flex;
+        flex-flow: row wrap;
+        text-align: center;
+        background-image: url(/assets/img/sfondo.png);
+      }
+.flex-container > *
+     {
+        flex: 1 100%;
+        padding:20px;
+        margin: 3%;
+        max-width: 100%;
+        overflow: hidden;
+        box-shadow: 1px 3px 3px 3px rgba(2, 1, 1, 0.3);
+      }
+/* HEADER */
+.header
+    {
+        background-image: linear-gradient(rgba(0,155,195,255),rgba(36,105,131,255));
+        padding:30px 20px;
+        font-size: 20px;
+        box-shadow: 0px 3px 0px 0px grey;
+    }
+#img
+    {
+        padding: 0 0 10px 0;
+
+    }
+#subtext
+    {
+        padding: 20px;
+        color:white;
+    }
+.subtext1
+    {
+        padding: 2px;
+        color: white;
+    }
+
+
+
+/* MAIN */
+.main
+    {
+        background-color: white;
+        line-height: 32px;
+        text-align: left;
+        font-size: 23px;
+    }
+/* ELEMENTI NEL MAIN - ARTICLE */
+#h1
+    {
+        font-size: 40px;
+        text-align: left;
+        padding: 0 0 50px 0;
+        line-height: 55px;
+    }
+#author
+    {
+        text-align: left;
+        font-size: 22px;
+        color:rgba(128, 128, 128,0.7);
+    }
+.fas fa-pen
+    {
+        color:rgba(128, 128, 128,0.5);
+    }
+#subtext2
+    {
+        padding:40px 0 40px 0;
+    }
+#pr
+    {
+        font-weight: bold;
+        color: rgba(170,32,114,255)
+    }
+.list1
+    {
+        padding: 0 0 30px 25px;
+    }
+.list2
+    {
+        padding:30px 0 30px 25px;
+        
+    }
+#p2
+    {
+        padding-bottom: 20px;
+    }
+/* TABELLE */
+table   
+    {
+        text-align: center;
+        margin-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+table #caption
+    {
+        font-style: italic;
+    }
+table td, table th
+    {
+        border: 0.5px solid rgba(255, 255, 255, 0.1);
+        padding: 20px;
+    }
+        
+table .thead
+    {
+        background-color: rgba(61,109,205,255);
+        color: white;
+        
+    }
+#blue
+    {
+        font-weight: bold;
+        color: rgba(0,153,204,255);
+    }
+table .tr1
+    {
+        background-color: rgba(245,245,245,255)
+    }
+.div1
+    {
+       padding: 45px 0 40px 0;
+       border-top: 3px solid rgba(72,104,193,255);
+    }
+#vid
+    {
+        border-radius:25px;
+        display: block;
+        margin: 0 auto;
+    }
+/* FORM */
+.nov
+    {
+        text-align: left;
+        background-color: rgba(226,231,232,255);
+        margin-top: 40px;
+        
+    }
+.nov #novi
+    {
+        font-weight: bold;
+        padding: 25px;
+        text-align: center;
+    }
+.nov p
+    {
+        padding-left: 15px;
+        font-size: 22px;
+    }
+#fd
+    {
+        text-align: center;
+        padding-bottom: 15px;
+        display: inline;
+        padding-left: 15px;
+    }
+#input
+    {
+        font-size: 20px;
+        text-align: left;
+        border-bottom: 0.5px dashed;
+        border-top: transparent;
+        border-left: transparent;
+        border-right: transparent;
+    }
+.button
+    {
+        background-color: rgba(51,103,202,255);
+        color: white;
+        border: transparent;
+        font-size: 20px;
+    }
+/* ELEMENTI NELL' ASIDE */
+.aside-1
+  {
+    background-color: white;
+  }
+.aside-2
+  {
+    background-color: green;
+  }
+.articols h2
+  {
+    text-align: center;
+    margin-top: 45px;
+  }
+.articols div
+  {
+    background-color: rgba(128, 128, 128,0.1);
+    margin-top: 20px;
+    padding:25px;
+    border: 1px solid rgba(128, 128, 128,0.3);
+  }
+.articols .data
+  {
+    text-align: right;
+    padding-top: 30px;
+  }
+
+/* FOOTER */
+.footer
+  {
+    background-image: linear-gradient(rgba(0,85,102,255),rgba(50,60,55,255));
+    color:white;
+  }
+.footer .address
+{
+    padding-top:25px;
+    line-height: 25px;
+}
+#info
+{
+    color: rgba(255,0,254,255);
+}

@@ -1,0 +1,59 @@
+.quadrato
+    {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+#img-adattata img
+    {
+        max-width: 100%;
+
+    }
+
+#img-tagliata
+    {
+        overflow: hidden;
+    }
+#img-tagliata img
+    {
+        width:200px;
+        margin-left: -51px;
+        margin-top: -61px;
+        
+    }
+#bg-adattato
+    {
+        background-image: url(../img/logo\ html5.webp);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+#bg-tagliato
+    {
+        background-image: url(../img/logo\ html5.webp);
+        background-position: center;
+        background-size: cover;
+    }
+section
+    {
+        height: 500px;
+        background-image: url(/background/img/logo\ html5.webp);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+#grad1
+    {
+        background-image:linear-gradient(red,blue);
+    }
+
+
+/*
+    img
+    {
+        max-width:100%;
+    }
+*
+    {
+        box-sizing:border-box;
+    } 
+*/

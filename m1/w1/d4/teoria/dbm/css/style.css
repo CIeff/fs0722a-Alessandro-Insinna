@@ -1,0 +1,53 @@
+.quadrato
+    {
+        background-color: red;
+        border:1px solid black;
+    }
+#q1, #q3, #q4, #q5
+    {
+        width: 100px;
+        height: 100px;
+    }
+#q2
+    {
+        max-width: 600px;
+        min-height: 50px;
+    }
+#q3
+    {
+       /* overflow: hidden;*/
+       overflow-y: auto;
+    }
+#q4
+    {
+        padding:15px;
+       /* padding-top: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px; */
+
+        /*
+        padding:10px 15px; -> y x 
+        padding: 10px 15px 10px 15px;
+        */
+
+        box-sizing: border-box;
+
+        
+    }
+#q5
+    {
+        background-color: transparent;
+        border: 10px dashed rgba(0, 0, 0,0.5);
+        border-bottom: none;
+        border-bottom-left-radius: 100%;
+        border-top-right-radius:100%;
+        margin: 10px;
+    }
+.full-height
+    {
+        background-color: yellow;
+        width: 100%;
+        height: 100vh;
+    }
+    

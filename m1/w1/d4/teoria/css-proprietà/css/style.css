@@ -1,0 +1,33 @@
+.trasparente
+    {
+        opacity: 0.5;
+    }
+.striscia
+    {
+        background-color: blue;
+        width: 20px;
+        word-break: break-all;
+    }
+.striscia2:nth-of-type(2)
+    {
+        background-color: green;
+        width: 30px;
+        white-space: nowrap;
+    }
+.quadrato
+    {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: inline-block;
+        margin-left:-0.3rem;
+        margin-bottom: -0,3rem;
+    }
+.quadrato:nth-of-type(5)
+    {
+        display:none;
+    }
+.quadrato:nth-of-type(6)
+    {
+        display:hidden;
+    }
