@@ -29,7 +29,7 @@ body
     }
 #div1
     {
-        background-image: url(/images/banner.jpg);
+        background-image: url(../images/banner.jpg);
         padding-bottom: 40px;
         background-position:center;
         background-size:42rem;
@@ -92,7 +92,7 @@ p
     {
         width: 200px;
         height: 200px;
-        background-image: url(/images/notebook.jpg);
+        background-image: url(../images/notebook.jpg);
         background-size: contain;
         border: 1px solid transparent;
         margin: 0 auto;
@@ -147,7 +147,7 @@ p
     }
 #boxpic1
     {
-        background-image: url(/images/foto1.jpg);
+        background-image: url(../images/foto1.jpg);
     }
 .divbox
     {
@@ -163,11 +163,11 @@ p
     }
 #boxpic2
     {
-        background-image: url(/images/foto2.jpg);
+        background-image: url(../images/foto2.jpg);
     }
 #boxpic3
     {
-        background-image: url(/images/foto3.jpg);
+        background-image: url(../images/foto3.jpg);
         background-size: cover;
     }
 #footer

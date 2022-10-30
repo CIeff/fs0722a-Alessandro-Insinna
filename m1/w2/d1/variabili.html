@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+    <script>
+        
+        var a;
+        console.log(a);
+        a = 6;
+        console.log(a);
+
+        var x = 1;
+        console.log(x);
+        var x=2;
+        console.log(x);
+
+
+
+        /* TIPI DI DATO */
+
+        var numero=5; //variabile numerica //varibile numerica
+        var stringa="Ciao" //variabile stringa //stringa
+        var array=[1,2,3,'ciao'] //contenitore di dati di ogni tipo //array
+        var oggetto=                    //lista valori che hanno un nome. Lista coppia chiave-valore
+        {
+            nome:'Mario',
+            cognome:'Rossi',
+            anni:30
+        } 
+        var booleano=true; //o true o false
+
+
+
+        console.log(typeof numero);
+
+
+        /* Mescolino */
+
+        var booleano2='true'; //stringa non booleano
+        var numbero2='5'; //stringa non numero
+        
+        
+        /* Concatenamento */
+
+        var saluto='ciao';
+        var nome='Marco';
+        
+        console.log(saluto + ' ' + nome); //usando l'operatore '+' su due stringhe ottengo un concatenamento
+
+
+
+
+
+        /* Parkour */
+
+        var t=2;
+        var k='2';
+
+        console.log(t+k); //t viene convertita in stringa, quindi avviene un concatenamento
+        console.log(t*k); //trasforma la stringa in numero e usa l'operatore moltiplicazione
+        console.log(t*nome); //cerca di trasformare la stringa in numero ma non riesce e ritorna NaN (Not a Number)
+        
+
+        
+        /* Concatenare numeri convertendoli in stringhe */
+
+        console.log(5+""+5);
+
+        console.log(String(5)+String(5));
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
