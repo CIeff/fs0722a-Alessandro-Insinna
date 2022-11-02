@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+    <script>
+
+        saluta();
+        
+        function saluta()
+            {
+                document.write("ciao ");
+            }
+
+        function salutoBold()
+            {
+                return "<b>ciao</b>";
+            }
+        
+        let saluto=salutoBold();
+        console.log(saluto);
+        document.write(saluto);
+
+
+        /* FUNZIONI PARAMETRICHE */
+
+        function testoBold(testo)
+            {
+                return `<b> ${testo} </b>`;
+            }
+        let testoB=testoBold("Prova");
+        console.log(testoB);
+
+        function testoTag(testo,nomeTag)
+            {
+                return `<${nomeTag}>${testo}</${nomeTag}>`;
+            }
+
+        document.write(testoTag("tag1","div"));
+        document.write(testoTag("tag2","span"));
+        document.write(testoTag(" <br>ciaoBelli","b"));
+
+        //document.createElement('div');
+
+
+        function somma(a,b)
+            {
+                return a+b;
+            }
+        console.log(somma(4,7));
+
+        function isEven (numero)
+            {
+                return numero %2==0;
+            }
+        console.log(isEven(88));
+
+        
+
+
+
+
+    </script>
+</body>
+</html>

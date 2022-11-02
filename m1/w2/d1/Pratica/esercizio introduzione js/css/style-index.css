@@ -1,0 +1,27 @@
+body
+    {
+        background-color: rgba(0, 255, 255,0.2);
+    }
+.box
+    {
+        display: flex;
+        margin: 0 auto;
+        text-align: left;
+        padding-top: 5%;
+        flex-flow: column;
+    }
+.h1
+    {
+        background-color: transparent;
+        font-size: 30px;
+        border: 3px solid rgba(0, 0, 0,0.1);
+        margin-bottom: 1%;
+    }
+#tp
+    {
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgb(27, 30, 51);
+        border-radius: 25px;
+        
+
+    }

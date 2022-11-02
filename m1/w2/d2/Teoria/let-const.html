@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+    <script>
+        
+        var x=0;
+        {
+            console.log(x);
+        }
+
+        let y=0;
+        {
+            console.log(y);
+        }
+
+        {
+            let u=1;
+        }
+            //console.log(u); non legge la variabile perchè "let" è soggetta al blocco in cui si trova
+
+        {
+            var f=1;
+        }
+        console.log(f);
+
+        console.log("============");  //spacing.
+
+        let i=2;
+        {
+                //console.log(i); ancora non inizializzata;
+                let i=3;
+                console.log(i);
+        }
+        console.log(i);
+
+        
+        /*      CONST        */
+
+        const NOME_COSTANTE=6;   //testo tutto maiuscolo=costante, possibile usare "Kebab-case" (_)   //costanti come le let ( dentro blocchi vivono)
+
+        //NOME_COSTANTE=7;  non se pò fa
+
+        console.log(NOME_COSTANTE);
+
+        const PIZZA=
+        {
+            gusto:"Margherita",
+            prezzo:"5"
+        }
+        PIZZA.gusto="Diavola";  // posso riassegnare ciò che c'è all'interno se è un'oggetto.
+
+        console.log(PIZZA);
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

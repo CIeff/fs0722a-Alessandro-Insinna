@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body
+        {
+            background-color: rgba(245, 245, 220,0.5);
+        }
+        .divisore
+            {
+                background-color: greenyellow;
+            }
+    </style> 
+
+    <div><p class="divisore">Primo esercizio</p>
+        <p> Paragone di grandezza tra 2 numeri inseriti </p>
+        <button onclick="inserisciNumero()">Inserisci numeri</button>
+        <p id="risultato"></p>
+    </div>
+
+    <div><p class="divisore">Secondo esercizio</p>
+        <p> Comparazione di disuguaglianza tra un numero inserito 
+            e il numero "5"</p>
+        <button onclick="inserisciNumero2()">Inserisci numero per 
+        la comparazione</button>
+    </div>
+
+    <div><p class="divisore">Terzo esercizio</p>
+        <p> Divisibilità di un numero fornito per il numero 5</p>
+        <button onclick="inserisciNumero3()">Inserisci numero </button>
+        <p id="risultato2"></p>
+    </div>
+
+    <div><p class="divisore">Quarto esercizio</p>
+        <p> Scrivi un algoritmo per verificare che, dati due numeri interi, 
+            il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione 
+            sia uguale a 8.</p>
+        <button onclick="inserisciNumero4()">Inerisci numero</button>
+        <p id="risultato3"></p>
+    </div>
+
+    <div><p class="divisore">Quinto esercizio</p>
+        <p></p>
+        <button onclick="inserisciNumero5()">Inserisci saldo totale</button>
+        <p id="risultato4"></p>
+    </div>
+
+    <div><p class="divisore">Sesto esercizio</p>
+        <p></p>
+        <button onclick="inserisciNumero6()">Inserisci saldo totale</button>
+        <p id="risultato5"></p>
+    </div>
+
+    <div><p class="divisore">Ottavo esercizio</p>
+        <p></p>
+        <button onclick="inserisciVariabile()">Inserisci variabile da controllare</button>
+        <p id="risultato6"></p>
+    </div>
+
+    <div><p class="divisore">Nono esercizio</p>
+        <p></p>
+        <button onclick="isEven()">Inserisci numero da controllare</button>
+        <p id="risultato7"></p>
+    </div>
+
+    <script>
+        
+        // ESERCIZIO 1
+       function inserisciNumero()
+        {
+            let num1=prompt ("inserisci numero 1");
+            let num2=prompt ("Inserisci numero 2");
+            if (num1 > num2)
+                {
+                    document.getElementById("risultato")
+                    .innerHTML="Il primo numero inserito è il più grande";
+                }
+                else
+                {
+                    document.getElementById("risultato")
+                    .innerHTML="Il secondo numero inserito è il più grande";
+                }
+        }
+        
+        // Esercizio 2
+
+        function inserisciNumero2()
+        {
+            let num1=prompt("inserisci numero");
+            let num2=5;
+            if(num1==num2)
+                {
+                    console.log("Equal");
+                }
+                else
+                {
+                    console.log("Not-equal");
+                }
+        }
+
+        // Esercizio 3
+
+        function inserisciNumero3()
+            {
+                let num1=prompt("inserisci numero");
+                if (num1  %5==0)
+                    {
+                        document.getElementById("risultato2").
+                        innerHTML="divisibile per 5";
+                    }
+                    else
+                    {
+                        document.getElementById("risultato2").
+                        innerHTML="non divisibile per 5";
+                    }
+            }
+
+        // Esercizio 4
+
+        function inserisciNumero4()
+            {
+                let num1=prompt("inserisci primo numero");
+                let num2=prompt("inserisci secondo numero");
+                num1=num1*1;
+                num2=num2*1;
+                let somma=num1+num2;
+                let sottrazione=num1-num2;
+                let sottrazione2=num2-num1;
+                if (num1==8  || num2==8 || somma==8  || sottrazione==8 || sottrazione2==8)
+                    {
+                       document.getElementById("risultato3")
+                       .innerHTML="verificato";
+                    }
+                   else
+                        {
+                            document.getElementById("risultato3")
+                            .innerHTML="non verificato";
+                        }
+
+            }
+         /*
+         let y1=10;        metodo Luca-
+            let y2=2;
+            if(y1===8 || y2===8 || y1+y2===8 || y1-y2===8 || y2-y1===8)
+                {
+                    console.log("verificato");
+                }
+                else
+                {
+                    console.log("non verificato");
+                }
+        */   
+
+        // Esercizio 5
+
+        function inserisciNumero5()
+            {
+                let totalShoppingCart=prompt("inserisci saldo totale carrello");
+                let total;
+                const x =10;
+                if (totalShoppingCart>50)
+                    {
+                        totalShoppingCart=totalShoppingCart*1;
+                        total=totalShoppingCart;
+                        document.getElementById("risultato4")
+                        .innerHTML=`Il saldo totale (compreso costo spedizione) è 
+                        ${totalShoppingCart}`;
+                    }
+                    else
+                    {
+                        totalShoppingCart=totalShoppingCart*1;
+                        total=totalShoppingCart+ x ;
+                        document.getElementById("risultato4")
+                        .innerHTML=`Il saldo totale (compreso costo spedizione) è ${total}`;
+
+                    }
+            }
+        
+        // Esercizio 6
+
+        function inserisciNumero6()
+            {
+                let totalShoppingCart=prompt("inserisci saldo totale carrello");
+                let total;
+                let sconto;
+                const x =10;
+                if (totalShoppingCart>50)
+                    {
+                        totalShoppingCart=totalShoppingCart*1;
+                        sconto=totalShoppingCart/100*20;
+                        
+                        total=totalShoppingCart-sconto;
+                        
+                        
+                        document.getElementById("risultato5")
+                        .innerHTML=`Il saldo totale (compreso costo spedizione e sconto) è 
+                        ${total}`;
+                    }
+                    else
+                    {
+                        totalShoppingCart=totalShoppingCart*1;
+                        sconto=totalShoppingCart/100*20;
+                        total=totalShoppingCart-sconto+x;
+                        document.getElementById("risultato5")
+                        .innerHTML=`Il saldo totale (compreso costo spedizione e sconto) è 
+                        ${total}`;
+
+                    }
+            }
+        
+        // Esercizio 7
+
+        /* let nume1=1;     ORDINAMENTO ARRAY CON FUNZIONE JAVASCRIPT .REVERSE()
+        let nume2=2;
+        let nume3=3;
+        let vett=[nume1,nume2,nume3];
+        console.log(vett);
+    
+        vett.reverse();
+        console.log(vett); */
+
+        var p= 2;
+        var o= -4;
+        var r= 8;
+        if (p>o && p>r)
+            {
+            if (o>r)
+            {
+                console.log(p + ", " + o + ", " +r);
+            }
+            else
+            {
+                console.log(p + ", " + o + ", " +r);
+            }
+            }
+            else if (o>p && o >r)
+            {
+                if (p>r)
+                {
+                    console.log(o + ", " + p + ", " +r);
+                }
+                else
+                {
+                    console.log(o + ", " + r + ", " +p);
+                }
+            }
+            else if (r>p && r>o)
+                {
+                if (p>o)
+                {
+                    console.log(r + ", " + p + ", " +o);
+                }
+                else
+                    {
+                    console.log(r + ", " + o + ", " +p);
+                    }
+                }  
+        
+        // Esercizio 8
+
+        function inserisciVariabile()
+                {
+                    let var1=prompt("inserisci variabile");
+                    
+                    
+                    console.log(var1);
+                    console.log(typeof var1);
+                    var2= +var1;
+                    console.log(typeof var2);
+                    let tot=var1+1>0? "typeof = number" : "typeof = not a number";
+                    console.log(tot);
+
+                    /*if(typeof var2 === "number")
+                        {
+                            console.log("la variabile è un numero");
+                        }
+                        else
+                            {
+                                console.log("la variabile non è un numero");
+                            }*/
+                }
+            
+        // Esercizio 9
+
+
+        function isEven ()
+            {
+                let numero=prompt("inserisci numero");
+                numero=numero %2==0;
+                document.getElementById("risultato7")
+                .innerHTML=`Il numero è pari?"
+                ${numero}`;
+
+            }
+
+        // Esercizio 10
+
+        let val = 12
+        if (val < 10) 
+           {
+                if (val < 5) 
+                    {
+                        console.log("Meno di 5");
+                    } else 
+                        {
+                            console.log("Meno di 10");
+                        }
+                }
+                else
+                        {
+                            console.log("Uguale a 10 o maggiore");
+                        }
+            
+
+        // Esercizio 11
+
+        const me = 
+        {
+            name: 'John',
+            lastName: 'Doe',
+            skills: ['javascript', 'html', 'css'],
+        }
+
+        me.city="Toronto";
+        console.table(me);
+
+        // Esercizio 12
+
+        delete me.lastName;
+        console.table(me);
+
+        // Esercizio 13
+
+        delete me.skills[2];
+        console.table(me);
+
+        // Esercizio 14
+
+        let array=[];
+        array=[1,2,3,4,5,6,7,8,9,10];
+        console.log(array);
+
+        // Esercizio 15
+
+        array[9]=100;
+        console.log(array);
+
+
+
+
+            
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>

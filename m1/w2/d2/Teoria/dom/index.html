@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    
+
+        <input id="numero" type="number">
+        <button onclick="mostraRisultato()"> Controlla se è pari</button>
+        
+        <script>
+
+            function mostraRisultato()
+                {
+                    let numero=document.getElementById("numero");
+                    if(isEven(numero.value))
+                        {
+                            alert("Pari");
+                        } else
+                            {
+                                alert("Dispari");
+                            }
+                }
+            
+            numero.value="";
+
+               
+             function isEven (numero)
+                {
+                    return numero %2==0;
+                }
+
+
+
+
+        </script>
+</body>
+</html>

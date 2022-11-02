@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    
+
+
+
+
+
+
+
+
+    <script>
+
+        let a=2;
+
+        let b=a+a;  //  4
+
+
+        b=a;        //riassegno "b"
+        console.log(b);
+
+        b+=a;       // 4+2
+        console.log(b);
+
+        b-=2;
+        console.log(b);
+
+        b*=2;
+        console.log(b);
+
+        b/=2;
+        console.log(b);
+
+
+        /* CONCATENAMENTO (stringhe) */
+
+        let html ="";
+
+        html+="<div>";
+        html+="ciao";
+        html+="</div>";
+        console.log(html);
+
+
+
+        /* CONFRONTO */ //SISTEMI PER OTTENERE UN VALORE BOOLEANO
+
+
+        let c =10;
+        
+        console.log(c>10);
+        console.log(c>=10);
+        console.log(c==10);
+        console.log(c!=10);
+
+        console.log(c<100 && c>5);      // e e
+        console.log(c<100 && c>15);
+
+        console.log(c<100 || c>5);   // e or
+        
+            console.log("=============================================");
+
+        console.log(!(c<100));
+
+        let bool=true;
+        console.log(!!bool);
+
+        let r=5;
+        let t="5";
+        console.log(r==t);
+        console.log(r===t);  // identicità
+        console.log(r!==5);
+
+
+        let str ="";
+        if(str)    // stringa vuota mappa a false
+            {
+                console.log("non vedrai questo messaggio")
+            }
+        
+        let num=0;      //0 mappa a false
+        if(num)
+            {
+                console.log("non vedrai questo messaggio")
+            }
+
+        /* OPERATORE TERNARIO */
+
+        let anni=30;
+        let accesso=anni>=18 ? "consentito" : "non consentito";     //else if in una riga
+        console.log(accesso);
+
+
+        /* COALESCENZA  */
+
+
+        let htmlElement=document.getElementById("test") || "<div></div>";
+        
+            
+        
+
+
+
+        
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
