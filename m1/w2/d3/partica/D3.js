@@ -5,7 +5,8 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 2
-  Scrivi un algoritmo che mostri "not equal" in console 
+  Scrivi un algoritmo che mostri "not equal" 
+  in console 
   se un numero intero fornito è diverso da 5.
 */
 
@@ -54,6 +55,39 @@
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle 
   secondo il loro valore, dal più alto al più basso.
   Alla fine mostra il risultato in console.
+*/
+/* let z1=6;
+            let z2=14;
+            let z3=10;
+
+            if(z1>=z2)
+                {
+                    if(z3>=z1)
+                        {
+                            console.log(z3,z1,z2);
+                        }
+                    else  if(z3>=z2)
+                          {
+                                    console.log(z1,z3,z2);
+                                }
+                        
+                        else 
+                            {
+                                console.log(z1,z2,z3);
+                            }
+                }
+                else if (z3>=z2)
+                    {
+                        console.log(z3,z2,z1);
+                    }
+                    else if(z2>=z1)
+                        {
+                            console.log(z2,z3,z1);
+                        }
+                        else
+                            {
+                                console.log(z2,z1,z3);
+                            }
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */

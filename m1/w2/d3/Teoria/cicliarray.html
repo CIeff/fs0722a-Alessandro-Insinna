@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        let animali=["gatto ","cane ","anatra ","orso "];
+
+        //FOR EACH (PRIMO METODO DEGLI ARRAY).
+        animali.forEach(function(animale,i)
+            {
+                document.write(i+"- "+animale);
+            })
+
+                                                            document.write("<hr>");
+
+        for(let animale of animali)
+            {
+                document.write("- "+animale);
+            }
+                
+
+                                                            document.write("<hr>");
+
+        /* ATTENZIONE !! FOR OF POSSO UTILIZZARLO ANCHE PER CICLARE UNA STRINGA */  // FOR OFF MEGLIO DI FOR EACH!!!!!!!
+        
+        let stringa="testo da ciclare";
+        for(let lettera of stringa)
+            {
+                document.write(lettera+"<br>");
+            }
+                                                            
+        /* TRASFORMARE STRINGA IN ARRAY */
+
+        let animaliStr="gatto,cane,anatra,orso";
+        let animaliSplittati=animaliStr.split(",");
+        console.log(animaliSplittati.join("#"));
+
+
+
+        /* METODI CICLICI DEGLI ARRAY */
+
+        let numeri=[1,2,3,4,5];
+        let numeriX2=numeri.map(function(n)
+            {
+                return n*2;
+            })
+        console.log(numeri,numeriX2);
+
+        let animaliB=animali.map(function(a)
+            {
+                return "<b>"+a+"</b>";
+            })
+        console.log(animaliB);
+        document.write(animaliB);
+
+        let animaliC=animali.map(function(c)
+            {
+                return c.toUpperCase();
+            })
+        console.log(animaliC);
+        document.write(animaliC);
+
+
+    let utenti=[
+        {
+            id:1,
+            nome:"Mario",
+            cognome:"Rossi",
+            anni:30,
+        },
+        {
+            id:2,
+            nome:"Marco",
+            cognome:"Beschi",
+            anni:25,
+        },
+        {
+            id:3,
+            nome:"Simona",
+            cognome:"Udisco",
+            anni:24,
+        },
+        {
+            id:4,
+            nome:"Raffaele",
+            cognome:"Caravetta",
+            anni:28,
+        },
+    ]
+
+    let ricerca=utenti.filter(function(u)    //FILTER MI RESTITUISCE SEMPRE UN'ARRAY (ANCHE VUOTO).
+        {
+            return u.anni>24;
+        })
+    console.log(ricerca);
+
+    let result=utenti.find(function(u)
+        {
+            return u.id==3;
+        })
+    console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

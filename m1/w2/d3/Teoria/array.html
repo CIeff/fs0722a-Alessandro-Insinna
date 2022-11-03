@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let arr=[];
+
+
+        let numeri=[10,50,90,80,663];
+
+        console.table(numeri);
+        console.log(numeri);
+        console.log(numeri[0]);
+
+        numeri[0]=70;
+        console.table(numeri);
+
+        //lenght si usa su stringhe ed array per ottenerne un numero pari alla lughezza.
+
+        console.log(numeri.length);
+        console.log(numeri[numeri.length-1]); //ottengo sempre l'ultimo numero dell'array.
+        /*
+        numeri.length=2;
+        console.log(numeri.length);
+        console.log(numeri);
+        */
+
+        let str="ciao";
+        console.log(str.length);
+        console.log(str[0]);
+        console.log(str[1]);
+        console.log(str[2]);
+        console.log(str[3]);
+
+        
+        console.log( str.replace("c","x"));
+
+        // SCOPRIRE IL TIPO DI DATO
+
+
+        console.log(typeof (numeri));       //typeof su un array restituisce object.
+        console.log(Array.isArray(numeri));   //per avere certezza che il dato sia un'array si usa questo metodo.
+
+        if(numeri[6])
+            {
+                numeri[6]=800;
+            }
+        console.table(numeri);
+
+        console.log("================================================================");
+
+
+
+        //METODI ARRAY
+
+
+        let numeriOrdinati = numeri.sort(function(a,b){return a - b});
+        console.table(numeriOrdinati);
+
+        console.log("================================================================");
+        
+        //push          aggiunge alla fine di un'array.
+        numeri.push(20);
+        console.table(numeri);
+
+        /* //pop           elimina dalla fine di un'array.
+        let eliminato=numeri.pop();
+        console.table(numeri,"è stato eliminato il numero "+eliminato); 
+        */
+
+        //shift
+        numeri.shift(20); //aggiunge all'inizio dell'array.
+        console.log(numeri);
+        numeri.unshift(); //elimina dall'inizio dell'array.
+        console.log(numeri);
+
+        console.log("================================================================");
+        
+        // ELIMINAZIONE INIDCE A SCELTA
+
+
+        let start=1;
+        let qty=1;
+        numeri.splice(start,qty);           //elimino il 2ndo elemento.
+        console.log(numeri);
+        numeri.splice(start,qty,4444444);  //sostituisco il 2ndo elemento con il nuovo numero.
+        console.log(numeri);
+
+
+        
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="contenitore">
+        <input type="text" id="numeri">
+        <div data-simbolo="0" onclick="aggiungiCifra(this)">0</div>
+        <div data-simbolo="1" onclick="aggiungiCifra(this)">1</div>
+        <div data-simbolo="2" onclick="aggiungiCifra(this)">2</div>
+        <div data-simbolo="3" onclick="aggiungiCifra(this)">3</div>
+        <div data-simbolo="4" onclick="aggiungiCifra(this)">4</div>
+        <div data-simbolo="5" onclick="aggiungiCifra(this)">5</div>
+        <div data-simbolo="6" onclick="aggiungiCifra(this)">6</div>
+        <div data-simbolo="7" onclick="aggiungiCifra(this)">7</div>
+        <div data-simbolo="8" onclick="aggiungiCifra(this)">8</div>
+        <div data-simbolo="9" onclick="aggiungiCifra(this)">9</div>
+        <div data-simbolo="+" onclick="aggiungiCifra(this)">+</div>
+        <div data-simbolo="-" onclick="aggiungiCifra(this)">-</div>
+        <div data-simbolo="*" onclick="aggiungiCifra(this)">x</div>
+        <div data-simbolo="/" onclick="aggiungiCifra(this)">/</div>
+        <div data-simbolo="." onclick="aggiungiCifra(this)">.</div>
+        <div data-simbolo="---" onclick="dlt()">---</div>
+        <div onclick="clr()">c</div>
+        <div onclick="tot()">=</div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function aggiungiCifra(elemento)
+            {
+                let cifraCliccata=elemento.getAttribute("data-simbolo");
+                document.getElementById("numeri").value+=cifraCliccata;
+            }
+        
+        function tot()
+            {
+                let numeri=document.getElementById("numeri");
+
+               numeri.value=eval(numeri.value);
+            }
+        
+        function clr()
+            {
+                let numeri=document.getElementById("numeri");
+                numeri.value=" ";
+            }
+        function dlt()
+            {
+                let numeri=document.getElementById("numeri");
+                numeri.value=numeri.value.substring(0, numeri.value.length-1);
+            }
+
+        
+        /* 
+        isSymbol(s)
+            {
+                let simboli=["*","/","+","-"];
+                return simboli.includes(s);
+            }
+
+        isSymbol("+")
+        */
+            
+            // SUBSTRING!!!!
+            
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

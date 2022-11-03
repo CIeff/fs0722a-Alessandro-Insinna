@@ -15,6 +15,7 @@
         .divisore
             {
                 background-color: greenyellow;
+                margin-top: 10%;
             }
     </style> 
 
@@ -29,6 +30,7 @@
             e il numero "5"</p>
         <button onclick="inserisciNumero2()">Inserisci numero per 
         la comparazione</button>
+        <p id="risultato10"></p>
     </div>
 
     <div><p class="divisore">Terzo esercizio</p>
@@ -81,10 +83,15 @@
                     document.getElementById("risultato")
                     .innerHTML="Il primo numero inserito è il più grande";
                 }
-                else
+                else if (num2 >num1)
                 {
                     document.getElementById("risultato")
                     .innerHTML="Il secondo numero inserito è il più grande";
+                }
+                else
+                {
+                    document.getElementById("risultato")
+                    .innerHTML="I due numeri sono uguali";
                 }
         }
         
@@ -97,10 +104,14 @@
             if(num1==num2)
                 {
                     console.log("Equal");
+                    document.getElementById("risultato10")
+                    .innerHTML="Il numero è uguale a 5";
                 }
                 else
                 {
                     console.log("Not-equal");
+                    document.getElementById("risultato10")
+                    .innerHTML="Il numero non è uguale a 5";
                 }
         }
 
@@ -113,11 +124,13 @@
                     {
                         document.getElementById("risultato2").
                         innerHTML="divisibile per 5";
+                        console.log("divisibile per 5");
                     }
                     else
                     {
                         document.getElementById("risultato2").
                         innerHTML="non divisibile per 5";
+                        console.log("non divisibile per 5");
                     }
             }
 
@@ -216,18 +229,20 @@
         
         // Esercizio 7
 
-        /* let nume1=1;     ORDINAMENTO ARRAY CON FUNZIONE JAVASCRIPT .REVERSE()
+        /*                                  ORDINAMENTO ARRAY CON FUNZIONE JAVASCRIPT .REVERSE()
+        let nume1=1;     
         let nume2=2;
         let nume3=3;
         let vett=[nume1,nume2,nume3];
         console.log(vett);
     
         vett.reverse();
-        console.log(vett); */
-
-        var p= 2;
-        var o= -4;
-        var r= 8;
+        console.log(vett); 
+        */
+        
+        var p= 4;
+        var o= 5;
+        var r= 2;
         if (p>o && p>r)
             {
             if (o>r)
@@ -261,18 +276,15 @@
                     console.log(r + ", " + o + ", " +p);
                     }
                 }  
-        
+            
+    
         // Esercizio 8
 
         function inserisciVariabile()
                 {
                     let var1=prompt("inserisci variabile");
-                    
-                    
                     console.log(var1);
-                    console.log(typeof var1);
                     var2= +var1;
-                    console.log(typeof var2);
                     let tot=var1+1>0? "typeof = number" : "typeof = not a number";
                     console.log(tot);
 
@@ -285,7 +297,18 @@
                                 console.log("la variabile non è un numero");
                             }*/
                 }
-            
+            /*
+                    let test="ciao";
+                    if(typeof test === "number")
+                        {
+                            console.log("è un numero");
+                        }
+                        else
+                            {
+                                console.log("non è un numero");
+                                }
+            */  
+
         // Esercizio 9
 
 
