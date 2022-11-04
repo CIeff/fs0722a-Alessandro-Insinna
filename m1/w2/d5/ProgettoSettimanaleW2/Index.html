@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgettoSettimanaleW2</title>
+    <link rel="stylesheet" href="style-css/reset.css">
+    <link rel="stylesheet" href="style-css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Knewave&family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+   <div class= "boom">
+    <div class="container">
+        <div class="calc-body">
+          <div class="calc-screen">
+            <input type="text" class="typed"  id= "casellaInput" >
+          </div>
+          <div class="rigaCalc">
+            <div id= "c" class="riquadro" onclick="clr()">C</div>
+            <div class="riquadro" data-simbolo="--" onclick="dlt()">Del</div>
+            <div class="riquadro" data-simbolo="/" onclick="aggiungiCifra(this)">/</div>
+            <div class="riquadro" data-simbolo="-" onclick="aggiungiCifra(this)">-</div>
+          </div>
+          <div class="rigaCalc">
+            <div class="riquadro" data-simbolo="7" onclick="aggiungiCifra(this)">7</div>
+            <div class="riquadro" data-simbolo="8" onclick="aggiungiCifra(this)">8</div>
+            <div class="riquadro" data-simbolo="9" onclick="aggiungiCifra(this)">9</div>
+            <div class="riquadro" data-simbolo="*" onclick="aggiungiCifra(this)">x</div>
+          </div>
+          <div class="rigaCalc">        
+            <div class="riquadro" data-simbolo="4" onclick="aggiungiCifra(this)">4</div>
+            <div class="riquadro" data-simbolo="5" onclick="aggiungiCifra(this)">5</div>
+            <div class="riquadro" data-simbolo="6" onclick="aggiungiCifra(this)">6</div>
+            <div class="riquadro" data-simbolo="+" onclick="aggiungiCifra(this)">+</div>
+          </div>   
+            <div class="rigaCalc">
+            <div class="riquadro" data-simbolo="1" onclick="aggiungiCifra(this)">1</div>
+            <div class="riquadro" data-simbolo="2" onclick="aggiungiCifra(this)">2</div>
+            <div class="riquadro" data-simbolo="3" onclick="aggiungiCifra(this)">3</div>
+            <div class="riquadro" data-simbolo="**2" onclick="aggiungiCifra(this)">^2</div>
+          </div>  
+            <div class="rigaCalc">
+            <div class="riquadro" data-simbolo="0" onclick="aggiungiCifra(this)">0</div>
+            <div class="riquadro" data-simbolo="." onclick="aggiungiCifra(this)">.</div>
+            <div class="riquadro" data-simbolo="/100" onclick="aggiungiCifra(this)">%</div>
+            <div  id="tot" class="riquadro" onclick="tot()">=</div>
+          </div>
+          </div>  
+        </div>
+    </div>
+  </div>
+
+<script src="script/script.js"></script>
+</body>
+</html>
+
+
