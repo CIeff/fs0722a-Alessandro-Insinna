@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <div id= "time"></div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        
+            
+
+        setInterval(function()
+            {
+                
+                let ora=new Date();
+
+
+
+                //let timestamp=ora.getTime();console.log(timestamp);
+                let anno=ora.getFullYear();
+                let indiceGiorni=ora.getDay();
+                let giorni=ora.getDate();
+                let mesi=ora.getMonth();
+                let minuti=ora.getMinutes();
+                let ore=ora.getHours();
+                let secondi=ora.getSeconds();
+                document.getElementById("time").textContent=anno+"    "+mesi+ "mese : "   +indiceGiorni+" "+ore+": "+minuti+": "+secondi+". ";
+          
+            },100000);
+
+        {
+            let future=new Date();
+
+            future.setMonth(future.getMonth()+1);
+            console.log(future);
+
+
+        }
+
+        {
+
+            let data= new Date();
+            let options=
+                {
+                    weekday:"long",
+                    day:"numeric",
+                    month:"long",
+                    year:"numeric",
+
+
+                }
+            console.log(data.toLocaleDateString("it-IT",options)); //per mostrare una data nel formato del locale scelto (locale=l'area geografica (con linguaggi e formati nativi))
+
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

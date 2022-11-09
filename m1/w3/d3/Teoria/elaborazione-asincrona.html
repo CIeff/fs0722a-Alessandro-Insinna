@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        console.log(1);
+        console.log(2);
+
+
+        //QUESTA PROMISE GESTISCE U CASO IN CUI L'INSUCCESSO E' PREVISTO
+        let call=new Promise(function(success,error)
+        {
+
+            setTimeout(function()
+            {
+                let password="password";
+                if(password=="password")
+                {
+                success("accesso consentito");
+                }
+                else
+                {
+                error("c'è stato un errore");
+                }
+            },3000)
+        });
+                                    //quando  vi viene fornita una promise io facendo consolo log di quella promise io non posso mai leggere quei dati, leggo usando il metodo "then"
+        call.then((risultato)=>console.log(risultato), (erroreRisultato)=>console.log(erroreRisultato));
+
+        console.log(3);
+
+
+        let call2=new Promise(function(success)
+        {
+            success("Ecco il risultato");
+        })
+
+        call2.then((result)=>console.log(result));
+
+
+
+    </script>
+</body>
+</html>

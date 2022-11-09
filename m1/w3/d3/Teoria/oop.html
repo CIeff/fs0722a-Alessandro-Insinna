@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+    <script>
+{
+        let obj={};             // DA PREFERIRE
+        let ojbNew=new Object();
+
+        let persona=
+        {
+            nome:"Mario",
+            cognome:"Rossi",
+            anni:30
+        }
+
+        function Persona(n,c,a)
+        {
+            this.nome=n;
+            this.cognome=c;
+            this.anni=a;
+            this.cittadinanza="italiana";   
+            this.presentazione=()=>
+            {
+                console.log(`Ciao, mi chiamo ${this.nome} ${this.cognome}`);
+            }
+
+        }
+
+        let mario=new Persona(); //NON INSERISCO DATI PERCHE VOGLIO METTERLI DOPO
+        mario.nome="Mario";
+        mario.cognome="Rossi";
+        mario.anni=30;
+        console.log(mario);
+        mario.presentazione();
+
+        let lorenzo=new Persona("Lorenzo","Trozzo",28);    // PASSO IMMEDIATAMENTE I VALORI IN FASE DI ISTAZIAMENTO (COSTRUZIONE)
+        console.log(lorenzo);
+        lorenzo.presentazione();
+}
+
+console.log("=======================================================================================");
+
+{
+
+
+                    //UTILIZZO DI CLASSE
+
+        class Utente 
+        {
+            constructor(n,c,u="Utente")                          //TUTTO CIO' CHE SI TROVA NEL CONSTRUCTOR VIENE LANCIATO, FUNZIONI COMPRESE QUANDO RICHIAMATO.
+            {
+                this.nome=n;
+                this.cognome=c;
+                this.ruolo=u;
+            }
+        }
+
+        let mario=new Utente("Mario","Rossi","Admin");
+        let lorenzo=new Utente("Lorenzo","Trozzo");
+        console.log(mario,lorenzo);
+
+        class Admin extends Utente
+        {
+            constructor(n,m,t)
+            {
+                super(n,m,"Admin");
+                this.titolo=t;
+            }
+        }
+
+
+        let Amministratore= new Admin("Lorenzo","Trozzo","Capo dell'universo");
+        console.log(Amministratore);
+
+        let Amministratore2= new Admin("Lorenzo","Trozzo","Capo del capo");
+        console.log(Amministratore2);
+
+
+        class SuperAdmin extends Admin
+        {
+           constructor(n,m)
+           { 
+                super(n,m,"Dev")
+           }
+        }
+
+
+        let superAmministratore = new SuperAdmin("Valerio","Pirolli",);
+        console.log(superAmministratore);
+
+
+
+
+
+
+
+
+
+
+
+}
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

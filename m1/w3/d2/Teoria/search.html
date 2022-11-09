@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <input type="search" id="cerca">
+    <button id="cercaBtn">Cerca</button>
+
+
+
+    <div id="tendina">
+        <div>Cane</div>
+        <div>Gatto</div>
+        <div>Capra</div>
+        <div>Alpaca</div>
+    </div>
+
+
+
+
+
+
+    <script>
+           
+           
+           function ricerca()
+        {
+            let divAnimali=document.querySelectorAll("#tendina>div");
+            
+            for(let div of divAnimali)
+            {
+                let nomeAnimale=div.textContent.toLocaleLowerCase();
+                if(nomeAnimale.search(cerca.value.toLocaleLowerCase())!=-1)         //SE IN UN ELSE ENTRA UN "0" VIENE PRESO COME FALSE
+                {
+                    div.style.display="block";
+                }
+                else
+                {
+                    div.style.display="none";
+                }
+            }
+        }
+
+        let cerca= document.querySelector("#cerca");
+        let cercaBottone= document.querySelector("#cercaBtn");
+
+        cercaBtn.addEventListener("click",ricerca);
+        cerca.addEventListener("keyup",ricerca);
+
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

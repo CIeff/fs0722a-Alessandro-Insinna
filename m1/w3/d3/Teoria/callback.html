@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="testo"></div>
+
+
+
+
+
+
+    <script>
+
+        function scrivi(testo,fn)
+        {
+            let areaTesto=document.querySelector("#testo");
+            areaTesto.innerHTML+=fn(testo);
+        }
+
+
+        scrivi("Testo Bold <br>",bold);
+        scrivi("Testo Corsivo",italic);
+        scrivi("Testo t",(t)=>"<div>"+t+"</div>");
+
+        function bold(text)
+        {
+            return "<b>"+text+"</b>"
+        }
+
+        function italic(text)
+        {
+            return "<i>"+text+"</i>"
+        }
+
+
+
+    </script>
+</body>
+</html>

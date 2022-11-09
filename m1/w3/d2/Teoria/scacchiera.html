@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #scacchiera
+        {
+            height: 500px;
+            width: 500px;
+        }
+        .casella
+        {
+            width: calc(100%/8);
+            height: calc(100%/8);
+            border: 1px solid black;
+            display: inline-block;
+            margin-bottom:-0.3rem;
+            margin-left:-0.3rem;
+            color:green;
+        }
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+        <div id="scacchiera"></div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        let scacchiera=document.querySelector("#scacchiera");
+
+        
+        let numeroDiv=64;
+
+        for(let i=0;i<8;i++)
+        {
+            for(x=0;x<8;x++)
+            {
+            let colore=(i+x)%2==0? "#000" : "#fff";
+            
+            //scacchiera.innerHTML+=`<div class="casella" style="color:green; background-color:${colore}">${i}+${x}</div>`;
+            let casellaDiv=document.createElement("div"); //<div></div>
+            casellaDiv.classList.add("casella");
+            casellaDiv.style.backgroundColor=colore;
+
+            scacchiera.append(casellaDiv);
+        }
+        }
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <script>
+
+      
+let utenti = [
+            {
+                id: 1,
+                name: "Leanne Graham",
+                username: "Bret",
+                email: "Sincere@april.biz",
+                address: {
+                    street: "Kulas Light",
+                    suite: "Apt. 556",
+                    city: "Gwenborough",
+                    zip: "92998-3874",
+                },
+                phone: "1-770-736-8031 x56442",
+                website: "hildegard.org",
+               company: {
+                    name: "Romaguera-Crona",
+                    catchPhrase: "Multi-layered client-server neural-net",
+                    bs: "harness real-time e-markets"
+                }
+            },
+            {
+                id: 2,
+                name: "Ervin Howell",
+                username: "Antonette",
+                email: "Shanna@melissa.tv",
+                address: {
+                    street: "Victor Plains",
+                    suite: "Suite 879",
+                    city: "Wisokyburgh",
+                    zip: "90566-7771",
+                    
+                },
+                phone: "010-692-6593 x09125",
+                website: "anastasia.net",
+               company: {
+                    name: "Deckow-Crist",
+                    catchPhrase: "Proactive didactic contingency",
+                    bs: "synergize scalable supply-chains"
+                }
+            },
+            {
+                id: 3,
+                name: "Clementine Bauch",
+                username: "Samantha",
+                email: "Nathan@yesenia.net",
+                address: {
+                    street: "Douglas Extension",
+                    suite: "Suite 847",
+                    city: "McKenziehaven",
+                    zip: "59590-4157",
+                    
+                },
+                phone: "1-463-123-4447",
+                website: "ramiro.info",
+               company: {
+                    name: "Romaguera-Jacobson",
+                    catchPhrase: "Face to face bifurcated interface",
+                    bs: "e-enable strategic applications"
+                }
+            },
+        ]
+
+        console.log(utenti[1]["id"]);
+                                                        // ELIMINA DA ARRAY DI OGGETTI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        function trovaElimina(chiave,valore,array)
+        {                                                                               //SPLICE MODIFICA ARRAY ORIGINALE!!!!!!!!!!!!!
+            let arrayCopy=[...array];
+            let indice=array.findIndex((e)=>e[chiave]==valore);
+            arrayCopy.splice(indice,1);
+            return arrayCopy;
+        }
+
+        let utentiNew=trovaElimina("name","Leanne Graham",utenti);
+        console.log(utentiNew);
+        console.log(utenti);
+
+                                                        // ELIMINAZIONE PER ESCLUSIONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        function trovaElimina2(chiave,valore,array)
+        {
+            return array.filter((e)=>e[chiave]!=valore);                        //FILTER NON MODIFICA ARRAY ORIGINALE!!!!!!!!!!!!!!
+        }
+        let utentiNew2= trovaElimina2("website","ramiro.info",utenti);
+        console.log(utentiNew2);
+
+
+/*
+        function elimina(chiave,valore,array)
+        {
+            let copiaArray=[...array];
+            let indice=copiaArray.findIndex((e)=>e[chiave]!=valore);
+            copiaArray.splice(indice,1);
+            return copiaArray;
+        }
+*/
+
+                                                                            // COMPARAZIONE DI TUTTI GLI OGGETTI DI UN ARRAY E TROVA IL PIU' GRANDE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        let idAlto=utenti.reduce((previous,current)=>
+        {
+            if(previous.id>current.id)
+            {
+                return previous;
+            }
+            else
+            {
+                return current;
+            }
+        })
+        console.log(idAlto);
+
+                                                                        // ONE LINER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+        let idBasso=utenti.reduce((previous,current)=>(previous.id<current.id)?previous:current);
+        console.log(idBasso);
+
+                                                                        //SOMMA DI TUTTI I NUMERI DELL'ARRAY !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        let numeri=[10,50,90,80,663];
+        let somma=numeri.reduce((p,c)=>p+c);
+
+        console.log(somma);
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

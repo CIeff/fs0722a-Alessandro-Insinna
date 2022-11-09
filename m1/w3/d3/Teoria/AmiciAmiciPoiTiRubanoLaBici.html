@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        class Veicolo
+        {
+            constructor(nRuote=2,cambio="Marce",maxVel=0)
+            {
+                this.nRuote=nRuote;
+                this.cambio=cambio;
+                this.maxVel=maxVel;
+                this.vel=0;
+            }
+
+            static checkWheelsNumber()
+            {
+                return "i veicoli hanno 2 ruote";
+            }
+            accelera()
+            {
+                this.vel++;
+            }
+            frena()
+            {
+                this.vel--;
+            }
+            stop()
+            {
+                if(this.vel==1)
+                {
+                this.vel=0;
+                }
+            }
+        }
+        console.log(Veicolo.checkWheelsNumber())
+
+
+        class Bici extends Veicolo
+        {
+            constructor()
+            {
+                super(2,"Marce",40)
+            }
+
+            haLeRotelle(bool)
+            {
+                if(bool)
+                {
+                    this.nRuote+=2;
+                }
+            }
+        }
+        
+        let bike = new Bici();
+        bike.accelera();
+        bike.accelera();
+        bike.frena();
+        console.log(bike);
+        let miniBike = new Bici();
+        miniBike.haLeRotelle(true);
+        console.log(miniBike);
+
+        let ogg = new Object ();
+
+        Object.freeze();            //ESEMPIO DI METOD0 STATICO
+
+        Array.isArray();            //ESEMPIO DI METODO STATICO
+
+
+
+
+
+    </script>
+</body>
+</html>

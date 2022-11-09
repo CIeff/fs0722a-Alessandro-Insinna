@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <section id= "commenti" >
+        <div class="commento">
+            <b>Cosimo D'amico</b>
+                <p>Auguri</p>               
+            <input type="text">
+        </div>
+        <div class="commento">
+            <b>Vanessa Oteng</b>
+                <p>Auguri</p>
+            <input type="text">
+        </div>
+        <div class="commento">
+            <b>Vincenzo Paluszewski</b>
+                <p>Auguri</p>
+            <input type="text">
+        </div>
+        <div class="commento">
+            <b>Andrea Rossi</b>
+                <p>Auguri</p>
+            <input type="text">
+        </div>
+
+    </section>
+
+
+    
+        <button id="start">Ringrazia</button>
+
+        <style>
+            .commento
+            {
+                margin-bottom: 30px;
+            }
+        </style>
+
+
+
+    <script>
+
+        let bottone=document.querySelector("#start");                                       //restituisce solo un elemento
+
+        bottone.addEventListener("click",function()
+        {
+            
+            let comments=document.querySelectorAll(".commento");
+
+            let ringraziamenti=["Grazie ","Grazie Mille "," Wow, Grazie! "];
+            let punti=["","! ","!!! "];
+            let smile=[""," :) "," :D "];
+
+
+            for(let comment of comments)
+            {
+                let rand1=randomNumber(ringraziamenti.length);
+                let rand2=randomNumber(punti.length);
+                let rand3=randomNumber(smile.length);
+
+                let nome=comment.querySelector("b").textContent.split(" ")[0];
+
+                comment.querySelector("input").value=ringraziamenti[rand1]+ nome+punti[rand2]+smile[rand3];
+            }
+        })
+
+
+        function randomNumber(max)
+        {
+            return Math.floor(Math.random()*max);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

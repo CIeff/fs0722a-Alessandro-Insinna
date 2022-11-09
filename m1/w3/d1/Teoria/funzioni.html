@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function nomeFunzione()
+        
+            {
+                return "testo";
+                
+            }
+
+        nomeFunzione();
+
+        function sostituisciVirgole(testo)
+            {
+                if(typeof testo =="string")
+                    {
+                        let testoConPunti=testo.replaceAll(",",".");
+                        return Number(testoConPunti);
+                    }
+                    else
+                        {
+                            throw new Error("La funzione sostituisciVirgole() richiede una stringa, hai inserito un dato di tipo: "+typeof testo);
+                        }
+            }
+
+        console.log(sostituisciVirgole("5,4"));
+
+
+
+        
+        function moltiplicazione (a=1,b=1)
+            {
+                return a*b;
+            }
+        console.log(moltiplicazione("5"+"5",5))            //non inserisci b= undefined 
+        
+
+
+        // Usando SPREAD OPERATOR
+        function moltiplicaPro(...numeri)
+            {
+                let moltiplicazione=1;
+                for(let numero of numeri)
+                    {
+                       moltiplicazione*=numero;
+                    }
+                return moltiplicazione;
+            }
+        console.log(moltiplicaPro(5,5,5,5,5,5,5,5,5))
+
+        function moltiplicaProUltra(...numeri)
+            {
+                return numeri.reduce(function(c,p)                                                          //return numeri.reduce((c,p)=> c*p)
+                    {
+                        return c*p;
+                    })
+            }
+        console.log(moltiplicaProUltra(5,5,5,5,5,5,5,5,5));
+
+
+        //Gestione valori mancanti
+
+        function somma(a,b)
+            {
+                if((!a||!b) && (a!=0&&b!=0))
+                    {
+                        return "Err.";
+                    }
+                return a+b;
+            }
+
+        console.log(somma(0,0));
+
+
+        // FUNZIONE SELF-INVOKING
+
+        let dato=
+        (
+            function()
+                {
+                    console.log("eseguita");
+                    return "ecco il dato";
+                }
+        ) ()
+        console.log(dato);
+
+        
+        //CLOSURES
+
+        function aa()
+        {
+            let x=0;
+            function bb()
+            {
+                console.log(x);
+            }
+            bb();
+        }
+
+        aa();
+
+        function a(x)
+        {
+            return function b(y)
+            {
+                return function c(z)
+                {
+                    return x+y+z;
+                }
+            }
+        }
+
+        let risultato=a(5)(7)(9);
+        console.log(risultato);
+
+
+
+
+        //FUNZIONI FRECCIA              usa const con le frecce
+
+        const nomeFunzioneFreccia=() => "testo";
+        console.log(nomeFunzioneFreccia());
+
+
+        const funzioneConParametro=a=>a*2;   // con un solo parametro posso eliminare le tonde
+        console.log(funzioneConParametro(2));
+
+        const funzioneConParametri=(a,b)=>a*b;
+        console.log(funzioneConParametri(2,4));
+
+        const funzioneLunga=()=>
+            {
+                let a="testo";
+                return a;
+            }
+        console.log(funzioneLunga());
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
