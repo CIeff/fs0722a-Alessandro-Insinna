@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <div id="target"></div>
+    <button id="elimina">Elimina</button>
+
+
+    <div id="box"> Testo del div <span>Testo dello span</span></div>  
+
+
+
+
+    <script>
+        //trim rimuove primo spazio
+
+
+        let target=document.getElementById("target");
+
+        let div=document.createElement("div");
+        div.textContent="Elemento creato da js";
+
+        /*
+        let divText=document.createTextNode("Prova");
+
+        div.append(divText);
+        */
+
+        target.append(div);
+
+
+        let box=document.getElementById("box");
+        console.log(box.innerHTML);
+        console.log(box.innerText);
+        console.log(box.textContent);
+
+        console.log(box.childNodes[0].textContent);  //prelevo solo il teso contenuto nel div (senza span);
+        console.log(box.childNodes[1].firstChild.textContent);
+
+
+        let elimina=document.querySelector("#elimina");
+        elimina.addEventListener("click",()=>div.remove());
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        :target
+        {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+<a href="#test">test</a>
+<a href="#test1">test1</a>
+<a href="#test2">test2</a>
+
+    <div id="test">target</div>
+    <div id="test1">target1</div>
+    <div id="test2">target2</div>
+
+<button onclick="history.back()">Indietro</button>
+<button onclick="history.forward()">Avanti</button>
+<button onclick="history.go(-2)">-2</button>
+<button onclick="history.go(+2)">+2</button>
+<button onclick="location.reload()">Refresh</button>
+<button onclick="location.href=location.href">Azzera history</button>
+    <script>
+
+        console.log(navigator); //INFO BROWSER
+        console.log(location);  //INFO PAGINA ATTIVA
+        console.log(history);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+    <script>
+
+        let text=`{"nome":"mario","cognome":"Rossi"}`;
+
+        let textToObj=JSON.parse(text); // traforma una stringa JSON in oggetto
+        console.log(textToObj);
+
+        let obj={nome:"Mario",cognome:"Rossi"};
+        let objToJSON=JSON.stringify(obj);
+        console.log(objToJSON);
+        console.log(typeof objToJSON);
+
+        sessionStorage.setItem("persona",objToJSON); //posso salvare solo stringhe
+        sessionStorage.getItem("persona");          //recupero dati
+        console.log(persona);
+
+
+
+    </script>
+</body>
+</html>

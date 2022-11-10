@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:not([type="submit"])
+        {
+            border:1px solid black;
+            padding:15px;
+            width: 40%;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        form input[type="submit"]
+        {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+    <form id="myForm">
+        <div>
+        <input type="text" class="notEmpty" id="nome" placeholder="Nome" data-noEmpty="Ti sei dimenticato il nome">
+        <span></span>
+        </div>
+        <div>
+        <input type="text" class="notEmpty" id="cognome" placeholder="Cognome">
+        <span></span>
+        </div>
+        <div>
+        <input type="email" class="notEmpty" id="email" placeholder="E-mail">
+        <span></span>
+        </div>
+        <div>
+        <input type="password" class="notEmpty" id="password" placeholder="Password">
+        <span></span>
+        </div>
+        <button type="button" id="mostraNascondi" >Mostra/Nascondi</button>
+        <input type="submit" id="invia" value="invia">
+    </form>
+
+
+    <script>
+
+        let mostraNascondi=document.querySelector("#mostraNascondi");
+        mostraNascondi.addEventListener("click",function()
+        {
+            let password=document.querySelector("#password");
+
+            password.type=password.type=="text"?"password":"text";  //pseudo toggle!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            
+        })
+
+        let formBtn=document.querySelector("#invia");
+        
+        formBtn.addEventListener("click", function(e)
+        {
+            e.preventDefault();
+
+            let nome=document.querySelector("#nome");
+            let cognome=document.querySelector("#cognome");
+            let email=document.querySelector("#email");
+            let password=document.querySelector("#password");
+
+        
+            
+
+
+            function validateNotEmpty(f,m)
+            {
+                if(!document.querySelector(`#${f.id}Validation`))
+                {
+                var span=document.createElement("span");
+                span.id=f.id+"Validation";
+                f.after(span);
+                }  
+
+                if(!f.value)
+            {
+                span.textContent=m;
+            }
+            else
+            {
+                span.textContent="";
+            }
+            }
+            
+            
+            let campi=document.querySelectorAll("#myForm .notEmpty");
+
+            for (let campo of campi)
+                {
+                validateNotEmpty(campo,campo.id+" mancante");
+                }
+            
+                let valid=true;
+
+              
+        })
+
+        
+
+
+
+    </script>
+</body>
+</html>

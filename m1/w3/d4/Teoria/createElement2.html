@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="target"></div>
+    <button id="elimina">Elimina</button>
+    <button id="crea">Crea</button>
+
+
+    <script>
+
+ {      
+       let crea= document.querySelector("#crea");
+       crea.addEventListener("click",()=>
+       {
+            let target=document.getElementById("target");
+            let div=document.createElement("div");
+            div.textContent="Elemento creato da js";
+
+            div.addEventListener("click",()=>
+            {
+                div.remove();
+            })
+
+            target.append(div);
+       })
+       
+
+        let elimina=document.querySelector("#elimina");
+        elimina.addEventListener("click",()=>
+        {
+            let div=document.querySelector("#target div");
+            div.remove();
+
+        })
+        
+        /*              //per queryselectorALL ( che restituisce un'array)
+        for (let e of div)
+        {
+            el.remove()
+        }
+        */
+        
+}
+  
+      
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input:not([type="submit"])
+        {
+            border:1px solid black;
+            padding:15px;
+            width: 40%;
+            display: inline-block;
+            border-radius: 5px;
+        }
+        form input[type="submit"]
+        {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+    <form id="myForm">
+        <div>
+        <input type="text"  required id="nome" placeholder="Nome">
+        <span></span>
+        </div>
+        <div>
+        <input type="text" required pattern="[a-zA-Z]{2,20}" id="cognome" placeholder="Cognome">
+        <span></span>
+        </div>
+        <div>
+        <input type="email" required id="email" placeholder="E-mail">
+        <span></span>
+        </div>
+        <div>
+        <input type="password" required minlength="8" id="password" placeholder="Password">
+        <span></span>
+        </div>
+        <button type="button" id="mostraNascondi" >Mostra/Nascondi</button>
+        <input type="submit" id="invia" value="invia">
+    </form>
+
+
+
+
+    <script>
+
+        let mostraNascondi=document.querySelector("#mostraNascondi");
+        mostraNascondi.addEventListener("click",function()
+        {
+            let password=document.querySelector("#password");
+
+            password.type=password.type=="text"?"password":"text";  //pseudo toggle!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            
+        })
+
+        let formBtn=document.querySelector("#invia");
+
+        formBtn.addEventListener("click", function(e)
+        {
+            e.preventDefault();
+
+            let nome=document.querySelector("#nome");
+            let cognome=document.querySelector("#cognome");
+            let email=document.querySelector("#email");
+            let password=document.querySelector("#password");
+
+            let valid=true;
+
+            //console.log(nome.checkValidity(), nome.validationMessage,nome.validity);
+            console.log(cognome.checkValidity(), cognome.validationMessage,cognome.validity);
+            //console.log(email.checkValidity(), email.validationMessage,email.validity);
+            console.log(password.checkValidity(), password.validationMessage,password.valicogdity);
+
+
+            if (valid)
+            {
+                console.log("form inviato");
+            }
+
+
+
+
+
+        })
+
+
+
+
+
+           
+
+
+
+
+
+    </script>
+</body>
+</html>
