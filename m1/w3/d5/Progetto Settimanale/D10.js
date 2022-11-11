@@ -588,27 +588,28 @@ removeIndex(3);                                         // richiamo funzione
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
-
+/*
 function selectContainer()                            // creo funzione
 {
  let container= document.querySelector("#container");               // inizializzo variabile agganciandola all'id container tramite query selector
 }
 selectContainer();                                  // richiamo funzione
-
+*/
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
-
+/*
 function selectAllTd ()                         // creo funzione
 {
   let td =document.querySelectorAll("td");             // inizializzo variabile agganciandola all'id td tramite query selector all(che restituisce array )
 }
+*/
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
-
+/*
 function stampAllTd ()                                // creo funzione
 {
   let tds= document.querySelectorAll("td");           // inizializzo variabile agganciandola all'id td tramite query selector all (array)
@@ -618,11 +619,12 @@ function stampAllTd ()                                // creo funzione
   }
 }
 stampAllTd();                                         // richiamo funzione
+*/
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-
+/*
 function colorLinks()                                 // creo funzione
 {
   let links=document.querySelectorAll("a");           // inizializzo variabile agganciandola agli elementi "a" con query selector (array)
@@ -632,12 +634,12 @@ function colorLinks()                                 // creo funzione
   }
 }
 colorLinks();                                         // richiamo funzione
-
+*/
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
-
+/*
 function createListElement()                          // creo funzione
 {
   let lista=document.querySelector("#myList");          // inizializzo variabile agganciandola all'id myList
@@ -649,12 +651,12 @@ function createListElement()                          // creo funzione
 
 }
 createListElement();                                // richiamo funzione
-
+*/
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
-
+/*
 function svuotaLista()                                  // creo funzione
 {
     let lista=document.querySelector("#myList");        // inizializzo variabile agganciandola all'id myList
@@ -664,11 +666,12 @@ function svuotaLista()                                  // creo funzione
     }
 }
 svuotaLista();                                          // richiamo funzione
+*/
 
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+/*
 function addClassTest()                                 //creo funzione
 {
   let trs=document.querySelectorAll("tr");              // creo variabile e la inizializzo agganciandola agli elementi tr (array)
@@ -678,7 +681,7 @@ function addClassTest()                                 //creo funzione
   }
 }
 addClassTest();                                         // richiamo funzione
-
+*/
 
 // [EXTRA] JS Avanzato
 
