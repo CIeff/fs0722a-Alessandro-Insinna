@@ -1,0 +1,166 @@
+body {
+  font-family: "Outfit", sans-serif;
+  color: white;
+  background-image: url("../../assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-attachment: fixed;
+  font-family: "Outfit", sans-serif;
+}
+
+/* logo epicdoe*/
+.logo {
+  height: 50px;
+  margin-top: 37px;
+  margin-left: 172px;
+  position: absolute;
+}
+
+.container {
+  top: 20%;
+  left: 22%;
+  width: 980px;
+  height: auto;
+  position: absolute;
+}
+.sottotitolo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.799);
+  font-size: 25px;
+  font-weight: 200;
+  line-height: 0;
+  padding-bottom: 30px;
+}
+.titolo {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-size: 40px;
+  font-weight: bold;
+  padding-bottom: none;
+  margin-bottom: 0;
+}
+#perc_giusta,
+#perc_sbagliata {
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: -55px;
+}
+
+#domande_giuste,
+#domande_sbagliate {
+  color: rgba(255, 255, 255, 0.711);
+
+  font-size: 20px;
+  margin-top: -50px;
+}
+
+#answerCorrect {
+  text-align: center;
+  float: left;
+  font-size: 50px;
+  width: 300px;
+  height: 360px;
+  padding-top: 30px;
+}
+.cerchio_1 {
+  text-align: center;
+  float: left;
+  width: 360px;
+  height: 350px;
+}
+#val_cerchio1 {
+  fill: none;
+  stroke: #d20094;
+  stroke-width: 50px;
+}
+
+#val_cerchio2 {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 50px;
+  stroke-dasharray: 880px;
+  stroke-dashoffset: 0px;
+  animation: anim 2s linear forwards;
+}
+@keyframes anim {
+  0% {
+    stroke-dashoffset: 0px;
+  }
+}
+
+#answerWrong {
+  font-size: 50px;
+  text-align: center;
+  float: left;
+  width: 300px;
+  height: 360px;
+  padding-top: 30px;
+}
+#cerchio {
+  width: 93%;
+  height: 93%;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+  box-shadow: 0px 0px 20px 6px black;
+  border-radius: 50%;
+}
+#circle-text {
+  position: absolute;
+  top: -17em;
+  left: 0.05em;
+  right: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.Text {
+  font-size: 18px;
+  line-height: 0;
+  font-weight: 500;
+  color: white;
+}
+
+#Text2 {
+  color: #00ffffdc;
+  font-weight: 600;
+}
+
+.Small_Text {
+  padding-top: 8px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.666);
+}
+
+#Small_Text2 {
+  margin-top: -25px;
+}
+.tasto {
+  text-align: center;
+  padding-bottom: 55px;
+}
+
+.btn-rate {
+  width: 200px;
+  height: 55px;
+  border: 1px solid white;
+  background-color: transparent;
+  font-size: 17px;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  color: white;
+  transition: all 0.07s ease-in-out;
+}
+.btn-rate:hover {
+  box-shadow: 0 0px 5px 3px #00ffff;
+  color: rgb(26, 26, 68);
+  border: transparent;
+  background-color: #00ffff;
+  cursor: pointer;
+  transform: scaleY(1.15) scaleX(1.15);
+}

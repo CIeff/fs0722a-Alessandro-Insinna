@@ -1,0 +1,82 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 16px;
+}
+
+#container {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+}
+
+#img-logo {
+  height: 50px;
+  margin-top: 45px;
+  margin-left: 180px;
+}
+
+p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 25px;
+}
+
+h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 6rem;
+  font-weight: 60px;
+  line-height: 70px;
+}
+
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-size: 3rem;
+  color: #d20094;
+  font-weight: 300px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+ul li {
+  list-style-type: disc;
+  line-height: 25px;
+  margin-left: 20px;
+}
+
+.b {
+  font-weight: bold;
+}
+
+#btn-checkbox {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#btn-proceed {
+  background-color: darkgray;
+  color: rgb(3, 3, 59);
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 18px 50px;
+  box-shadow: 0 10px 50px 5px black;
+  font-weight: 900;
+}
+#checkbox {
+  height: 20px;
+  width: 20px;
+  border: 1px solid white;
+}
+
+#div-proceed {
+  font-weight: 900;
+}

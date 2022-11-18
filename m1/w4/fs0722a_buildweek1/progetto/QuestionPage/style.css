@@ -1,0 +1,150 @@
+body {
+  background-image: url(../assets/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 32px 64px;
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#img-logo {
+  height: 50px;
+  margin-top: 5px;
+  margin-left: 108px;
+}
+
+#cont-Domande {
+  border: 1px solid wheat;
+  width: 900px;
+  height: 500px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#orologio {
+  position: relative;
+  height: 140px;
+  width: 140px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+#countdown-number {
+  position: relative;
+  color: white;
+  font-size: 3rem;
+}
+
+.timer-text {
+  color: white;
+  font-size: 10px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+.cerchioBlu {
+  stroke-dasharray: 376.4px;
+  stroke-dashoffset: 0px;
+  stroke-width: 15px;
+  stroke: #00ffff;
+  fill: none;
+  position: absolute;
+  /*quando hai elementi che si sovrappongono con position absloute o relative puoi dire quello che sta sopra con z-index! con z-index maggiore sta sopra! se non è indicato è zero!*/
+  z-index: 10;
+  animation: countdown 30s linear infinite forwards;
+}
+
+svg#bg-trasp circle {
+  stroke-dasharray: 376.4px;
+  stroke-dashoffset: 0px;
+  stroke-width: 15px;
+  stroke: #fdfdfd;
+  opacity: 0.3;
+  position: absolute;
+  z-index: 5;
+  fill: none;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+  to {
+    stroke-dashoffset: 376.4px;
+  }
+}
+
+.container {
+  max-width: 900px;
+  margin: 32px auto;
+}
+
+#questionText {
+  font-size: 50px;
+  font-family: "Outfit" sans-serif;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px 100px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  top: 60%;
+  left: 21.5%;
+}
+
+.grid-item {
+  width: 100%;
+  padding: 24px 0;
+  border-radius: 50px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: -4px -2px 1.5px rgb(200, 195, 186);
+}
+
+.grid-item:hover {
+  background-color: rgba(255, 20, 193, 0.5);
+  transform: scaleY(1.1) scaleX(1.1);
+  cursor: pointer;
+}
+
+#footer {
+  margin-top: 120px;
+  font-weight: 550;
+}
+.none {
+  display: none;
+}
+.abc {
+  bottom: 10%;
+  position: absolute;
+  left: 46.5%;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <header>
+        <a href="https://epicode.com/it/"><img src="../assets/epicode_logo.png" alt="epicodeLogo" class="logo" /></a>
+
+    </header>
+
+
+
+    <main class="container">
+
+        <div>
+            <h1 class="titolo">Results</h1>
+            <h2 class="sottotitolo">The summary of your answers:</h2>
+        </div>
+
+
+
+        <div id="answerCorrect">
+            <h3>Correct</h3>
+            <p id="perc_giusta">66.7%</p>
+            <p id="domande_giuste">4/6 questions</p>
+        </div>
+
+        <div class="cerchio_1">
+
+
+            <svg id="cerchio">
+                <circle id="val_cerchio1" r="140" cx="50%" cy="50%"></circle>
+                <circle id="val_cerchio2" r="140" cx="50%" cy="50%"></circle>
+            </svg>
+            <div style="position: relative">
+                <div id="circle-text">
+                    <p class="Text1">Congratulations!</p>
+                    <p class="Text1" id="Text2">You passed the exam.</p>
+                    <p class="Small_Text">
+                        We'll send you the certificate in few minutes.
+                    </p>
+                    <p class="Small_Text" id="Small_Text2">
+                        Check your email (including promotions / spam folder)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="answerWrong">
+            <h3>Wrong</h3>
+            <p id="perc_sbagliata">33.3%</p>
+            <p id="domande_sbagliate">2/6 questions</p>
+        </div>
+
+
+
+        <div class="tasto">
+            <a href="../FeedbackPage/index.html"> <button class="btn-rate" type="button">RATE US</button> </a>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

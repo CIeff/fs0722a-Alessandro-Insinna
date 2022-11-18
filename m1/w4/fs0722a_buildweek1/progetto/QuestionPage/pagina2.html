@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap" rel="stylesheet" />
+  <title>Quiz Epicode</title>
+</head>
+
+<body>
+  <!--header-->
+  <header class="header">
+    <!--logo-->
+    <a href="https://epicode.com/it/"><img id="img-logo" src="../assets/epicode_logo.png" alt="logo di Epicode" /></a>
+    <!--timer delle domande-->
+    <div id="orologio">
+      <svg id="bg-trasp">
+        <circle r="60" cx="70" cy="70">
+
+        </circle>
+      </svg>
+      <svg id="blue">
+        <circle class="cerchioBlu" r="60" cx="70" cy="70">
+
+        </circle>
+      </svg>
+      <!--display tempo del timer-->
+      <span class="timer-text">SECONDS</span>
+      <div id="countdown-number"></div>
+      <span class="timer-text">REMAINING</span>
+    </div>
+    </div>
+  </header>
+  <!--container centrale delle domande-->
+  <main class="container">
+
+    <!-- container delle domande con elementi griglia-->
+    <h1 id="questionText">Banana in Pigiama!</h1>
+    <div class="grid">
+      <div class="grid-item answer"></div>
+      <div class="grid-item answer"></div>
+      <div class="grid-item answer"></div>
+      <div class="grid-item answer"></div>
+    </div>
+  </main>
+
+  <!--footer in cui verra segnato la progressione delle domande-->
+  <div id="footer">
+    <p class="abc">question/10</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
