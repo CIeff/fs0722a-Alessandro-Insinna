@@ -62,7 +62,6 @@ function noPopUp() {
 
 function popUp() {
     document.querySelector(".popUp").classList.remove("none");
-    document.querySelector(".popUp").classList.add("animation");
 }
 
 let popUpButton = document.querySelector(".popUpButton");
