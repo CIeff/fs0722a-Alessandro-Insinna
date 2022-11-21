@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=0.9, maximum-scale=1.1">
+    <title>Media queries</title>
+    <!-- 
+        la proprietà initial scale imposta il fattore di zoom iniziale (quando la pagina viene caricata)
+         la proprietà user-scalable permette di consentire o meno all'utente di ridimensionare/zoommare la pagina
+         con minimum-scale e maximum-scale posso stabilire qunato l'utente possa zoommare
+        -->
+    <style type="text/css">
+        body{background: red;}                         /*mobile first*/
+        @media screen and (min-width:480px) {           /*smartphone landscape*/
+            body{background: yellow;}
+        }
+        @media screen and (min-width:768px){            /* tablet*/
+            body{background: green;}
+        }
+        @media screen and (min-width:1024px){           /*laptop*/
+            body{background: blue;}  
+        }
+        @media screen and (min-width:1200px){           /* desktop*/
+            body{background: grey;}
+        }
+        @media print{
+            body{background-color: white;}
+        }
+    </style>
+</head>
+<body>
+    
+
+    
+</body>
+</html>

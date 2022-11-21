@@ -1,0 +1,331 @@
+/* IMPOSTAZIONI GENERALI */
+@media screen and (min-width:768px) {
+    header{
+        font-size: 2rem;
+    }
+    main{
+        font-size: 2rem;
+    }
+    main h1{
+        font-size: 6rem;
+    }
+    h2{
+        font-weight: bold;
+    }
+    table{
+        margin:auto;
+    }
+    section h2{
+        background-color: rgb(134, 128, 128);
+    }
+    form input{
+        width: 70%;
+        height: 40px;
+    }
+    form button{
+        width:130px;
+        height: 40px;
+    }
+    aside h2{
+        font-size: 3.3rem;
+    }
+
+}
+@media screen and (min-width:1200px) {
+    header {
+        height: 50px;
+        display: inline-flex;
+        width: 90%;
+        margin-left: 5%;        
+    }
+    header div{
+        display: inline-flex;
+    }
+    header img{
+        margin-top: -30px;
+        margin-left: -25px;
+    }
+    header p{
+        font-size: 1.5rem;
+        margin-top: -15px;
+        font-weight: 100;
+    }
+    header nav {
+        font-size: 1.5rem;  
+        margin-top: -15px;
+        position:absolute;
+        right:10%;
+    }
+    main{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 2.7rem;
+    }
+    main h1{
+        font-size: 7rem;
+    }
+    table{
+        width:70%
+    }
+    main iframe{
+        width: 49.4%;
+        display: inline-block;
+        height: 262px;
+        margin: 0;
+        vertical-align: top;
+        font-size: 0;
+    }
+    main section{
+        width: 49.99%;
+        display: inline-block;
+        border-radius: 25px;
+        vertical-align: top;      
+    }
+    aside h2{
+        width: 100%;
+        height: 50px;
+        margin: auto;
+    }
+    aside div{
+        font-size: 2rem;
+        display:inline-block;
+        vertical-align: top;
+        margin: 0;
+        width: 32.9%;
+        height: 150px;
+    }
+    footer{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    footer p,footer address{
+        font-size: 2rem;
+        text-align: center;
+        margin-left: 21%;
+        margin-right: 21%;
+    }
+@media stamp {
+    body{
+        background:white;
+    }
+    img{
+        display: none;
+    }
+    i{
+        display:none;
+    }
+    a{
+        color:red;
+    }
+    header div nav{
+        display:none;
+    }
+    table{
+        background-color: white;
+        color: black;
+        border:1px solid black;
+    }
+    table th{
+        font-weight: bold;
+    }
+    aside{
+        display:none;
+    }
+    footer{
+        display:none;
+    }
+}
+}
+html {font-size: 62.5%;}
+body { 
+    font-family: Poppins, 'Helvetica Neue', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    padding: 15px;
+    background-image: url('../img/sfondo.png');
+    background-position: center center;
+}
+* {box-sizing: border-box;}
+hr {display: none;} /* rimuove l'elemento */
+
+/* HEADER */
+header {
+    background: rgb(0,160,198);
+    background: linear-gradient(180deg, rgba(0,160,198,1) 0%, rgba(3,109,134,1) 68%);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 3px 3px #444;
+    margin-bottom: 1.5em;
+    padding: 2em 1.5em;
+}
+header div img {
+    margin-bottom: 20px;
+}
+header nav ul {
+    margin: 0;
+    display: inline-flex;
+}
+header nav li {
+    list-style: none;
+}
+header nav li a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+header nav li a:hover {
+    color: red;
+}
+header nav li a::before {
+    content: "\22c6\0020";
+}
+
+/* MAIN */
+main {
+    background-color: #fff;
+    box-shadow: 0 3px 3px #444;
+    padding: 2em 1em;
+    margin-bottom:1.5em ;
+}
+section { 
+    background-color: #e3e3e3;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+section h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.7em;
+}
+article img{
+    width: 60px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    border:3px solid  #499cb6;
+    outline: 3px solid rgb(138, 4, 138);
+}
+p, address, ul, ol, dl, blockquote {
+    margin-bottom: 1.2em;
+}
+h1 + p {
+    color: #a0a0a0;
+}
+ul, ol {
+    margin-left: 2em;
+}
+a {
+    color: #00A0C6;
+    font-weight: bold;
+}
+strong {
+    color: #a02571;
+    font-weight: bold;
+}
+code {
+    background-color: #e3e3e3;
+    border: 1px solid #969494;
+    border-radius: 5px;
+}
+iframe {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2em;
+    border-radius: 20px;
+}
+
+/* TABELLE */
+table {
+    margin-bottom: 2em;
+}
+caption {
+    font-weight: bold;
+    font-style: italic;
+}
+thead tr {
+    background-color: #3f6bca;
+    color: #ffffff;
+}
+th, td {
+    padding: 12px 15px;
+    vertical-align: bottom;
+    text-align: center;
+}
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #3f6bca;
+}
+
+/* FORM */
+input {
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px dashed #333;
+}
+button {
+    padding: 4px 7px;
+    background-color: #3f6bca;
+    border: 0;
+    color: white;
+    font-weight: bold;
+}
+
+/* ELEMENTI NELL' ASIDE */
+aside h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+@media screen and (min-width:768px) {
+    aside h2{font-size: 3.3rem;}
+}
+aside div {
+    background-color: #e3e3e3;
+    border: 1px solid #c3c3c3;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+aside div p:last-child {
+    margin-bottom: 0;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+
+/* FOOTER */
+footer {
+    background: rgb(53,53,53);
+    background: linear-gradient(0deg, rgba(53,53,53,1) 0%, rgba(5,85,103,1) 68%);
+    box-shadow: 0 3px 3px #444;
+    color: #f0f0f0;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.2rem;
+}
+footer a {
+    color: fuchsia;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immagini per alte risoluzioni</title>
+    <style type="text/css">
+        #logo{background: url(images/logo.png) no-repeat; width: 267px; height: 70px; background-color: #666;}
+        
+        @media
+        only screen and (-webkit-min-device-pixel-ratio:2), 
+        only screen and (min-resolution: 192dpi){
+            #logo{background: url(images/logo-2x.png) no-repeat; background-size: 534px 140px; width: 534px;height: 140px;background-color: green;}
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="logo">
+
+    </div>
+</body>
+</html>
