@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+    <style>
+        .contenitore{
+            width: 1024px;
+            margin: 0 auto;
+            border:2px solid rgb(0, 0, 0);
+            position:relative;
+            height: 800px;
+        }
+        .contenitore div{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+        }
+        #rosso{
+            background-color: red;
+            top:20px;
+            left: 20px;
+            z-index: 3;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #blu{
+            background-color: blue;
+            top:40px;
+            left: 40px;
+            z-index: 2;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #verde{
+            background-color: greenyellow;
+            top: 60px;
+            left: 60px;
+            z-index: 1;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #viola{
+            background-color: violet;
+            top: 80px;
+            left: 80px;
+            z-index: 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+        #viola:hover{
+            z-index: 4;
+            transform: scale(1.2);
+        }
+        #verde:hover{
+            z-index: 4;
+            transform: scale(1.15);
+        }
+        #blu:hover{
+            z-index: 4;
+            transform: scale(1.1);
+        }
+        #rosso:hover{
+            z-index: 4;
+            transform: scale(1.05);
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        /* auto-> uguale a tutti i parents
+           numero-> qualsiasi numero intero (positivo o negativo)
+           initial-> default(0)
+           inherit->eredita dal genitore
+        */
+
+    </style>
+</head>
+<body>
+    <h2>La proprietà z-index</h2>
+    <div class="contenitore">
+        <div id="rosso">ROSSO</div>
+        <div id="blu">BLUE</div>
+        <div id="verde">VERDE</div>
+        <div id="viola">VIOLA</div>
+        <img src="httpcloud3steamusercontentcomugc166572776348276016248435CCD07BC6AD4039E73E4393D760CC57B6EF7.png" alt="">
+    </div>
+</body>
+</html>

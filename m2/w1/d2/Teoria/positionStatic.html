@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Static</title>
+    <style>
+        div.static{
+            position:static;
+            border:3px solid yellowgreen;
+            top:100px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Position Static</h2>
+    <p>Un elemento che ha <code>Position:static</code> non è posizionato in nessun modo speciale, è sempre posizionato secondo il flow naturale della pagina</p>
+    <p>Glie elementi che hanno <code>position:static</code> non sono influenzati da top,bottom,left,right</p>
+    <p> Usato per cambiare "position" acquisiti da ancestors che possono avere positions differenti.</p>
+    <div class="static">
+        Io sono il div static
+    </div>
+</body>
+</html>

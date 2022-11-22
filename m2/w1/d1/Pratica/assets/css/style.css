@@ -75,6 +75,7 @@
         margin: 0;
         vertical-align: top;
         font-size: 0;
+        margin-inline: -7px;
     }
     main section{
         width: 49.99%;
@@ -94,6 +95,7 @@
         margin: 0;
         width: 32.9%;
         height: 150px;
+        margin-inline: -7px;
     }
     footer{
         width: 90%;
@@ -108,7 +110,9 @@
     }
 @media stamp {
     body{
+        background-image: none;
         background:white;
+        padding:0;
     }
     img{
         display: none;

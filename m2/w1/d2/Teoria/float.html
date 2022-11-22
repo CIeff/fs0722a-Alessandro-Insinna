@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        body{margin:0px;}
+        .container{width:1200px; margin:0 auto;border: 1px solid black;}
+        header{background-color:navy;text-align: center;}
+        header h1{color:white;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin:0;font-weight: 400;}
+        nav{background-color: blueviolet;height: 30px;}
+        nav ul{margin: 0;padding:0;list-style-type: none;}
+        nav li{float:left;border-right: 1px solid white;padding:0 90px}
+        /*float rompe la caratteristica di display:block e fa fluttuare gli elementi a sx ed a dx
+          i tag a cui asegnamo float NON contribuiscono all'altezza del contenitore! */
+        nav li#ultimo{border-right:none}
+        nav a{color: white;text-decoration: none;line-height:30px;display: block;}
+        nav a:hover{background-color: white;color:blueviolet;border-radius: 5px;}
+        /* main */
+        aside{float:left;width:300px;}
+        section{margin:0 310px;}
+        section p{text-align: justify;}
+        #right{float:right}     /* gli elementi con float vanno scritti sempre prima perchè gli elementi senza float prendono lo spazio lasciato libero */
+        .right{float:right}
+        .left{float:left}
+        /* footer */
+        footer{background-color: blueviolet;color: white;text-align: center;clear: both;}
+        footer p{margin:0}
+    </style>
+</head>
+<body>
+                                <!--header aside nav footer main article section-->
+
+    <div class="container">
+        <!-- inestazione -->
+        <header>
+            <h1>Epicode</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">Css</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Typescript</a></li>
+                    <li id="ultimo"><a href="#">Angular</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- corpo centrale-->
+        <main>
+            <aside>
+                <img src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png" width=200px alt=""><br>
+                <img src="httpcloud3steamusercontentcomugc166572776348276016248435CCD07BC6AD4039E73E4393D760CC57B6EF7.png" width=200px alt="">
+            </aside>
+            <aside id="right">
+                <img src="httpcloud3steamusercontentcomugc166572776348276016248435CCD07BC6AD4039E73E4393D760CC57B6EF7.png" width=200px alt="">
+                <img src="httpcloud3steamusercontentcomugc166572776348276016248435CCD07BC6AD4039E73E4393D760CC57B6EF7.png" width=200px alt="">
+            </aside>
+            <section>
+                <img class="left" src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png"  alt=""><p>Cotton candy jujubes powder donut tiramisu tiramisu lollipop tart chocolate bar. Chocolate gingerbread apple pie powder cake. Sugar plum chocolate marzipan lollipop lollipop. Liquorice cake cheesecake ice cream danish biscuit muffin. Sugar plum toffee ice cream danish icing macaroon oat cake jujubes. Powder soufflé pudding cotton candy jelly beans marshmallow marshmallow wafer. Pastry wafer chocolate bear claw chocolate bar sweet roll.</p>
+                <img class="right" src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png" alt=""><p>Chocolate bar powder gingerbread jujubes jelly beans cotton candy muffin wafer. Pastry tiramisu jelly-o brownie apple pie carrot cake jelly beans chocolate cake. Sweet candy canes sugar plum wafer brownie sesame snaps bear claw dessert danish. Cake muffin biscuit sugar plum tootsie roll bear claw brownie croissant chocolate bar. Fruitcake wafer gummi bears dragée cupcake. Lollipop tart chocolate bar chupa chups oat cake. Donut lollipop apple pie carrot cake sweet roll fruitcake.</p>
+                <img class="left" src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png"  alt=""><p>Cookie sugar plum sesame snaps carrot cake icing tart lemon drops. Tootsie roll cookie sweet roll cookie jujubes gummi bears croissant pastry cotton candy. Chocolate bar topping marzipan jelly-o brownie. Oat cake sugar plum carrot cake fruitcake biscuit jujubes halvah. Liquorice sesame snaps sweet roll gummi bears toffee caramels cheesecake sugar plum tart. Ice cream shortbread cake sugar plum wafer sugar plum sweet roll apple pie. Topping chocolate carrot cake gummies jelly. Sesame snaps apple pie jelly-o jelly-o candy powder bonbon.</p>                
+                <img class="right" src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png" alt=""><p>Chocolate bar powder gingerbread jujubes jelly beans cotton candy muffin wafer. Pastry tiramisu jelly-o brownie apple pie carrot cake jelly beans chocolate cake. Sweet candy canes sugar plum wafer brownie sesame snaps bear claw dessert danish. Cake muffin biscuit sugar plum tootsie roll bear claw brownie croissant chocolate bar. Fruitcake wafer gummi bears dragée cupcake. Lollipop tart chocolate bar chupa chups oat cake. Donut lollipop apple pie carrot cake sweet roll fruitcake.</p>
+                <img class="left" src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png"  alt=""><p>Cotton candy jujubes powder donut tiramisu tiramisu lollipop tart chocolate bar. Chocolate gingerbread apple pie powder cake. Sugar plum chocolate marzipan lollipop lollipop. Liquorice cake cheesecake ice cream danish biscuit muffin. Sugar plum toffee ice cream danish icing macaroon oat cake jujubes. Powder soufflé pudding cotton candy jelly beans marshmallow marshmallow wafer. Pastry wafer chocolate bear claw chocolate bar sweet roll.</p>
+                <img class="right" src="httpcloud3steamusercontentcomugc166572776348275562642B13A8750906ABD322AFAEDB644042113002202.png" alt=""><p>Chocolate bar powder gingerbread jujubes jelly beans cotton candy muffin wafer. Pastry tiramisu jelly-o brownie apple pie carrot cake jelly beans chocolate cake. Sweet candy canes sugar plum wafer brownie sesame snaps bear claw dessert danish. Cake muffin biscuit sugar plum tootsie roll bear claw brownie croissant chocolate bar. Fruitcake wafer gummi bears dragée cupcake. Lollipop tart chocolate bar chupa chups oat cake. Donut lollipop apple pie carrot cake sweet roll fruitcake.</p>
+            </section>           
+        </main>
+        <footer>
+            <p>Cookie sugar plum sesame snaps carrot cake icing tart lemon drops. Tootsie roll </p>
+        </footer>
+    </div>
+
+</body>
+</html>
