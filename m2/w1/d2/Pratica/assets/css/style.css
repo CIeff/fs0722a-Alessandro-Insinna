@@ -20,6 +20,9 @@ hr {
 
 /* HEADER */
 header {
+  z-index: 1;
+  position: sticky;
+  top:0;
   background: rgb(0, 160, 198);
   background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
   text-align: center;
