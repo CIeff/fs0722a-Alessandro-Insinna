@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Gallery</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+            grid-gap:20px;
+            align-items: stretch;
+        }
+        #container img{
+            border:1px solid gray;
+            box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.3);
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <main id="container">
+        <img src="pix/23m.jpeg" alt="Sample photo">
+        <img src="pix/24m.jpeg" alt="Sample photo">
+        <img src="pix/22m.jpeg" alt="Sample photo">
+        <img src="pix/25m.jpeg" alt="Sample photo">
+        <img src="pix/15l.jpeg" alt="Sample photo">
+        <img src="pix/16l.jpeg" alt="Sample photo">
+    </main>
+</body>
+</html>

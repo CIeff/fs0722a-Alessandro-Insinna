@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Order</title>
+    <style>
+        html,body{height: 100%;}
+        body{
+            margin:0;
+            padding:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            background: #e3e3e3;
+            outline: 2px solid black;
+            display: flex;
+            flex-flow: row nowrap;   /* mette assieme i valori delle proprietà flex-direction e flex-wrap */
+            align-items: center;
+            justify-content: space-around;
+        }
+        #box1{
+            background-color: red;
+            border:3px solid black;
+            order: 2;
+            -webkit-order:2;
+        }
+        #box2{
+            background-color: blue;
+            border: 3px  solid  black;
+            order: 3;
+            -webkit-order:3;
+        }
+        #box3{
+            background-color: green;
+            border: 3px solid black;
+            order: 1;
+            -webkit-order:1;
+        }
+        #container div{
+            padding:22px;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1">Box 1</div>
+        <div id="box2">Box 2</div>
+        <div id="box3">Box 3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .mainNav{
+            display: flex;
+            background-color: orangered;
+            color: white;
+            border-radius: 3px;
+            padding: 10px;
+            font-family: sans-serif;
+
+        }
+        .mainNav > ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex:3;   
+        }
+        .mainNav li{
+            margin-right: 1em;
+        }
+        .mainNav form{
+            display: flex;
+            justify-content: flex-end;
+            flex: 0.5;
+        }
+        .mainNav input{
+            flex: 1;
+        }
+        .mainNav button{
+            background-color: white;
+            border: 0;
+            border-radius: 1em;
+            color: orangered;
+            padding: 0px 1em;
+            margin-left: 0.3em;
+        }
+        @media screen and (max-width: 575px){
+            .mainNav{
+                flex-direction: column;
+            }
+            .mainNav ul{
+                flex-direction: column;
+                margin-bottom: 0.8em;
+                text-align: center;
+            }
+            .mainNav li{
+                margin-bottom: 0.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="mainNav">
+        <ul>
+            <li>Logo</li>
+            <li>Home</li>
+            <li>Products</li>
+            <li>Service</li>
+        </ul>
+        <form>
+            <input type="search" placeholder="search">
+            <button>Go</button>
+        </form>
+    </nav>
+</body>
+</html>

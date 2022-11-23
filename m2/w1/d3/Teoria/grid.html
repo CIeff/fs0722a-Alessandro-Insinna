@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        #container{
+            display: grid; /* altri possibili inline-grid | subgrid*/
+            /*
+            grid-template-columns: 10% 15% auto 15% 10%;
+            grid-template-rows: 25% 10% auto;
+            */
+            grid-template-columns: [inizio-col] 10% [col-2] 15% [col-3] auto [col-4] 15% [col-5] 10% [fine-col];
+            grid-template-rows: [inizio-riga] 25% [riga-1-fine riga-2-inizio] 25% [fine-riga-2] auto [fine-tutto];
+            outline: 3px solid red;
+            margin-bottom: 50px;
+        }
+        div {
+            border: 2px solid gray;
+        }
+        #container2{
+            outline: 4px solid yellowgreen;
+            display: grid;
+            grid-template-columns: 15% repeat(3,25%) auto;
+            grid-template-rows: [inizio-riga] 25% [riga-1-fine riga-2-inizio] 25% [fine-riga-2] auto [fine-tutto];
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+
+    <div id="container2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+
+    <div style='display: grid; grid-template-columns: repeat(4,25%); grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "main   main     .    sidebar"
+    "footer footer footer footer";'>
+        <div style='grid-area:header'>header</div>
+        <div style='grid-area:main'>main</div>
+        <div style='grid-area:sidebar'>sidebar</div>
+        <div style='grid-area:footer'>footer</div>
+    </div>
+
+    <br><br>
+
+    <div style='display: grid;
+                grid-template-columns: 25% auto 25%;
+                grid-template-rows:    20% 30% auto;
+                grid-row-gap:10px;
+                grid-column-gap:15px;'>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+
+    <br><br>
+
+    <div style='display:grid;
+                grid-template-columns: auto auot;
+                grid-template-rows: auto auto;
+                justify-items: stretch;'> <!-- stretch riempie la width dell'elemento; altri valori: start | end | center-->
+                <!--
+                    align-item -> allinea verticalmente (invece che orizzontalmente) valori: stretch | start | end | center
+                    justify-content -> posiziona rispetto ai margini del contenitore; valori: stretch | start | end | center | space-around | space-between
+                    align-content -> posiziona rispetto ai margini orizzontali del contenitore; valori: stretch | start | end | center | space-around | space-between | space-evenly
+                -->
+        <div>1</div>
+        <div>2</div>
+
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

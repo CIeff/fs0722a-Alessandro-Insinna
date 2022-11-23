@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Elementi</title>
+    <style>
+        div div{
+            border:1px solid green;
+            padding:30px;
+        }
+    </style>
+</head>
+<body>
+    <div style='display:grid;
+                grid-template-columns: [iniz-col] 10% [col-2] 15% [col-3] auto [col-4] 15% [col-5] 10% [fin-col];
+                grid-template-rows: [iniz-rig] 25% [rig-2] 15% [rig-3] auto [fin-rig];'>
+        <div>1</div>
+        <div style='
+                    grid-column-start: 2;
+                    grid-column-end: col-5;
+                    grid-row-start: iniz-rig;
+                    grid-row-end: 3;'
+        >2</div>
+        <div>5</div>
+        
+        <div>6</div>
+        <div>10</div>
+
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+    </div>
+</body>
+</html>
