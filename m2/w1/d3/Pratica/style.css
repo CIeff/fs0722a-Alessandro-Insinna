@@ -85,6 +85,7 @@ nav ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 nav ul div{
     background-color: rgba(255,223,127,255);
@@ -98,14 +99,17 @@ nav ul li{
     margin-right: 1em;
 }
 #shop{
+    display:flex; 
     flex-grow: 2;
     font-size: 2rem;
     width: 50%;
 }
 #shop img{
-    max-width: 13%;
-    float:left;
+    height:60px;
     margin-left: 15%;
+}
+#shop li{
+    margin-top: 10px;
 }
 
 /* Fine Nav */
@@ -173,11 +177,16 @@ article img{
         width: 0;
     }
     #shop img{
-        width: 50%;
+        height: 50px;
+        margin-left: 23px;
         
     }
+    #shop li{
+        margin-top: 10px;
+        font-size: 1.5rem;
+    }
     nav ul div{
-        width: 13.8%;
+        width: 15%;
         padding-left:1%;
         padding-right: 1%;
         padding-top: 2%;
