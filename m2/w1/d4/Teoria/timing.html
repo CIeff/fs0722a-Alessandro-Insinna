@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timing</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            border: 1px solid gray;
+            margin: 20px 20px;
+            transition: 5s;
+        }
+        #div1{transition-timing-function: linear;}      /* costante */
+        #div2{transition-timing-function: ease;}        /* parte piano, accelera, rallenta ->default */
+        #div3{transition-timing-function: ease-in;}     /* bassa velocità iniziale */
+        #div4{transition-timing-function: ease-out;}    /* bassa velocità finale */
+        #div5{transition-timing-function: ease-in-out;} /* bassa velocità iniziale e finale */
+
+        div:hover{
+            width:400px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>La proprietà <code>transition-timing-function</code></h1>
+    <p>Scrivo una serie di div per vedere le diverse curve di velocità</p>
+    <div id="div1">linear</div>
+    <div id="div2">ease</div>
+    <div id="div3">ease-in</div>
+    <div id="div4">ease-out</div>
+    <div id="div5">ease-in-out</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni testo</title>
+    <style>
+        #box{
+            margin:20px auto;
+            padding:5px;
+            width: 400px;background-color: gray;
+            border: 1px solid black;
+        }
+        #box h1{
+            margin: 0;
+            padding:5px;
+            animation-name: animazione_testo_02;
+            animation-duration: 5s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+        @keyframes animazione_testo_01{
+            0%{opacity: 0;}
+            100%{opacity: 1;}
+        }
+        @keyframes animazione_testo_02{
+            0%{transform:translate(0,0);}
+            10%{transform:translate(180px,0);}
+            100%{transform:translate(180px,0);}
+            /* 50% buon compromesso. 10->100% arriva e si ferma per la durata dell'animazione */
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Testo di prova</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni</title>
+    <style>
+        #box{
+            width: 150px;
+            height: 150px;
+            background-color: yellowgreen;
+            color:blueviolet;
+            border: 1px solid gray;
+            margin: auto;
+            animation: rotazione linear 0.65s infinite ;  /* nome animazione, timing function, delay (opzionale), iteration count, [direction], [fill mode] */
+        }
+        @keyframes rotazione {
+            /* from */
+            100% {transform: rotate(360deg);} /* step intermedio */
+            /* to */
+        }
+        h3{
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Animazione di una trasformazione</h1>
+    <p>gradualmente ruoteremo un div di 180 gradi e poi ritornerà alla posizione di partenza</p>
+    <div id="box">
+        <h3>box</h3>
+    </div>
+</body>
+</html>

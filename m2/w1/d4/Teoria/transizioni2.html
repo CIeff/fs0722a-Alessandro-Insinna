@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transizioni 2</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border: 1px solid black;
+            margin: 20px 20px;
+            transition-property: all;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0.1s;
+            /*transition: width 6s linear 2s  -> propriety, duration, timing function, delay*/
+        }
+        div:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>Specifico le proprietà della transizione una ad una</h1>
+    <p></p>
+    <div>    </div>
+</body>
+</html>

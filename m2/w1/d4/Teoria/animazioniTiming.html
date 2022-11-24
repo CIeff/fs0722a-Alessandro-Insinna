@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animazioni Timing</title>
+    <style>
+        #box{
+            width: 520px;
+            border: 1px solid gray;
+            padding:5px;
+            margin: auto;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid bisque;
+            animation-fill-mode: forwards;
+
+        }
+        #b1{
+            border-color: gold;
+            animation-name: animazione_box;
+            animation-duration: 5s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease;
+        }
+        #b2{
+            border-color: brown;
+            animation-name: animazione_box;
+            animation-duration: 5s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+        }
+        #b3{
+            border-color: green;
+            animation-name: animazione_box;
+            animation-duration: 5s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+        }
+        #b4{
+            border-color: red;
+            animation-name: animazione_box;
+            animation-duration: 5s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+        }
+        #b5{
+            border-color: rebeccapurple;
+            animation-name: animazione_box;
+            animation-duration: 5s;
+            animation-delay: 0.2s;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+        @keyframes animazione_box{
+            0%{transform: translate(0,0);}
+            100%{transform: translate(400px,0) rotate(90deg); border-radius: 50px;}
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="b1" class="box">1</div>
+        <div id="b2" class="box">2</div>
+        <div id="b3" class="box">3</div>
+        <div id="b4" class="box">4</div>
+        <div id="b5" class="box">5</div>
+    </div>
+</body>
+</html>

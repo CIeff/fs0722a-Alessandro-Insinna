@@ -1,0 +1,52 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: gray;
+    height: 100vh;
+    font-family: "Indie Flower";
+    font-size: 2rem;
+}
+.sticks{
+    margin: auto;
+    border: 1px solid transparent;
+    height: 30%;
+    width: 20%;
+    box-shadow: 2px 2px 6px black;
+    animation-name: sticks;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in-out;
+}
+.sticks:hover{
+    transform: scale(1.2);
+}
+@keyframes sticks{
+    0%{transform: scale(10);}
+    100%{transform: scale(1);}
+}
+.top{
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+.bottom{
+    margin-top: 0;
+    margin-bottom: 10%;
+}
+.sUn{
+    background-color:rgba(240,241,193,255);
+    transform: rotate(-8deg);
+}
+.sEv{
+    background-color: rgba(194,222,189,255);
+    transform: rotate(8deg);
+}
+.s3{
+    background-color:rgba(180,180,208,255);
+    transform: rotate(10deg);
+}
+.sticks div {
+    width:60%;
+    margin: 20% auto;
+}
+

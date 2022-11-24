@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --o0: 10px;
+        --v0: 20px;
+        --o1: 0px;
+        --v1: 0px;
+        --o2: 0px;
+        --v2: 0px;
+      }
+#ananas-1{
+    order: 1;
+    animation: maryJane 2s infinite;
+}
+#ananas-2{
+    order:3;
+    animation: maryJane 2s infinite;
+}
+      #container {
+        display: flex;
+        justify-content: center;
+      }
+      #acquario {
+        order:2;
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+        width: 600px;
+        border: 3px solid salmon;
+        background-image: url("images/fondo.jpg");
+        background-size: cover;
+      }
+      #coralli {
+        display: flex;
+        flex-direction: row;
+        z-index: 999;
+      }
+
+      #pescino-1 {
+        animation: move0 2s infinite;
+      }
+      #pescino-2 {
+        animation: move1 2s infinite;
+      }
+      #pescino-3 {
+        animation: move2 2s infinite;
+      }
+      #pescino-4 {
+        animation: move3 2s infinite;
+      }
+      #pescino-5 {
+        animation: move4 2s infinite;
+      }
+      #pescino-6 {
+        animation: move5 2s infinite;
+      }
+
+      @keyframes move0 {
+        50% {
+          transform: translate(var(--o0), var(--v0));
+        }
+      }
+      @keyframes move1 {
+        50% {
+          transform: translate(var(--o1), var(--v1));
+        }
+      }
+      @keyframes move2 {
+        50% {
+          transform: translate(var(--o2), var(--v2));
+        }
+      }
+      @keyframes move3 {
+        50% {
+          transform: translate(var(--o3), var(--v3));
+        }
+      }
+      @keyframes move4 {
+        50% {
+          transform: translate(var(--o4), var(--v4));
+        }
+      }
+      @keyframes move5 {
+        50% {
+          transform: translate(var(--o5), var(--v5));
+        }
+      }
+      @keyframes maryJane {
+      50%{opacity: 0;}        
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img id="ananas-1" src="4-giorno/images/pineapple.png" alt="ananal" />
+      <img id="ananas-2" src="4-giorno/images/pineapple.png" alt="ananal" />
+
+      <div id="acquario">
+        <div id="pescino-1" class="pescino">
+          <img src="images/cardinale.gif" alt="" srcset="" />
+        </div>
+        <div id="pescino-2" class="pescino">
+          <img src="images/cardinale2.gif" alt="" srcset="" />
+        </div>
+        <div id="pescino-3" class="pescino">
+          <img src="images/pesce-arciere.gif" alt="" srcset="" />
+        </div>
+        <div id="pescino-4" class="pescino">
+          <img src="images/pesce-arciere2.gif" alt="" srcset="" />
+        </div>
+        <div id="pescino-5" class="pescino">
+          <img src="images/pesci_tropicali_44.gif" alt="" srcset="" />
+        </div>
+        <div id="pescino-6" class="pescino">
+          <img src="images/pygoplites-diacanthus.gif" alt="" srcset="" />
+        </div>
+
+        <div id="coralli">
+          <img class="corallo" src="images/corallo.gif" alt="" srcset="" />
+          <img class="corallo" src="images/corallo2.gif" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let pesci = document.getElementsByClassName("pescino");
+      let len = pesci.length;
+      for (let i = 0; i < len; i++) {
+        pesci[i].style = `z-index: ${i}`;
+        setInterval(function setMovement() {
+          let rnd1 = Math.round(Math.random() * 200);
+          let rnd2 = Math.round(Math.random() * 200);
+          document.documentElement.style.setProperty(`--o${i}`, `${rnd1}px`);
+          document.documentElement.style.setProperty(`--v${i}`, `${rnd2}px`);
+        }, 2000);
+      }
+    </script>
+  </body>
+</html>
