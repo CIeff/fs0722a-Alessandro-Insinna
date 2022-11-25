@@ -1,3 +1,6 @@
+body{
+    overflow: hidden;
+}
 #container{
     display: flex;
     flex-wrap: wrap;
@@ -22,7 +25,7 @@
     transform: scale(1.2);
 }
 @keyframes sticks{
-    0%{transform: scale(10);}
+    0%{transform: scale(0);}
     100%{transform: scale(1);}
 }
 .top{
