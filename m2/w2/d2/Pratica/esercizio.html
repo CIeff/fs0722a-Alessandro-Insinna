@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="imgs/100x100_logo.png"
+              alt="Logo"
+              width="30"
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+            EasyTrip
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul
+              class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+              style="--bs-scroll-height: 100px"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#saldi">Saldi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#welcomeSummer"
+                  >Welcome Summer</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Last Minute</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Recensioni</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!--Fine Navbar-->
+
+      <!--Payoff-->
+      <div class="row m-4">
+        <div class="card border-light bg-light p-3">
+          <div class="card-body">
+            <span class="float-end mt-2">-As easy as a click</span>
+            <h5 class="card-title border-bottom pb-4 fs-1">EasyTrip</h5>
+            <p class="card-text mt-3 fst-italic text-secondary">
+              Scopri e viaggia verso nuove ed eccitanti mete, tutto alla portata
+              di un click.
+            </p>
+            <a href="#" class="btn btn-info text-light col-8 offset-2 mt-3"
+              >Prenota ora</a
+            >
+          </div>
+        </div>
+      </div>
+      <!--Fine Payoff-->
+
+      <!--Saldi-->
+      <div id="saldi">
+        <div class="row ms-3 me-6">
+          <div class="col-2 fw-bold">Saldi</div>
+          <div
+            class="offset-4 col-5 mb-1 text-info text-end"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample"
+            role="button"
+            aria-expanded="true"
+            aria-controls="collapseExample"
+          >
+            Nascondi sezione
+          </div>
+        </div>
+
+        <div class="row m-3 collapse show" id="collapseExample">
+          <article>
+            <div class="row">
+              <div class="col-6 col-md-4 col-lg-3 mb-1">
+                <div class="card">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top border border-info"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body border border-info">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 mb-1">
+                <div class="card">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top border border-info"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body border border-info">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 col-md-4 col-lg-3 mb-1">
+                <div class="card">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top border border-info"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body border border-info">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 d-block d-md-none d-lg-block col-lg-3 mb-1">
+                <div class="card">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top border border-info"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body border border-info">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!--Fine Saldi-->
+
+      <!--Welcome Summer-->
+      <div id="welcomeSummer">
+        <div class="row ms-3 me-6 mt-5">
+          <div class="col-6 fw-bold">Welcome Summer</div>
+          <div
+            class="col-5 mb-1 text-info text-end"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseExample2"
+            role="button"
+            aria-expanded="true"
+            aria-controls="collapseExample2"
+          >
+            Nascondi sezione
+          </div>
+        </div>
+
+        <div class="row m-3 collapse show" id="collapseExample2">
+          <article>
+            <div class="row">
+              <div
+                class="col-12 col-md-6 col-lg-4 col-xl-2 mb-1 border border-0"
+              >
+                <div class="card shadow-lg border border-0">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-6 col-lg-4 col-xl-2 mb-1 border border-0"
+              >
+                <div class="card shadow-lg border border-0">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-6 col-lg-4 col-xl-2 mb-1 border border-0"
+              >
+                <div class="card shadow-lg border border-0">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-6 col-lg-4 col-xl-2 mb-1 border border-0"
+              >
+                <div class="card shadow-lg border border-0">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-6 col-lg-4 col-xl-2 mb-1 border border-0"
+              >
+                <div class="card shadow-lg border border-0">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-12 col-md-6 col-lg-4 col-xl-2 mb-1 s border border-0"
+              >
+                <div class="card shadow-lg border border-0">
+                  <img
+                    src="imgs/293_banner_beach bungalow .jpg"
+                    class="card-img-top"
+                    alt="imgs/293_banner_beach bungalow .jpg"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                    <a href="#" class="btn btn-info">Prenota</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <!--Fine Welcome Summer-->
+
+      <!--Offerta del giorno-->
+      <div id="offertaDelGiorno" class="d-none d-md-block">
+        <div class="m-4 fw-bold">Offerta del giorno</div>
+        <div class="d-flex col-12 m-4">
+          <div class="col-6">
+            <img
+              src="imgs/293_banner_beach bungalow .jpg"
+              class="w-100 col-12 shadow-sm rounded"
+              alt="Picture"
+            />
+          </div>
+          <div class="mt-5 offset-1 col-4">
+            <h1 class="fw-normal">Fushifaru Maldives</h1>
+            <p class="font-monospace text-secondary mb-5">
+              15.01.2021-31.01.2021
+            </p>
+            <div class="text-secondary fs-5">
+              <span>Ville a partire da </span
+              ><span class="font-lead">500€,</span>
+              <p>non fartele sfuggire!</p>
+              <button type="button" class="btn btn-dark rounded-pill fs-6 mt-3">
+                Best offer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Fine Offerta del giorno-->
+
+      <!--Last Minute-->
+      <div class="row m-3">
+        <div class="col-4 col-md-4 col-lg-6 mb-1">
+          <img
+            src="imgs/293_banner_beach bungalow .jpg"
+            class="card-img-top rounded shadow-lg"
+            alt="imgs/293_banner_beach bungalow .jpg"
+          />
+        </div>
+        <div class="col-4 col-md-4 col-lg-6 mb-1">
+          <img
+            src="imgs/293_banner_beach bungalow .jpg"
+            class="card-img-top rounded shadow-lg"
+            alt="imgs/293_banner_beach bungalow .jpg"
+          />
+        </div>
+        <div class="col-4 col-md-4 col-lg-6 mb-1">
+          <img
+            src="imgs/293_banner_beach bungalow .jpg"
+            class="card-img-top rounded shadow-lg"
+            alt="imgs/293_banner_beach bungalow .jpg"
+          />
+        </div>
+        <div class="col-4 col-md-4 col-lg-6 mb-1">
+          <img
+            src="imgs/293_banner_beach bungalow .jpg"
+            class="card-img-top rounded shadow-lg"
+            alt="imgs/293_banner_beach bungalow .jpg"
+          />
+        </div>
+        <div class="col-4 col-md-4 col-lg-6 mb-1">
+          <img
+            src="imgs/293_banner_beach bungalow .jpg"
+            class="card-img-top rounded shadow-lg"
+            alt="imgs/293_banner_beach bungalow .jpg"
+          />
+        </div>
+        <div class="col-4 col-md-4 col-lg-6 mb-1">
+          <img
+            src="imgs/293_banner_beach bungalow .jpg"
+            class="card-img-top rounded shadow-lg"
+            alt="imgs/293_banner_beach bungalow .jpg"
+          />
+        </div>
+      </div>
+
+      <!--Fine Last Minute-->
+
+      <!--Recensioni-->
+      <div id="recensioni" class="ms-3">
+        <p class=" col-12 text-center fw-bold fs-4 mt-4">Dicono di noi</p>
+        <div class="d-flex">
+        <div class="col-2">
+            <i class="bi bi-person-circle  border rounded-circle border-info " style='font-size:40px;' ></i>
+        </div>
+        <div class="col-6">
+            <p class="fw-bold fs-5 ">User</p>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+            minima blanditiis nostrum nobis id, voluptate fuga dolorem libero!
+            Blanditiis deserunt ad sint iure doloribus exercitationem illum
+            accusantium quae similique nostrum!
+            </p>
+        </div>
+        </div>
+        <div class="d-flex">
+            <div class="col-2">
+                <i class="bi bi-person-circle  border rounded-circle border-info " style='font-size:40px;' ></i>
+            </div>
+            <div class="col-6">
+                <p class="fw-bold fs-5 ">User</p>
+                <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+                minima blanditiis nostrum nobis id, voluptate fuga dolorem libero!
+                Blanditiis deserunt ad sint iure doloribus exercitationem illum
+                accusantium quae similique nostrum!
+                </p>
+            </div>
+            </div>
+            <div class="d-flex">
+                <div class="col-2">
+                    <i class="bi bi-person-circle  border rounded-circle border-info " style='font-size:40px;' ></i>
+                </div>
+                <div class="col-6">
+                    <p class="fw-bold fs-5 ">User</p>
+                    <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+                    minima blanditiis nostrum nobis id, voluptate fuga dolorem libero!
+                    Blanditiis deserunt ad sint iure doloribus exercitationem illum
+                    accusantium quae similique nostrum!
+                    </p>
+                </div>
+                </div>        
+      </div>
+      <!--Fine Recensioni-->
+
+      <!--Fine Footer-->
+
+      <!--Footer-->
+    </div>
+    <div id="footer" class="bg-dark m-0 p-5">
+      <button type="button" class="btn btn-dark text-secondary border border-secondary offset-3 col-5 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Contattaci
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Invia</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="text-light text-center mt-4">© 2021 Kalina travel LTD. All Rights Reserved</p>
+      </div>
+      
+      <!--Fine Footer-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
