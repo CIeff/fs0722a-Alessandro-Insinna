@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/app.css">
+    <title>Document</title>
+</head>
+<body class="firefox">
+
+    <!-- Problemi moderni di css 1. organizzazione del codice 
+                                 2. mantenibilità 
+                                 3. rischi di duplicazione
+
+         Coosa è cambiato? 1. la qualità e quantità di dettagli richiesti da una moderna produzione web
+                           2. ecosistema in cui si sviluppa-> responsive
+                           3. tema della modularità-> porzioni di pagine che devono poter essere replicate
+                           -> problemi di lunghezza del codice, selettori troppo nidificati, mancata modularità, necessità di usare !important
+                           -> preprocessore css ci serve a mantenere il foglio di stile più modulare, più qualitativo, più leggibile
+                           -> sass (syntatically awesome style sheet) 
+                           -> preprocessore? Nasce con l'intento di potenziare gli strumenti per definire i fogli di stile 
+                           -> preprocessore si occupa di generare un file .css (preprocessando e aggregando la struttura di file sass) 
+                           
+                           diverse sintassi di sass-> noi useremo quella scss
+                           sintassi css
+
+                            body{
+                                margin:0;
+                                padding:10px
+                            }
+
+                            primo step nella sintassi sass -> sintassi iniziale di sass-> senza graffe e senza punti e virgola
+                                          -> tendenza a ridurre la sintassi
+
+                            body
+                                margin:0
+                                padding:10px
+
+                            secondo step .scss -> sassify cascading style sheet-> estendere la funzionalità del css standard
+                                               -> è un css con cose in più (sass dice che scss è un css con i superpowers)
+                        -->
+
+        <nav>
+            <ul>
+                <li>Primo</li>
+                <li>Secondo</li>
+                <li>Terzo</li>
+            </ul>
+        </nav>
+
+        <!-- Selettori Nidificati-->
+        <div id="main">
+            <p>Paragrafo in main</p>
+            <span>Span in main</span><br>
+            <a href="#">Link in main</a>
+        </div>
+
+        <!-- Selettori Nidificati 2-->
+        <div id="main2">
+            <div>
+                Testo
+                <p class="red">Testo con <a href="#">Link</a></p>
+            </div>
+        </div>
+
+        <!-- Nesting-->
+        <div class="esempio">
+            <h1 class="titolo">Titolo child</h1>
+            <p class="para">Paragrafo child</p>
+            <button class="bottone">Clicca qui</button>
+        </div>
+
+        <!-- Keyword &-->
+        <a href="#" id="pippo">Link pippo</a>
+
+        <!-- Pseudo-classi-->
+        <div class="esempio2">
+            <h1>keyword &</h1>
+            <button class="bottone">Prova</button>
+        </div>
+
+        <div id="main3">
+            <p>testo main 3</p>
+            <div id="main3-sidebar">    
+                <p>testo contenuto in <code>main3-sidebar</code></p>
+            </div>
+        </div>
+
+        <!-- Proprietà Nidificate
+             proprietà css che hanno un prefisso comune    
+        -->
+        <div id="main4">
+            <p>Testo con proprietà nidificate</p>
+        </div>
+
+</body>
+</html>

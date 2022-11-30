@@ -1,0 +1,105 @@
+nav {
+    display:block;
+    ul {
+        display:inline;
+        background-color: yellowgreen;
+        border:1px solid black;
+    }
+}
+/* Selettori Nidificati*/
+#main{
+    p{                      
+        font-size: 1.5rem;
+        margin-bottom:10px;
+    }
+    span{
+        font-size: 1.2rem;
+        padding-left: 10px;
+    }
+    a{
+        color: red;
+        text-decoration: none;
+    }
+}
+/* Selettori Nidificati 2*/
+#main2{
+    background-color: beige;
+    margin-top: 20px;
+    border-top: 2px solid black;
+    div{
+        color:violet;
+        .red{
+            color:green;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+}
+/* Nesting*/
+.esempio{
+    background-color: gainsboro;
+    h1{
+        color: aqua;
+    }
+    .titolo{
+         font-size: 50px;
+    }
+    .bottone{
+        background-color: black;
+        color:green;
+    }
+}
+/* Keyword &*/
+#pippo{
+    color:cornflowerblue;
+    font-size: 30px;
+    text-decoration: none;
+    &:hover{
+        background-color: gray;
+        text-decoration: underline;
+    }
+}
+/* Esempio2*/
+.esempio2{
+    background-color: aquamarine;
+    h1{
+        color:yellowgreen ;
+        &:hover{
+            color: black;
+            text-decoration: underline;
+        }
+    }
+    .bottone{
+        background-color: gainsboro;
+        &:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
+}
+
+#main3{
+    color: gray;
+    border:2px solid green;
+    margin-top: 20px;
+    &-sidebar{
+        border:1px solid blue;
+        padding:10px;
+    }
+    body.firefox & {
+        line-height: 1.5em;
+    }
+    body &{
+        margin:10px;
+    }
+}
+
+/* Proprietà Nidificate*/
+#main4{
+    font: {
+        family:Georgia;
+        size: 1.5em;
+        weight:bold;
+    }
+}

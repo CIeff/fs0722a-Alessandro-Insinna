@@ -1,0 +1,17 @@
+.btn {
+  display: inline;
+  padding: 20px;
+}
+.btn:hover {
+  transform: scale(1.2);
+}
+
+body {
+  width: 100%;
+  color: #4f4f4f;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}/*# sourceMappingURL=main.css.map */

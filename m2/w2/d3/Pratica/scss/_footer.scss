@@ -1,0 +1,37 @@
+footer{
+    div.container{
+        padding:3%;
+        display:$d-flex;
+        margin-top:4.3%;
+        background-color: $footer-white;
+        div.rights{
+            padding-top: 40px;
+            flex-grow: 1;
+            p{
+                color: gray;
+                margin-bottom: 15px;
+            }
+            ul{
+                padding-top: 20px;
+                display: $d-flex;
+                li{
+                    margin-right: $font-size-1;
+                    &:hover {
+                        cursor: pointer;
+                        color: $btn1-col;
+                    }
+                }
+            }
+        }
+        div.imgs{
+            display: $d-grid;
+            &:hover{
+                cursor: pointer;
+            }
+            img.macStadium{
+                width: 120px;
+                margin-top: 20px;
+            }
+        }
+    }
+}

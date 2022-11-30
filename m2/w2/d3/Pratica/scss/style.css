@@ -1,0 +1,108 @@
+nav div {
+  display: flex;
+  padding-top: 2%;
+  padding-left: 10%;
+}
+nav span {
+  font-weight: bold;
+  font-size: 2em;
+}
+nav span a {
+  text-decoration: none;
+  color: black;
+}
+nav span:hover {
+  transform: scale(1.2);
+}
+nav ul {
+  margin-left: 66.6%;
+  list-style: none;
+  display: flex;
+  margin-top: 0;
+  font-size: 1.2em;
+}
+nav ul li {
+  margin-right: 1em;
+  color: white;
+}
+nav ul li:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+body {
+  font-family: Arial;
+  background-color: rgb(100, 14, 197);
+}
+
+main div.container {
+  display: flex;
+  margin: 3% 12% 3% 10%;
+}
+main div.container h1 {
+  font-weight: bold;
+  font-size: 3em;
+  font-family: Arial;
+  padding-top: 3em;
+  margin-bottom: 5px;
+}
+main div.container p {
+  font-weight: bold;
+  font-size: 1em;
+  padding-right: 1.5em;
+}
+main div.container button {
+  margin-top: 0.5em;
+  border: transparent;
+  padding: 2em 1.5em 2em 1.5em;
+  border-radius: 5px;
+  color: white;
+  margin-right: 0.5em;
+  font-size: 1em;
+}
+main div.container button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+main div.container button.btn1 {
+  background-color: rgb(16, 108, 255);
+}
+main div.container button.btn2 {
+  background-color: rgb(255, 135, 0);
+}
+
+footer div.container {
+  padding: 3%;
+  display: flex;
+  margin-top: 4.3%;
+  background-color: rgb(249, 248, 248);
+}
+footer div.container div.rights {
+  padding-top: 40px;
+  flex-grow: 1;
+}
+footer div.container div.rights p {
+  color: gray;
+  margin-bottom: 15px;
+}
+footer div.container div.rights ul {
+  padding-top: 20px;
+  display: flex;
+}
+footer div.container div.rights ul li {
+  margin-right: 1em;
+}
+footer div.container div.rights ul li:hover {
+  cursor: pointer;
+  color: rgb(16, 108, 255);
+}
+footer div.container div.imgs {
+  display: grid;
+}
+footer div.container div.imgs:hover {
+  cursor: pointer;
+}
+footer div.container div.imgs img.macStadium {
+  width: 120px;
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */

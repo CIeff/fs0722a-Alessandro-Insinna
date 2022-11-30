@@ -1,0 +1,11 @@
+@import "variables";
+@import "buttons";
+
+body{
+    width:$main-width;
+    color:$colore-primario;
+}
+.container{
+    width: $main-width;
+    padding:$padding-base;
+}

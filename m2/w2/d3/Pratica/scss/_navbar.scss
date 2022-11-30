@@ -1,0 +1,42 @@
+nav{
+    div{
+        display: $d-flex;
+        padding: {
+            top:2%;
+            left:10%;
+        }
+    }
+    span{
+        font: {
+            weight:$font-weight-bold;
+            size:$font-size-2;        
+        }
+        a{
+            text-decoration:$none;
+            color: black;
+        }  
+        &:hover{
+            transform: scale(1.2);
+        }
+    }
+    ul{
+        margin-left: 66.6%;
+        list-style: $none;
+        display: flex;
+        margin-top: 0;
+        font-size: $font-size-1-2;
+        li{
+            margin-right: $margin-1;
+            color:white;            
+            &:hover {
+                color:orange;
+                cursor: pointer;
+            }
+        }
+     
+        
+
+    }
+
+    
+}

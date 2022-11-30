@@ -1,0 +1,107 @@
+@charset "UTF-8";
+nav {
+  display: block;
+}
+nav ul {
+  display: inline;
+  background-color: yellowgreen;
+  border: 1px solid black;
+}
+
+/* Selettori Nidificati*/
+#main p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+#main span {
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+#main a {
+  color: red;
+  text-decoration: none;
+}
+
+/* Selettori Nidificati 2*/
+#main2 {
+  background-color: beige;
+  margin-top: 20px;
+  border-top: 2px solid black;
+}
+#main2 div {
+  color: violet;
+}
+#main2 div .red {
+  color: green;
+}
+#main2 div .red a {
+  text-decoration: none;
+}
+
+/* Nesting*/
+.esempio {
+  background-color: gainsboro;
+}
+.esempio h1 {
+  color: aqua;
+}
+.esempio .titolo {
+  font-size: 50px;
+}
+.esempio .bottone {
+  background-color: black;
+  color: green;
+}
+
+/* Keyword &*/
+#pippo {
+  color: cornflowerblue;
+  font-size: 30px;
+  text-decoration: none;
+}
+#pippo:hover {
+  background-color: gray;
+  text-decoration: underline;
+}
+
+/* Esempio2*/
+.esempio2 {
+  background-color: aquamarine;
+}
+.esempio2 h1 {
+  color: yellowgreen;
+}
+.esempio2 h1:hover {
+  color: black;
+  text-decoration: underline;
+}
+.esempio2 .bottone {
+  background-color: gainsboro;
+}
+.esempio2 .bottone:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#main3 {
+  color: gray;
+  border: 2px solid green;
+  margin-top: 20px;
+}
+#main3-sidebar {
+  border: 1px solid blue;
+  padding: 10px;
+}
+body.firefox #main3 {
+  line-height: 1.5em;
+}
+body #main3 {
+  margin: 10px;
+}
+
+/* Proprietà Nidificate*/
+#main4 {
+  font-family: Georgia;
+  font-size: 1.5em;
+  font-weight: bold;
+}/*# sourceMappingURL=app.css.map */
