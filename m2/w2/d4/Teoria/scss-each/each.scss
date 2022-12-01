@@ -1,0 +1,6 @@
+@each $color in lightgray, burlywood, sienna, plum, green, red, blue {
+   .col_#{$color} {
+    background-color:  #{$color};
+    color:white;
+   }
+}

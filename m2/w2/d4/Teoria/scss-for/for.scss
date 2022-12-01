@@ -1,0 +1,7 @@
+@for $m from 1 through 5 {
+    .p#{$m} {
+        padding-left:$m*12px;
+        color:greenyellow;
+        background-color: grey;
+    }
+}

@@ -1,0 +1,40 @@
+%default-button{
+    color:$custom-black;
+    border:1px solid $custom-black;
+    box-shadow: 0 0 1px $custom-green;
+    text-shadow: 0 0 0 10px $custom-black;
+    border-radius: 5%;
+    padding: {
+        top:2px;
+        right:2px;
+        left:2px;
+        bottom:2px;
+    }
+    border:transparent;
+    font-size:15px;
+    &:hover {
+        transform: scale(1.15);
+        color: $custom-green;
+        background-color: $custom-black;
+    }
+}
+
+%default-a-link{
+    text-decoration: none;
+    color: $custom-black;
+    &:hover {
+        transform: scale(1.15);
+        color: $custom-green;
+        background-color: $custom-black;
+    }
+}
+
+%default-h1{
+    font-size:1.5rem;
+    margin:20px;
+}
+
+%default-p{
+    font-size:1.1rem;
+    color:$custom-viole;
+}

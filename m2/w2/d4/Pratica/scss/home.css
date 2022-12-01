@@ -1,0 +1,226 @@
+nav button {
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 0 1px #01ff01;
+  text-shadow: 0 0 0 10px #1a1a1a;
+  border-radius: 5%;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  border: transparent;
+  font-size: 15px;
+}
+nav button:hover {
+  transform: scale(1.15);
+  color: #01ff01;
+  background-color: #1a1a1a;
+}
+
+nav button a, nav ul li a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+nav button a:hover, nav ul li a:hover {
+  transform: scale(1.15);
+  color: #01ff01;
+  background-color: #1a1a1a;
+}
+
+main .container h1 {
+  font-size: 1.5rem;
+  margin: 20px;
+}
+
+main .container p {
+  font-size: 1.1rem;
+  color: #e600e6;
+}
+
+nav {
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+  text-shadow: 0px 0px 1px #1a1a1a;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e600e6;
+  padding-top: 3%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav {
+    padding-top: 1%;
+    padding-left: 15%;
+    padding-right: 5%;
+    margin-top: 0;
+  }
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin-right: 20px;
+}
+@media screen and (min-width: 768px) {
+  nav ul {
+    font-size: 1.2rem;
+    padding-top: 3%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav ul {
+    font-size: 1.4rem;
+    padding-top: 1%;
+  }
+}
+nav button {
+  background-color: #01ff01;
+  display: none;
+}
+@media screen and (min-width: 425px) {
+  nav button {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  nav button {
+    font-size: 1.2rem;
+    padding: 2%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  nav button {
+    padding: 1%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 100%;
+  font-family: "Spectral", serif;
+  background-color: #1a1a1a;
+  color: #01ff01;
+}
+main .container {
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+main .container p {
+  padding-bottom: 50px;
+  margin-left: 20px;
+}
+main img {
+  width: 50%;
+  margin: 2% 20%;
+  padding-bottom: 50px;
+}
+main img:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  main .container h1 {
+    font-size: 4rem;
+    padding-bottom: 4%;
+  }
+  main .container div {
+    display: flex;
+  }
+  main .container img {
+    margin-left: 2%;
+    padding-bottom: 5%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .container h1 {
+    font-size: 5rem;
+  }
+  main .container p {
+    font-size: 2rem;
+  }
+  main .container img {
+    width: 120%;
+  }
+}
+
+aside {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  aside {
+    display: block;
+    font-size: 1.4rem;
+  }
+  aside ul {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 110px;
+    right: 50px;
+  }
+  aside ul li {
+    margin-bottom: 50%;
+    border-bottom: 1px solid #e600e6;
+  }
+  aside ul li:hover {
+    cursor: pointer;
+    color: #d9d9d9;
+  }
+}
+@media screen and (min-width: 1200px) {
+  aside {
+    margin-left: 20%;
+  }
+  aside ul li {
+    font-size: 2rem;
+  }
+}
+
+footer {
+  background-color: #01ff01;
+  display: grid;
+  font-size: 15px;
+}
+footer div {
+  grid-column-start: 2;
+  margin-right: 50%;
+}
+footer div p {
+  width: 200%;
+  color: #e600e6;
+  text-shadow: 1px 0px 1px #1a1a1a;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+footer div p:hover {
+  color: #1a1a1a;
+  text-shadow: 1px 0px 1px #01ff01;
+  cursor: pointer;
+}
+footer img {
+  grid-column-start: 12;
+  width: 35px;
+  height: 45px;
+  flex-shrink: 1;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+@media screen and (min-width: 1200px) {
+  footer div p {
+    margin-left: 35%;
+  }
+}/*# sourceMappingURL=home.css.map */

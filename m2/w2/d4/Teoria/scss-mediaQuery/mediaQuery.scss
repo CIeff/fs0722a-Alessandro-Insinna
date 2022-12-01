@@ -1,0 +1,44 @@
+/*.menu {
+    li{
+        padding:10px;
+        @media screen and (max-width:1024px){
+            display: block;
+            text-align: center;
+            background-color: gray;
+        }
+        @media screen and (min-width:1025px){
+            display: inline-block;
+            border-right: 1px solid black;
+            &:first-child{
+                border-left:1px solid black;
+            }
+        }
+    }
+}
+*/
+
+//Definire i mixins per i due maggiori breakpoint (mobile e tablet)
+//breakpoint è una variabile che può avere diversi valori
+
+@mixin devices ($breakpoint) {
+    @if $breakpoint == tablet {
+    @media screen and (max-width:680px){
+        @content
+    }
+    }   
+    @if $breakpoint == mobile {
+        @media screen and  (max-width: 480px){
+            @content
+        }
+    }
+}
+
+.responsive{
+    background-color: yellow;
+    @include devices(tablet){
+        background-color: lightblue;
+    }
+    @include devices(mobile){
+        background-color: greenyellow;
+    }
+}

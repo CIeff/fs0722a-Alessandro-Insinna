@@ -1,0 +1,31 @@
+/*.menu {
+    li{
+        padding:10px;
+        @media screen and (max-width:1024px){
+            display: block;
+            text-align: center;
+            background-color: gray;
+        }
+        @media screen and (min-width:1025px){
+            display: inline-block;
+            border-right: 1px solid black;
+            &:first-child{
+                border-left:1px solid black;
+            }
+        }
+    }
+}
+*/
+.responsive {
+  background-color: yellow;
+}
+@media screen and (max-width: 680px) {
+  .responsive {
+    background-color: lightblue;
+  }
+}
+@media screen and (max-width: 480px) {
+  .responsive {
+    background-color: greenyellow;
+  }
+}/*# sourceMappingURL=mediaQuery.css.map */

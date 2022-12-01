@@ -1,0 +1,19 @@
+//set template
+//possible values dark, bright
+$template:dark;
+//template colors
+$bg-dark:black;
+$fg-dark:grey;
+$bg-bright:beige;
+$fg-bright:beige;
+
+body {
+    @if $template ==dark{
+        background-color: $bg-dark;
+        color: $fg-bright;
+    }
+    @else{
+        background-color: $bg-bright;
+        color:$fg-dark;
+    }
+}

@@ -1,0 +1,44 @@
+footer{
+    background-color: $custom-green;
+    display: grid;
+    font-size:15px;
+    div{
+        grid-column-start: 2;
+        margin-right: 50%;
+        p{
+        width: 200%;
+        color:$custom-viole;
+        text-shadow: 1px 0px 1px $custom-black;
+        margin: {
+            left:20px;
+            top:10px;
+            bottom:10px
+        }
+    
+        &:hover {
+            color: $custom-black;
+            text-shadow: 1px 0px 1px $custom-green;
+            cursor:pointer;
+        }
+    }
+    }
+    img{
+        grid-column-start: 12;
+        width: 35px;
+        height: 45px;
+        flex-shrink: 1;
+        margin: {
+            right:5px;
+            top:5px;
+            bottom:5px;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        div{
+            p{
+                margin-left: 35%;
+            }
+        }
+    }
+}

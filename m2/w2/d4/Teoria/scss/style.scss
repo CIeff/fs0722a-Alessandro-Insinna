@@ -1,0 +1,60 @@
+/* Extend*/
+.box{
+    border:1px solid black;
+    background-color: green;
+    margin-bottom: 10px;
+    width: 200px;
+    font-size: 30px;
+}
+.myBox{
+    @extend .box;
+    font-size:10px;
+}
+
+/* Placeholder %*/
+%box2{
+    border: 1px solid black;
+    background-color: violet;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.myFirstBox{
+    @extend %box2;
+    font-size: 10px;
+}
+.mySecondBox{
+    @extend %box2;
+    font-size:20px;
+}
+
+/* Mixin*/
+@mixin baseButton($bgColor, $color, $borColor) {
+    padding:10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    border:1px solid $borColor;
+    background-color: $bgColor;
+    outline:1px solid $bgColor;
+    box-shadow: 0 0 10px $bgColor;
+    &:hover {
+        color:$bgColor;
+        background-color: $color;
+        box-shadow: $borColor;
+    }
+}
+button.green{
+    @include baseButton(green,white,black);
+}
+button.red{
+    @include baseButton(red,white,black)
+}
+button.blue{
+    @include baseButton(blue,white,black)
+}
+button.yellow{
+    @include baseButton(yellow,white,black)
+}

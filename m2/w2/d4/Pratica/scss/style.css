@@ -27,7 +27,10 @@ nav ul li {
   margin-right: 1em;
   color: white;
 }
-nav ul li:hover {
+nav ul a {
+  text-decoration: none;
+  color: white;
+}nav ul a:hover {
   color: orange;
   cursor: pointer;
 }

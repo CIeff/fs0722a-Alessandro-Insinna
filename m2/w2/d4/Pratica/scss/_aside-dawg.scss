@@ -1,0 +1,29 @@
+aside{
+    display:none;
+    @media screen and (min-width:768px) {
+        display: block;
+        font-size: 1.3rem;
+        margin-right: 10%;
+        ul{
+            position: sticky;
+            top:140px;
+            right:50px;
+            width: 100px;
+            li{
+                margin-bottom: 50%;
+                border-bottom: 1px solid $custom-viole;
+                &:hover {
+                    cursor: pointer;
+                    color: $custom-white;
+                }
+            }
+        }
+    }
+    @media screen and (min-width:1200px){
+        ul{
+            li{
+                font-size: 2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@function stripes($nr,$url){
+  $start: hsla(0,100%,50%,0.4);
+  $step_1: 100% / $nr; 
+  $step_2: 360  / $nr;
+  $stripe: "linear-gradient(to bottom, " + $start + " 0% ";
+  @for $i from 0 through $nr {
+    $stripe: $stripe + ", " + hsla($step_2 * $i, 100%, 50%,0.4) + ($step_1 * $i) + ", " + hsla($step_2 * ($i + 1), 100%, 50%, 0.4) + ($step_1 * $i) ;
+  }
+  $stripe: $stripe + ")";
+  @return unquote($stripe + ", url(" + $url + ")");
+}
+
+div{
+  width: 400px;
+  height: 400px;
+  background-image: stripes(7,"https://picsum.photos/seed/picsum/400/400");
+}

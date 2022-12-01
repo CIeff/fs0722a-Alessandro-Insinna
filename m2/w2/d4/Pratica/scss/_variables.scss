@@ -1,6 +1,23 @@
+$custom-green:lighten(green, 25%);
+$custom-black:lighten(black, 10%);
+$custom-white:darken(white,15%);
+$custom-viole:lighten(purple,20%);
+
+$d-flex:flex;
+
+$default-padding-px-right:20px;
+$default-padding-px-left:20px;
+$default-padding-px-top:20px;
+$default-padding-px-bottom:20px;
+
+$default-padding-perc-right:5%;
+$default-padding-perc-left:5%;
+$default-padding-perc-top:3%;
+$default-padding-perc-bottom:3%;
+
+
 $font-weight-bold:bold;
 $d-line:inline;
-$d-flex:flex;
 $d-grid:grid;
 $max-width:100%;
 $none:none;

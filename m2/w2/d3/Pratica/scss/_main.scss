@@ -1,4 +1,5 @@
 body{
+    overflow: hidden;
     font-family: $Arial;
     background-color: $custom-violet;
 }
@@ -34,7 +35,7 @@ main{
                 size: $font-size-1;
             }
             &:hover{
-                transform: scale(1.2);
+                transform: $scale-default;
                 cursor: pointer;
             }
         }
