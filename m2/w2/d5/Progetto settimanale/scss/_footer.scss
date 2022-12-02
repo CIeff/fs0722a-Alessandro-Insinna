@@ -1,0 +1,54 @@
+footer{
+    color:white;
+    background-color: $custom-violet-bg;
+    @media screen and(min-width:768px) {
+        width: 100%;
+    }
+    h2{
+        margin:5px;
+        padding-top: 20px;
+
+    }
+    .contFoot{
+        @media screen and (min-width:768px) {
+            display: inline-flex;
+            justify-content: space-between;
+            width: 85%;
+            margin:20px 50px 0 50px;
+        }
+    }
+    .card,.card-header,.list-group-item{
+        background: transparent;
+        border:transparent;
+        margin:transparent;
+        outline:transparent;
+        color:white;
+        @media screen and (min-width:768px) {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    .card{
+        padding-bottom: 20px;
+    }
+    .card-header{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    h2,li.list-group-item{
+        &:hover {
+            cursor: pointer;
+            color:$custom-orange-text;
+        }
+    }
+    p{
+        margin-bottom: 0;
+        margin-left:15px;
+        font-size: 10px;
+        text-align: left;
+        @media screen and (min-width:768px) {
+            text-align: center;
+            padding-bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="scss/style.css" />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-md p-4">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">BootPro</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div
+        class="collapse navbar-collapse justify-content-end"
+        id="navbarScroll"
+      >
+        <ul
+          class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+          style="--bs-scroll-height: 120px"
+        >
+          <li class="nav-item">
+            <a class="nav-link home" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servizi</a>
+          </li>
+          <li class="nav-item d-inline-flex">
+            <a class="nav-link" href="#">Contatti</a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-twitter"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-twitch"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"
+              />
+              <path
+                d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-discord"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-whatsapp"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"
+              />
+            </svg>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--Fine Navbar-->
+
+    <!--Main-->
+    <main>
+      <div class="card sky">
+        <div class="card-body">
+          <h1 class="card-title">La nostra passione si erge sopra ogni cosa</h1>
+          <p class="card-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
+            numquam voluptate eum ab harum, quos saepe eius assumenda odio
+            necessitatibus sint quo fuga. Labore, velit similique quaerat ullam
+            error adipisci.
+          </p>
+          <a href="#" class="btn btn-primary">Iscriviti alla lista contatti</a>
+        </div>
+      </div>
+
+      <article class="d-md-flex">
+        <div class="card">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-briefcase-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5z"
+            />
+            <path
+              d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85v5.65z"
+            />
+          </svg>
+          <div class="card-body">
+            <h3>Lorem ipsum</h3>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card card2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-person-plus-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"
+            />
+          </svg>
+          <div class="card-body">
+            <h3>Lorem ipsum</h3>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-binoculars-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.5 1A1.5 1.5 0 0 0 3 2.5V3h4v-.5A1.5 1.5 0 0 0 5.5 1h-1zM7 4v1h2V4h4v.882a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V13H9v-1.5a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5V13H1V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882V4h4zM1 14v.5A1.5 1.5 0 0 0 2.5 16h3A1.5 1.5 0 0 0 7 14.5V14H1zm8 0v.5a1.5 1.5 0 0 0 1.5 1.5h3a1.5 1.5 0 0 0 1.5-1.5V14H9zm4-11H9v-.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5V3z"
+            />
+          </svg>
+          <div class="card-body">
+            <h3>Lorem ipsum</h3>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <div class="partnerships px-4">
+        <h1>Partnerships</h1>
+        <div class="d-flex">
+          <a href="#"><img src="img/company-1.png" alt="Accenture" /></a>
+          <a href="#"><img src="img/company-2.png" alt="FedEx" /></a>
+          <a href="#"><img src="img/company-3.png" alt="Netflix" /></a>
+          <a href="#"><img src="img/company-4.png" alt="Tim" /></a>
+        </div>
+      </div>
+
+          <!--Reviews-->
+    <div id="carousel">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <h1>Le opinioni dei nostri clienti</h1>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                    assumenda tempora expedita eius accusamus iure. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit.
+                  </p>
+              <img src="img/reviews/reviews-1.jpg" alt="Reviews" />
+              <p class="reviewer">Jamie Batty</p>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                assumenda tempora expedita eius accusamus iure. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit.
+              </p>
+              <img src="img/reviews/reviews-2.jpg" alt="reviews" />
+              <p class="reviewer">Jamie Batty</p>
+            </div>
+            <div class="carousel-item">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+                    assumenda tempora expedita eius accusamus iure. Lorem ipsum dolor
+                    sit amet consectetur adipisicing elit.
+                  </p>
+              <img src="img/reviews/reviews-3.jpg" alt="reviews" />
+              <p class="reviewer">Elton John</p>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </div>
+        <!--Fine Reviews-->
+    </main>
+    <!--Fine Main-->
+
+
+
+    <!--Footer-->
+    <footer>
+      <div class="contFoot">
+        <h2>BootPro</h2>
+        <div class="card">
+          <div class="card-header">Mission & Vision</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Lorem ipsum</li>
+            <li class="list-group-item">Lorem ipsum</li>
+            <li class="list-group-item">Lorem ipsum</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">Dove siamo</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Lorem ipsum</li>
+            <li class="list-group-item">Lorem ipsum</li>
+            <li class="list-group-item">Lorem ipsum</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">Contatti</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Lorem ipsum</li>
+            <li class="list-group-item">Lorem ipsum</li>
+            <li class="list-group-item">Lorem ipsum</li>
+          </ul>
+        </div>
+      </div>
+      <p>©Alessio per Epicode School</p>
+    </footer>
+
+    <!--Fine Footer-->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

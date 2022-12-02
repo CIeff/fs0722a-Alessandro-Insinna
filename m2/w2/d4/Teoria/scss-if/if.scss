@@ -1,22 +1,2 @@
 //set template
 //possible values dark, bright
-$template:dark;
-//template colors
-$bg-dark:black;
-$fg-dark:grey;
-$bg-bright:beige;
-$fg-bright:beige;
-
-@mixin colors{
-    @if $template == dark {
-        background-color: $bg-dark;
-        color: $bg-bright;
-    }
-    @if $template == bright {
-        background-color: $bg-bright;
-        color:$fg-dark;
-    }
-}
-body{
-    @include colors;
-}

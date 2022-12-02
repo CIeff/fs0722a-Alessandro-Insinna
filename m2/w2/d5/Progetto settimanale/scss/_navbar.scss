@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+nav{
+    background-color: $custom-violet-bg;
+    .navbar-brand{
+        color:white;
+    }
+    div{
+        .navbar-toggler{
+            background-color: $custom-orange-text;
+
+        }
+        .nav-link{
+            color:$custom-orange-text;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .home{
+            color:white;
+        }
+        li svg {
+        padding-top:10px;
+        color:$custom-orange-text;
+        &:hover {
+            cursor: pointer;
+        }
+        }
+    }
+
+}

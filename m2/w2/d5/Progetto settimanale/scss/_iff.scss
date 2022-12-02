@@ -1,0 +1,26 @@
+$template:default;
+
+$default-bg-color-main:transparent;
+$default-tx-color-main:black;
+$dark-bg-color-main:rgb(43, 41, 41);
+$dark-txt-color-main:white;
+
+
+@mixin colors{
+    @if $template == dark {
+        background-color: $dark-bg-color-main;
+        color: $dark-txt-color-main;
+        
+        article{
+                color:$default-tx-color-main;
+            }
+        
+    }
+    @if $template == default {
+        background-color: $default-bg-color-main;
+        color:$default-tx-color-main;
+    }
+}
+main{
+    @include colors;
+}

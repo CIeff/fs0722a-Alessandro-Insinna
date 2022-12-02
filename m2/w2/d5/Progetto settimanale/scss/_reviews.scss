@@ -1,0 +1,42 @@
+#carousel{
+    display: none;
+    @media screen and (min-width:768px) {
+    display: block;
+    margin: 0;
+    @media screen and (min-width:1200px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: url(../img/g.png);
+        background-position: bottom;
+        background-size: 3500px;
+    }
+#carouselExampleInterval{
+    width: 100%;
+    margin:0 auto;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    h1{
+        text-align: center;
+        font-weight: normal;
+        padding-bottom: 50px;
+    }
+    p{
+        text-shadow: 0 0 0.3px black;
+        margin-left: 30%;
+        margin-right: 30%;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    img{
+        width: 50px;
+        border-radius: 100%;
+        margin-left: 48.5%;        
+    }
+    .reviewer{
+        text-align: center;
+        text-shadow: 0 0 0.5px black;
+        padding-top: 15px;
+    }
+    }
+}
+}
