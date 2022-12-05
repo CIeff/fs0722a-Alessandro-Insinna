@@ -1,0 +1,268 @@
+main {
+  background-color: rgb(43, 41, 41);
+  color: white;
+}
+main article {
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgb(112, 32, 242);
+}
+nav .navbar-brand {
+  color: white;
+}
+nav div .navbar-toggler {
+  background-color: rgb(250, 39, 85);
+}
+nav div .nav-link {
+  color: rgb(250, 39, 85);
+}
+nav div .nav-link:hover {
+  cursor: pointer;
+}
+nav div .home {
+  color: white;
+}
+nav div li svg {
+  padding-top: 10px;
+  color: rgb(250, 39, 85);
+}
+nav div li svg:hover {
+  cursor: pointer;
+}
+
+main div.sky {
+  text-shadow: 0 0 0.3px black;
+  background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0;
+}
+@media screen and (min-width: 768px) {
+  main div.sky {
+    background-position: center;
+  }
+}
+main div.sky h1 {
+  font-weight: normal;
+}
+main div.sky a {
+  background-color: rgb(103, 15, 241);
+  border: transparent;
+  margin-bottom: 20px;
+}
+main div.sky a:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  main div.sky a {
+    margin-bottom: 300px;
+    margin-top: 15px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main div.sky a {
+    margin-bottom: 500px;
+    margin-top: 20px;
+  }
+}
+main div.sky p {
+  margin-right: 60%;
+}
+@media screen and (min-width: 768px) {
+  main div.sky p {
+    margin-right: 0;
+  }
+}
+main article .card {
+  border: transparent;
+}
+main article .card svg {
+  margin: 15px auto 0 auto;
+}
+main article .card h3 {
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  main article .card {
+    background-color: transparent;
+    margin-top: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main article .card {
+    padding-bottom: 300px;
+  }
+}
+main article .card2 {
+  background-color: rgb(248, 248, 248);
+}
+@media screen and (min-width: 768px) {
+  main article .card2 {
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main article {
+    background-image: url(../img/s.png);
+    background-position: top;
+    background-size: 3000px;
+    background-image: black;
+  }
+}
+main .partnerships {
+  background-image: url(../img/g.png);
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+main .partnerships h1 {
+  text-align: center;
+  font-weight: normal;
+}
+main .partnerships div {
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  main .partnerships div {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+main .partnerships div a > img {
+  width: 50px;
+}
+@media screen and (min-width: 768px) {
+  main .partnerships div a > img {
+    width: 100px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main .partnerships {
+    background-color: rgb(245, 245, 245);
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .partnerships {
+    background-color: transparent;
+    background-image: url(../img/v.png);
+    background-position: center;
+    background-size: 3400px;
+    padding-top: 0px;
+    padding-bottom: 590px;
+  }
+}
+
+#carousel {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #carousel {
+    display: block;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  #carousel {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: url(../img/g.png);
+    background-position: bottom;
+    background-size: 3500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #carousel #carouselExampleInterval {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  #carousel #carouselExampleInterval h1 {
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 50px;
+  }
+  #carousel #carouselExampleInterval p {
+    text-shadow: 0 0 0.3px black;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  #carousel #carouselExampleInterval img {
+    width: 50px;
+    border-radius: 100%;
+    margin-left: 48.5%;
+  }
+  #carousel #carouselExampleInterval .reviewer {
+    text-align: center;
+    text-shadow: 0 0 0.5px black;
+    padding-top: 15px;
+  }
+}
+
+footer {
+  color: white;
+  background-color: rgb(112, 32, 242);
+}
+@media screen and (min-width: 768px) {
+  footer {
+    width: 100%;
+  }
+}
+footer h2 {
+  margin: 5px;
+  padding-top: 20px;
+}
+@media screen and (min-width: 768px) {
+  footer .contFoot {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 20px 50px 0 50px;
+  }
+}
+footer .card, footer .card-header, footer .list-group-item {
+  background: transparent;
+  border: transparent;
+  margin: transparent;
+  outline: transparent;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  footer .card, footer .card-header, footer .list-group-item {
+    text-align: center;
+    font-size: 14px;
+  }
+}
+footer .card {
+  padding-bottom: 20px;
+}
+footer .card-header {
+  font-weight: bold;
+  font-size: 20px;
+}
+footer h2:hover, footer li.list-group-item:hover {
+  cursor: pointer;
+  color: rgb(250, 39, 85);
+}
+footer p {
+  margin-bottom: 0;
+  margin-left: 15px;
+  font-size: 10px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  footer p {
+    text-align: center;
+    padding-bottom: 5px;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obj-log-user</title>
+</head>
+<body>
+    
+    <input type="text" name="user" id="user" title="">
+    <input type="password" name="psw" id="psw">
+    <button id="entra_btn">Entra</button>
+    <div id="target1"></div>
+    <div id="target2"></div>
+
+    <script>
+
+        function User(){
+            this.name="";
+            this.accessID=-1;
+        }
+        User.prototype.userType={}|| null; //estende l'oggetto con prototype
+
+        function Admin(){
+            this.id="ADMIN";
+            this.access="unlimited";
+        }
+
+        var EventHandler={
+            CLICK:"click",
+            MOUSE_OVER:"mouseover",
+            MOUSE_OUT:"mouseout"
+        }
+        
+        var user= new User();
+        var entra_btn= document.querySelector("#entra_btn");
+        var user=document.querySelector("#user");
+        var psw=document.querySelector("#psw");
+        var target1=document.querySelector("#target1");
+        var target2=document.querySelector("#target2");
+
+        entra_btn.addEventListener(EventHandler.CLICK, logIn); //al click chiama la funzione login
+        user.addEventListener(EventHandler.MOUSE_OVER, onMouseOver);
+
+        function logIn(e){
+            if(user.value=="user" && psw.value=="123"){
+                user.accessID=0;
+                user.userType=null; //se è user setta la proprietà userType a null
+
+            }
+            else if(user.value=="admin" && psw.value=="123"){
+                user.accessID=1;
+                user.userType=new Admin(); //se è admin sett al proprietà userType con il nuovo oggetto new ADMIN
+            }
+            else{            //terzo caso nell'else se  è sbagliato
+                user.accessID=-1;
+                user.userType=null;  // se è user setta la proprietà userType a null
+            }
+            user.name=user.value;
+            if(user.accessID>-1){
+                target1.innerHTML="Benvenuto "+ user.name;
+                target2.innerHTML="";
+            }
+            else{
+                target1.innerHTML="User o psw errate";
+                target2.innerHTML="";
+            }
+            if (user && user.userType){
+                if(user.userType.id=="Admin")
+                console.log(user.userType.id);
+                target2.innerHTML="<h2>Ruolo Admin</h2>"
+            }
+            else {          //aggiunto l'else per svuotare l'h2
+                target2.innerHTML="";
+            }
+        }
+        function onMouseOver(e){
+            e.target.title="Inserisci il valore corretto";
+        }
+
+    </script>
+</body>
+</html>
+

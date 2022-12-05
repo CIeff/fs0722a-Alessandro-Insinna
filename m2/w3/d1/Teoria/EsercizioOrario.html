@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        function clock(){
+            this.currentDate=new Date();
+            this.hours=this.currentDate.getHours();
+            this.minutes=this.currentDate.getMinutes();
+            this.seconds=this.currentDate.getSeconds();
+        }
+        clock.prototype.run=function (){                    //prototype con un metodo
+            setInterval(this.update.bind(this),1000);       //.bind è un metodo che crea una nuova funzione dove possiamo "fissare" this altrimenti nelle funzioni callback 
+        };                                                  // si sarebbe perso il "this"
+        clock.prototype.update=function(){
+            this.updateTime(1);
+            console.log(this.hours+" "+this.minutes+" "+this.seconds);
+        };
+        clock.prototype.updateTime=function(seconds){
+            this.seconds+=seconds;
+            if(this.seconds==60){
+                this.minutes++;
+                this.seconds=0;
+            }
+            if(this.minutes==60)
+            {
+                this.hours++;
+                this.minutes=0;
+            }
+            if(this.hours==24){
+                this.hours=0;
+            }
+        };
+        var clock=new clock();
+        clock.run();
+
+    </script>
+</body>
+</html>

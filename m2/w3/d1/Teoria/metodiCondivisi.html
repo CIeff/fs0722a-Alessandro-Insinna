@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Metodi Condivisi</title>
+</head>
+<body>
+    <!-- tipi di dato primitivi-> strutture semplici-> assegno un valore ad una variabile-->
+    <!--
+        oggetti-> strutture complesse-> quando asseggno un oggetto ad una variabile
+        non fa in modo che la variabile contenga effettivamente l'oggetto, ma contiene un riferimento all'oggetto
+    -->
+
+    <script>
+        var x=10; //x è 10
+        var y=x;
+        y=y+1;    // y è 11 ma x è ancora 10
+
+        var persona= {nome:"Mario",cognome:"Rossi"};
+        var altraPersona=persona;
+        altraPersona.nome="Giuseppe";
+        // se proviamo ad accedere alla proprietà nome dell'oggetto persona anch'essa ora ha volore Giuseppe
+        // sia persona che altraPersona contengono un riferimento allo stesso oggetto
+        // ogni modifica effettuata alla variabile persona si riflette anche su altraPersona
+        
+        //toString() e valueOf() sono metodi condivisi da tutti gli oggetti
+        //toString()-> restituisce una versiona stringa dell'oggeto
+        var x = new Object(32);
+        x.toString(); //restituisce la stringa "32";
+        console.log(x);
+
+        //se l'oggetto non è riconducibile ad un tipo di dato primitivo [object Object]
+        var persona= new Object({nome: "Mario",congome:"Rossi"});
+        persona.toString();  //restituisce [object Object]
+
+        //valueOf()-> restituisce il valore di un oggetto
+        var x = new Object (32);
+        y.valueOf(); //32;
+        console.log(y)
+
+
+    </script>
+</body>
+</html>
