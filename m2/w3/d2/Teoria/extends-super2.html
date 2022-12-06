@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extends super2</title>
+</head>
+<body>
+    
+    <script>
+        class Animal{
+            constructor(name,weight){
+                this.name=name;
+                this.weight=weight;
+            }
+            mangia(){
+                return this.name+" sta mangiando ";
+            }
+            dorme(){
+                return this.name+" sta dormendo ";
+            }
+            siSveglia(){
+                return this.name+" si sta svegliando ";
+            }
+        }
+        
+        class Gorilla extends Animal{
+            constructor(name,weight){
+                super(name,weight);
+            }
+            siArrampica(){
+                return this.name+" si sta arrampicando ";
+            }
+            grida(){
+                return this.name+" sta gridando ";
+            }
+            vigoroso(){
+                return super.mangia()+this.grida();
+            }
+            dailyRoutine(){
+                return super.siSveglia()+this.grida()+super.mangia();
+            }
+        }
+        
+        function display(content){
+            console.log(content);
+        }
+
+        const gorilla= new Gorilla("George","160kg");
+        display(gorilla.mangia());
+        display(gorilla.dorme());
+        display(gorilla.siArrampica());
+        display(gorilla.siSveglia());
+        display(gorilla.vigoroso());
+    </script>
+</body>
+</html>

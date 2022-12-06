@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book</title>
+</head>
+<body>
+    
+    <input type="text" id="newUser"><button id="add">Aggiungi</button>
+    <ul id="list"></ul>
+
+    <script>
+        
+        let list=document.querySelector("#list");
+        let btn=document.querySelector("#add");
+        let inputUser=document.querySelector("#newUser");
+
+        let users=[];
+
+        btn.addEventListener("click",()=>{
+            let user=new User(inputUser.value);
+            users.push(user);
+            writeInList();
+        });
+
+        function writeInList(){
+            list.innerHTML="";
+            users.forEach((el,index)=>{
+                list.innerHTML+=("<li>"+el.logUser()+"</li>");
+            })
+            console.log(users);
+        }
+
+        class User {
+            name="";
+            constructor(name){
+            this.name=name;
+            }
+            logUser(){
+                return "<b>"+this.name+"<b>";
+            }
+        }
+
+
+    </script>
+</body>
+</html>

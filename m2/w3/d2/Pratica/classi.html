@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classi</title>
+</head>
+<body>
+    
+
+    <script>
+        class Persona {
+            constructor(nome,eta){
+            this.nome=nome;
+            this.eta=eta;
+            this.confrontaEta= function(p){
+                return this.eta>p.eta?console.log(this.nome+" è più grande di "+p.nome)
+                :this.eta<p.eta?console.log(this.nome+" è più giovane di "+p.nome)
+                :console.log(this.nome+","+p.nome+" hanno la stessa età ");
+            };
+            }
+        }
+
+        let persona1= new Persona("Jesoo",33);
+        let persona2= new Persona("Gino",22);
+        let persona3= new Persona("Shakira",22);
+
+        persona1.confrontaEta(persona2);
+        persona2.confrontaEta(persona3);
+        persona3.confrontaEta(persona1);
+
+
+
+    </script>
+</body>
+</html>

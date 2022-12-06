@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Class2</title>
+</head>
+<body>
+    
+    <script>
+        class persona {
+            constructor(nome,cognome,age){
+                this.nome=nome;
+                this.cognome=cognome;
+                this.age=age;
+                this._email="";
+                this.indirizzo="";
+            }
+            mostraNomeCompleto(){
+                return this.nome+" "+this.cognome;
+            }
+            get email(){return this._email; }
+            set email(value){
+                var emailRegExp=/\w+@\w+\.\w{2,4}/i;
+                if(emailRegExp.test(value)){
+                    this._email=value;
+                }else{
+                    console.log("Email non valida");
+                }
+            }
+        }
+        var myPersona=new persona("mario","rossi",43);
+        console.log(myPersona.mostraNomeCompleto(),myPersona);
+    </script>
+</body>
+</html>

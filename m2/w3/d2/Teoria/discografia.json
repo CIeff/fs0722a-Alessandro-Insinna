@@ -1,0 +1,37 @@
+{
+"discografia":[
+    {
+    "titolo":"Whatever People Say I Am, That's What I'm Not",
+    "anno":2006,
+    "autore":"Artic Monkeys",
+    "songs":[
+        {
+        "canzone1":"The View from the Afternoon",
+        "canzone2":"Dancing Shoes",
+        "canzone3":"Still Take You Home"
+        }
+        ]},
+        {
+    "titolo":"Humbug",
+    "anno":2009,
+    "autore":"Artic Monkeys",
+    "songs":[{
+        "canzone1":"Pretty Visitors",
+        "canzone2":"The Jeweller's Hands",
+        "canzone3":"Dance Little Liar"
+        }]},
+        {
+    "titolo":"Favourite Worst Nightmare",
+    "anno":2007,
+    "autore":"Artic Monkeys",
+    "songs":[{
+        "canzone1":"Balaclava",
+        "canzone2":"Old Yellow Bricks",
+        "canzone3":"505"
+         }]
+    }]
+}
+
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class</title>
+</head>
+<body>
+    
+    <script>
+        class User{
+            name;       //dichiarazione opzionale
+            surname;
+            age;
+            constructor(_name="",_surname="",_age=0){
+            this.name=_name;
+            this.surname=_surname;
+            this.age=_age;
+            }
+            greetings(){
+                return "Hi," + this.name+this.surname;
+            }
+        }
+        var myUser= new User("mario","rossi",43);
+        console.log(myUser.greetings(),myUser);
+    </script>
+</body>
+</html>

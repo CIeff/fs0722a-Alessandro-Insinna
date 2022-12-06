@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ereditarietà</title>
+</head>
+<body>
+    
+    <script>
+        class User{
+            name="";
+            surname="";
+            age="-1";
+            constructor(_name,_surname,_age){
+                this.name=_name;
+                this.surname=_surname;
+                this.age=_age;
+            }
+        }
+        class Student extends User{
+            courses=[];
+        }
+        class Teacher extends User{
+            skills=[];
+        }
+        var utente=new User("Mario","Rossi",30);
+        var studente=new Student("Giuseppe","Verdi",20);
+        var professore=new Teacher("Carlo","Bianchi",54);
+
+        studente.courses=["Web Design", "OOP"];
+        professore.skills=["HTML", "CSS", "JS"];
+
+        console.log(utente);
+        console.log(studente);
+        console.log(professore);
+    </script>
+</body>
+</html>
