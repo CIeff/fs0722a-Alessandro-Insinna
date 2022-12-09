@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session storage</title>
+    <script>
+        function clickCounter() {
+            if (typeof(Storage) != undefined) {
+                if (sessionStorage.clickcount) {
+                    sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                } else {
+                    sessionStorage.clickcount = 1;
+                }
+                document.getElementById("result").innerHTML = "Hai cliccato il bottone " + sessionStorage.clickcount + "volte questa sessione";
+            } else {
+                document.getElementById("result").innerHTML = "Il tuo browser non supporta Web storage...";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result"></div>
+    <p>Clicca sul bottone per vedere il counter aumentare.</p>
+    <p>Chiudi il browser per verificare che il counter si è resettato</p>
+</body>
+</html>

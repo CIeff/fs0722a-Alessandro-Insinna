@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uno spazio per appunti</title>
+    <script src="js/application.js"></script>
+</head>
+<body>
+    <hgroup>
+        <h1>Text area</h1>
+        <h2>Memorizza i dati e li recupera</h2>
+    </hgroup>
+    <form action="#" name="form_da_ricordare">
+        <button type="button" id="salva" onclick="salvaIlDato(this.form.elemets['testo_da_ricordare'].value);">Memorizza quanto scritto</button>
+        <button type="button" id="recupera" onclick="recuperaIlDato(this.form.elements['testo_da_ricordare']);">Recupera l'ultimo testo memorizzato</button><br>
+        <label>Cosa hai in mente?</label><br>
+        <textarea name='testo_da_ricordare' cols="30" rows="5" required autofocus placeholder="Testo da ricordare"></textarea>
+    </form>
+
+</body>
+</html>

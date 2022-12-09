@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    
+    <p id="target"></p>
+
+    <script>        
+        function Conta(){
+            this.contaCounter=function(){
+                !sessionStorage.conta?sessionStorage.conta=1
+                :sessionStorage.conta++;
+                document.querySelector("#target").innerHTML="Counter: "+sessionStorage.conta;
+            }
+            this.timer=function(){
+                setInterval(() => {
+                    this.contaCounter();
+                }, 1000);
+            }
+        }
+        conta= new Conta();
+        conta.timer();
+    </script>
+</body>
+</html>

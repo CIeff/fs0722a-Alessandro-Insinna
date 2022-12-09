@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div"></div>
+    <script>
+
+        
+
+        const fetchy= fetch("https://jsonplaceholder.typicode.com/todos",{
+            method:"GET"    
+        })
+        .then(response=>{
+            let res=response.json();
+            let res2=res.PromiseResult;
+            console.log(res)
+            let span="";
+            res.forEach(element => {
+                span="<p>"+element.title+"</p>"
+            });
+            document.querySelector(".div").innerHTML=span;
+        })
+        .then(data=>data)
+
+        
+
+    </script>
+
+</body>
+</html>
