@@ -2,6 +2,7 @@ fetch("json/users.json")
 .then((response)=>response.json())
 .then((users)=>
 {
+    
     for (let element of users){
 
         let card=document.createElement("div");
