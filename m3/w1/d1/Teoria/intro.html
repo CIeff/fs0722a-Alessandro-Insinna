@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro</title>
+</head>
+<body>
+    <!--
+        problemi di JavaScript:
+                                1- tende a diventare disordinato (quindi difficile manutenzione)
+                                2- poca capacità di abbracciare le caratteristiche dell'orientamento ad oggetti
+                                3- il controllo del tipo di dato
+                                4- non c'è controllo degli errori (non c'è debug in fase di compilazione)
+
+            -> TypeScript "TypeScript è JavaScript per lo sviluppo su scala di applicazioni"
+                    differenze:
+                                1- è un linguaggio fortemente tipizzato (dichiaro tipi di dati)
+                                2- è orientato agli oggetti
+                                3- è contemporaneamente un linguaggio e un insieme di strumenti
+
+                TypeScript è JavaScript più alcune funzionalità aggiuntive
+                TypeScript (.ts) è un superset tipizzato di JavaScript (.js)
+                TypeScript viene COMPILATO in js (sono i file .js che aggancio poi al browser)
+                
+        Dalle conoscenze base di JavaScript aggiungo sintassi dedicate di TypeScript e poi compilo da .ts a .js
+        il codice TypeScript viene convertito nel suo equivalente JavaScript per essere eseguito.
+        Il codice compilato è compatibile con qualsiasi framwork, libreria etc JavaScript esistente.
+
+        Perchè usare TypeScript?
+                                    -Transpiler -> mentre interpreto il codice .ts per generare l'output .js ho il controllo degli errori
+                                    -Strong static typing -> sia il controllo del tipo di dato sia una sintassi per duderlo/modificarlo
+                                    
+        Componenti di TypeScript
+                                    -Linguaggio (sintassi, keyword, annotazione di tipo)
+                                    -Compiler (tsc "TypeScript Compiler") converte le istruzioni TypeScript nell'equivalente JavaScript
+                                    -TypeScript Language Service -> servizio che aiuta la compilazione del codice .ts
+
+        Qualsiasi script JavaScript è anche codice TypeScript valido (quindi posso fare il passaggio gradualmente)
+
+        passaggi
+                    1- salvo il file in formato .ts
+                    2- apro il terminale
+                    3- tsc+ nome del file  (controllo di essere nella cartella del file)
+                
+        flag del compilatore
+                                --help (tsc -help/h) stampa la guida
+                                --watch controlla le modifiche ai file e li compila
+                                --module carica moduli esterni
+                                --target imposta la versione ECMA di destinazione 
+                                --out compilare più file in un unico output
+
+        tsconfig.json
+
+        watch
+
+
+        tipi di dati in TypeScript
+                                    -number
+                                    -string
+                                    -boolean
+                                    -null
+                                    -undefined
+                                    -void -> è un'assenza di valore che viene utilizzato quando una funzione non restituisce nessun valore
+                                            function myFunc():void{
+                                                console.log("Messaggio");
+                                            }
+                                    -any -> può assumere qualsiasi tipo di dato (javascript alike)
+                                            var myVar:any =123;
+                                            myVar= "Una stringa";
+                                            myVar= true;
+                                    -tipi di dati definiti dall'utente:
+                                                                        -enum
+                                                                        -classi
+                                                                        -interfacce
+                                                                        -array
+                                                                        -tuple
+
+    -->
+</body>
+</html>
