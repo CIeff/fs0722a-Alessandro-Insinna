@@ -1,10 +1,9 @@
 
 
-let inputFiglio=(<HTMLInputElement>document.querySelector("#figlio"));
+let inputFiglio=(<HTMLInputElement>document.querySelector("#figlio"));  
 let btnFiglioDeposita=document.querySelector("#btn-figlio1");
 let btnFiglioRitira=document.querySelector("#btn-figlio2");
 let sonBalance=(<HTMLDivElement>document.querySelector("#sonBalance"));
-
 
 
 btnFiglioDeposita?.addEventListener("click",function(){
