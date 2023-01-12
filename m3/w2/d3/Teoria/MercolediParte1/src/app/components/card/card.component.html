@@ -1,0 +1,10 @@
+<app-child #child></app-child>
+<h3>{{child.nome}}</h3>
+
+<div class="card w-100">
+  <div class="card-body">
+    <ng-content select=".card-title"></ng-content>
+    <h5 class="bard-subtitle mb-2 text-muted">Sottotitolo Card</h5>
+    <ng-content select=".card-body"></ng-content>
+  </div>
+</div>

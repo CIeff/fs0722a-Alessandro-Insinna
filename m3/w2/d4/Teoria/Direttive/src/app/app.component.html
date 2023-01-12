@@ -1,0 +1,89 @@
+<div class="container text-center">
+  <h1 appColora [defaultColor]="'cyan'" appColora="lightgreen">Ciao</h1>
+
+  <h3>
+    Hello <span appColora="violet" defaultColor="blue"> World!</span>
+  </h3>
+
+  <button type="button" class="btn btn-success" (click)="active=!active">Toggle</button>
+
+  <!--Modo 1-->
+  <h3 *ngIf="active">{{"Riga di testo predefinita" | uppercase}}</h3>
+  <h3 *appComparsa="active">{{"Riga di testo alternativa" | uppercase}}</h3>
+
+  <!--Modo 2-->
+  <h3 *ngIf="active">Riga di testo predefinita</h3>
+  <h3 *ngIf="!active">Riga di testo alternativa</h3>
+
+ <hr>
+
+  <!--Modo 3 ng-Template-->
+  <h2>Clicca per vedere i nostri prodotti di punta</h2>
+  <button type="button" class="btn btn-success" (click)="mostra=!mostra">Elenco</button>
+
+  <h3 *ngIf="mostra; else inactive">
+    <table>
+      <tr>
+        <th>NOME</th>
+        <th>CATEGORIA</th>
+        <th>PREZZO</th>
+
+      </tr>
+      <tr>
+        <td>prodotto-1</td>
+        <td>categoria-1</td>
+        <td>12000</td>
+
+      </tr>
+      <tr>
+        <td>prodotto-3</td>
+        <td>categoria-3</td>
+        <td>10000</td>
+
+      </tr>
+      <tr>
+        <td>prodotto-3</td>
+        <td>categoria-3</td>
+        <td>15000</td>
+
+      </tr>
+    </table>
+  </h3>
+  <ng-template #inactive>
+      <h3>  <table>
+        <tr>
+          <th>NOME</th>
+          <th>CATEGORIA</th>
+          <th>PREZZO</th>
+          <th>SPECIFICHE</th>
+          <th>DISPONIBILITA'</th>
+          <th>SPEDIZIONE</th>
+        </tr>
+        <tr>
+          <td>prodotto-1</td>
+          <td>categoria-1</td>
+          <td>12000</td>
+          <td>123123asdasd1</td>
+          <td>15 pz</td>
+          <td>23gg</td>
+        </tr>
+        <tr>
+          <td>prodotto-3</td>
+          <td>categoria-3</td>
+          <td>10000</td>
+          <td>123123asdasd1</td>
+          <td>1523 pz</td>
+          <td>3gg</td>
+        </tr>
+        <tr>
+          <td>prodotto-3</td>
+          <td>categoria-3</td>
+          <td>15000</td>
+          <td>123123asdasd1</td>
+          <td>4 pz</td>
+          <td>13gg</td>
+        </tr>
+      </table></h3>
+  </ng-template>
+
+</div>

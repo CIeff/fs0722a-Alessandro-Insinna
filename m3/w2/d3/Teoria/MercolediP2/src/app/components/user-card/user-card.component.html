@@ -1,0 +1,9 @@
+<div class="card mb-3">
+  <div class="card-header">
+    {{element.name+" "+element.surname+" di anni "+element.eta}}
+  </div>
+  <div class="card-body">
+    <b *ngIf="element.sex==='Uomo'" style="color:red;">{{element.sex}}</b>
+    <i *ngIf="element.sex==='Donna'" style="color:blue;">{{element.sex}}</i>
+  </div>
+</div>

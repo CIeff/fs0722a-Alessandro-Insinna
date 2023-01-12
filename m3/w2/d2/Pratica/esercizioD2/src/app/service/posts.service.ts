@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interface/post.interface';
-import { FetchService } from './fetch.service';
 
 
 @Injectable({
@@ -21,6 +20,7 @@ export class PostsService {
   getPosts(){
     return this.posts
   }
+
 
 
 }
