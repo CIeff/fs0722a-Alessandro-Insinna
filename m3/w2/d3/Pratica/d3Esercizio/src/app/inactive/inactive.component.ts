@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-inactive',
@@ -11,7 +12,7 @@ export class InactiveComponent implements OnInit {
 
   posts:Post[] = this.ps.getPostFiltrati(false);
 
-  constructor(private ps:PostService) { }
+  constructor(private ps:PostService, private activatedRouted:ActivatedRoute) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +21,7 @@ export class InactiveComponent implements OnInit {
     console.log(id);
     this.posts = this.posts.filter(p=>p.id!=id)
     this.ps.toggle(id);
+
   }
 
 }

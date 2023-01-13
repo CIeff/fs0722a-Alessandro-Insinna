@@ -18,13 +18,20 @@ export class UserCardComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.lastPart=this.activatedRouted.snapshot.params["id"];
+    //this.lastPart=this.activatedRouted.snapshot.params["id"];
     //this.lastPart = window.location.href.split("/").pop();
-    let numberx=Number(this.lastPart)
+    //let numberx=Number(this.lastPart)
 
 
-    this.userList=this.userSrv.getUser(numberx)
+    //this.userList=this.userSrv.getUser(numberx)
+    this.activatedRouted.params.subscribe((p)=>{this.userList=this.userSrv.getUser(p["id"])})
   }
+
+//this.activatedRoute.params.subscribe((p)=>{this.userList=this.userSrv.getUser(p)})
+//
+//
+//
+//
 
 
 
