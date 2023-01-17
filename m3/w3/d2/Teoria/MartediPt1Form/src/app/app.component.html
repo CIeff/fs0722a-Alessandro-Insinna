@@ -1,0 +1,56 @@
+<div class="container">
+  <h1 class="text-center">Template-Driven Form</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div>
+          <form #form="ngForm" (ngSubmit)="submit()">
+            <div ngModelGroup="userInfo" id="userInfo" #userGroup="ngModelGroup">
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" [ngModel]="userForm.defUserName" class="form-control" required #username="ngModel">
+                <p *ngIf="username.invalid && username.touched"><strong>Questo campo è obbligatorio</strong></p>
+              </div>
+              <button type="button" class="btn btn-outline-info mt-2" (click)="generateUsername()">Genera Username</button>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" required [ngModel]="userForm.email" class="form-control" #email="ngModel">
+                <p *ngIf="email.invalid && email.touched"><strong>Questo campo è obbligatorio</strong></p>
+                <div class="form-group">
+                  <label for="secret">Domanda Segreta</label>
+                  <select name="secret" id="secret" class="form-select" [ngModel]="userForm.question">
+                    <option value="madre">Nome di battesimo di tua madre</option>
+                    <option value="padre">Nome di battesimo di tuo padre</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <textarea name="risposta" id="risposta"  rows="1" class="form-control" [(ngModel)]="risposta"></textarea>
+                </div>
+                <p>La tua risposta è: {{risposta}}</p>
+                <div class="radio" *ngFor="let genere of generi">
+                  <label>
+                    <input type="radio" name="sesso" ngModel [value]="genere.value" required> {{genere.label}}
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-info mt-3" [disabled]="form.invalid">Invia</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <div class="col" *ngIf="stampa">
+        <h2>I tuoi dati</h2>
+        <p>Username: {{user.username}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Domanda Segreta: {{user.secret}}</p>
+        <p>Risposta: {{user.risposta}}</p>
+        <p>Sesso: {{user.sesso}}</p>
+      </div>
+    </div>
+  </div>
+</div>

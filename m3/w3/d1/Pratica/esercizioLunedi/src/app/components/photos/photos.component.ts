@@ -30,7 +30,7 @@ export class PhotosComponent implements OnInit {
 
   delete(id:number){
     this.sub=this.photoSrv.deletePhoto(id).subscribe((ris)=>{
-      console.log(ris)
+      console.log(this.photos)
       this.photos=this.photos?.filter(x=>x.id!=id)
     })
   }
