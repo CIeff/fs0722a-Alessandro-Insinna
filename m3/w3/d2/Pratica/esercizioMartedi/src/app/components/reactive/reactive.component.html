@@ -1,12 +1,11 @@
 <div class="container mt-3">
   <h1 class="text-center">Reactive Hero Form</h1>
 
-  <form [formGroup]="form">
-
+  <form [formGroup]="form" (ngSubmit)="submit">
 
       <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" name="nome" id="nome" class="form-control" formControlName="nome">
+        <input type="text"  id="nome" class="form-control" formControlName="nome">
         <span *ngIf="getElementoForm('nome')?.invalid && getElementoForm('nome')?.touched">
           <ng-container *ngIf="getElementoErrore('nome','required')">
             Campo obbligatorio
@@ -16,7 +15,7 @@
 
       <div class="form-group">
         <label for="alterEgo">Alter Ego</label>
-        <input type="text" name="alterEgo" id="alterEgo" class="form-control" formControlName="alterEgo">
+        <input type="text"  id="alterEgo" class="form-control" formControlName="alterEgo">
         <span *ngIf="getElementoForm('alterEgo')?.invalid && getElementoForm('alterEgo')?.touched">
           <ng-container *ngIf="getElementoErrore('alterEgo','required')">
             Campo obbligatorio
@@ -35,7 +34,7 @@
 
       <div class="form-group">
         <label for="nemico">Nemico</label>
-        <input type="text" name="nemico" id="nemico" class="form-control" formControlName="nemico">
+        <input type="text"  id="nemico" class="form-control" formControlName="nemico">
         <span *ngIf="getElementoForm('nemico')?.invalid && getElementoForm('nemico')?.touched">
           <ng-container *ngIf="getElementoErrore('nemico','required') || getElementoForm('nemico')?.hasError('maxlength')">
             Campo obbligatorio. Massimo 10 caratteri.
@@ -45,7 +44,7 @@
 
       <div class="form-group">
         <label for="pianeta">Pianeta</label>
-        <input type="text" name="pianeta" id="pianeta" class="form-control" formControlName="pianeta">
+        <input type="text"  id="pianeta" class="form-control" formControlName="pianeta">
         <span *ngIf="getElementoForm('pianeta')?.invalid && getElementoForm('pianeta')?.touched">
           <ng-container *ngIf="getElementoErrore('pianeta','required') || getElementoForm('pianeta')?.hasError('minlength')">
             Campo obbligatorio. Minimo 5 caratteri.
@@ -56,7 +55,7 @@
       <div formArrayName="debolezza" class="mb-3">
         <h3>Debolezze</h3>
         <div class="form-group mb-2" *ngFor="let debolezza of debolezze(); let i=index">
-          <input type="text" name="debolezza" id="debolezza" class="form-control" [formControlName]="i">
+          <input type="text"  id="debolezza" class="form-control" [formControlName]="i">
         </div>
         <button type="button" class="btn btn-danger text-warning mb-3" (click)="addDebolezza()">Aggiungi Debolezza</button>
       </div>
