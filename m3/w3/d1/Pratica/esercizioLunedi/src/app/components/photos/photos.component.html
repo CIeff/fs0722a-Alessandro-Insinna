@@ -1,0 +1,17 @@
+<div *ngIf="!photos" class="text-center"><img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif"></div>
+
+<div *ngIf="photos">
+<h1>Totale Foto Preferite = {{counter}}</h1>
+
+
+<div class="card" *ngFor="let photo of photos" style="width: 18rem;">
+  <img src="{{photo.thumbnailUrl}}" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{photo.id}}</h5>
+    <p class="card-text">{{photo.title}}</p>
+    <button class="btn btn-danger" (click)="delete(photo.id)">Elimina</button>
+    <button class="btn btn-success" (click)="miPiace()">Mi Piace</button>
+  </div>
+</div>
+</div>
+
