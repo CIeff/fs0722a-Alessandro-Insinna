@@ -27,10 +27,10 @@
 
       <div formArrayName="poteri" class="mb-3">
         <h3>Super Poteri</h3>
-        <button type="button" class="btn btn-info text-dark mb-3" (click)="addPotere()">Aggiungi Potere</button>
         <div class="form-group mb-2" *ngFor="let potere of poteri(); let i=index">
           <input type="text" name="potere" id="potere" class="form-control" [formControlName]="i">
         </div>
+        <button type="button" class="btn btn-info text-dark mb-3" (click)="addPotere()">Aggiungi Potere</button>
       </div>
 
       <div class="form-group">
@@ -55,13 +55,13 @@
 
       <div formArrayName="debolezza" class="mb-3">
         <h3>Debolezze</h3>
-        <button type="button" class="btn btn-danger text-warning mb-3" (click)="addDebolezza()">Aggiungi Debolezza</button>
         <div class="form-group mb-2" *ngFor="let debolezza of debolezze(); let i=index">
           <input type="text" name="debolezza" id="debolezza" class="form-control" [formControlName]="i">
         </div>
+        <button type="button" class="btn btn-danger text-warning mb-3" (click)="addDebolezza()">Aggiungi Debolezza</button>
       </div>
 
-    <button type="submit" (click)="submit()" class="btn btn-info mt-3">Invia</button>
+    <button type="submit" (click)="submit()" class="btn btn-info mt-3" [disabled]="form.invalid">Invia</button>
 
   </form>
 </div>

@@ -58,8 +58,8 @@ export class ReactiveComponent implements OnInit {
   }
 
   submit(){
-    console.log(this.form.value);
     console.log("form inviato");
+    console.log(this.form.value);
     this.form.reset();
     this.poteri().length=1;
     this.debolezze().length=1;

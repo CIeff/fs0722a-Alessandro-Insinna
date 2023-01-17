@@ -35,6 +35,7 @@
         <label for="pianeta">Pianeta</label>
         <input type="text" name="pianeta" id="pianeta" required minlength="5" [ngModel]="user.pianeta" #pianeta="ngModel" class="form-control">
         <p *ngIf="pianeta.invalid  && pianeta.touched" class="bg-warning text-danger fw-bold">Campo obbligatorio. Minimo 5 caratteri ({{pianeta.value.length}}/5)</p>
+        <!--<p *ngIf="pianeta.errors"><span *ngIf="pianeta.errors['minlength']">troppo corto</span></p> -->
       </div>
 
       <div class="form-group">
@@ -44,7 +45,7 @@
 
     </div>
 
-      <button type="submit" class="btn btn-info col-12 mt-3">Crea</button>
+      <button type="submit" class="btn btn-info col-12 mt-3" [disabled]="form.invalid">Crea</button>
 
   </form>
 </div>
