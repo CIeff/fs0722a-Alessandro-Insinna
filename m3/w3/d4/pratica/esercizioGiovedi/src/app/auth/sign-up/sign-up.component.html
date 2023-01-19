@@ -1,0 +1,7 @@
+<form #f="ngForm" (ngSubmit)="signUpForm(f)">
+  <input type="text" name="name"  ngModel placeholder="nome">
+  <input type="email" name="email" ngModel  placeholder="email">
+  <input type="password" name="password" ngModel  placeholder="password" autocomplete="current-password">
+</form>
+<button type="submit" (click)="signUpForm(f)" >Registrati</button>
+

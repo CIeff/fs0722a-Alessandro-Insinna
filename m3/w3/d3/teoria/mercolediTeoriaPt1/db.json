@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "email": "asd@asd.asd",
+      "password": "$2a$10$kkxxrwTXZSEVuSvGYCbDN.0LrZxcBYT.cWW8aix3wAkJswZvBmxAq",
+      "name": "asd",
+      "surname": "asd",
+      "id": 1
+    },
+    {
+      "email": "luca@fant.ini",
+      "password": "$2a$10$iFWlHHNN3CxG0Pmz5L30je1OrhvUwCFjYsQaHTXJrKyaRbOtMnsbC",
+      "name": "Luca",
+      "surname": "Fantini",
+      "id": 2
+    },
+    {
+      "email": "789@99.COM",
+      "password": "$2a$10$FyeXPnBO8kPKgYyiD0T9KuBFFozORXBH/M8oLVHGcxYPAbt7fxN0W",
+      "name": "123",
+      "surname": "456",
+      "id": 3
+    },
+    {
+      "email": "ciao@ciao.ciao",
+      "password": "$2a$10$6NY5k/G1QKF5jOG06Fh6juw.3SIcZ.iNxQjNuYi8WB18Fzg6IeAlC",
+      "name": "ciao",
+      "surname": "ciaociao",
+      "id": 4
+    }
+  ],
+  "sports": [
+    {
+      "nome": "calcio",
+      "id": 1
+    },
+    {
+      "nome": "tennis",
+      "id": 2
+    }
+  ]
+}
