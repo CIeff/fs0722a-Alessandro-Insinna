@@ -13,20 +13,14 @@ export class UsersComponent implements OnInit {
 
   constructor(private authSrv:AuthServiceService, private http:HttpClient) { }
 
-  users:User[]=[];
+  user:any;
 
   ngOnInit(): void {
 
-      this.http.get<User[]>(`${this.authSrv.URL}/users`).pipe(catchError((err)=>{
-        console.log(err);
-        this.users=[{id:0,name:"ERRORE",email:""}]
-        throw err
-      })).subscribe((res)=>{
-        return this.users=res
+    this.user=localStorage.getItem('user');
+    this.user=JSON.parse(this.user)
 
-    })
-
-
+console.log(this.user)
   }
 
 

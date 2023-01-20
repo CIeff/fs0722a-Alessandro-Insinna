@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FilmsComponent } from './components/films/films.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilmsComponent
   ],
   imports: [
     BrowserModule,

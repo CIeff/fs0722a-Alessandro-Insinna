@@ -16,8 +16,9 @@ export class LogInComponent implements OnInit {
   }
 
   loginForm(f:NgForm){
-    this.authSrv.logIn(f.value).subscribe(()=>{
-      this.router.navigate(['/users'])
+    console.log(f.value)
+      this.authSrv.logIn(f.value).subscribe(()=>{
+      this.router.navigate(['/films'])
     })
   }
 
