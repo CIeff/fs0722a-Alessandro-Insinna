@@ -8,10 +8,8 @@ import { AuthGuardGuard } from './auth/auth-guard.guard';
 const routes: Routes = [
   {
     path:"films",
-    component:FilmsComponent
-    /*,
+    component:FilmsComponent,
     canActivate:[AuthGuardGuard]
-    */
   },
   {
     path:"",

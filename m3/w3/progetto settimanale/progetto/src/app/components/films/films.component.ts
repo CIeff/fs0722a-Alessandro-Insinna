@@ -104,10 +104,15 @@ export class FilmsComponent implements OnInit {
 
       if( filmx.find((e:any)=>e==this.filmW)){
 
-        return this.http.delete(`http://localhost:4201/favorites/`+this.filmW.id).subscribe();
+        return this.http.delete(`http://localhost:4201/favorites/`+this.filmW.id).subscribe(()=>{
+          this.http.get(`http://localhost:4201/favorites`).subscribe((r)=>{
+      this.filmCuore=r})
+        });
       }
       {
-        return  this.http.post(`http://localhost:4201/favorites`,this.dataFilm).subscribe()
+        return  this.http.post(`http://localhost:4201/favorites`,this.dataFilm).subscribe((x)=>{
+          this.filmCuore.push(x)
+        })
       }
     })
 
