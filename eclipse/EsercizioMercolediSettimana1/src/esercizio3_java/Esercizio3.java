@@ -1,5 +1,6 @@
 package esercizio3_java;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Esercizio3 {
@@ -17,10 +18,16 @@ public class Esercizio3 {
 		while(!s.equals(":q")){
 			System.out.println("inserisci stringa");
 			s= scanner.nextLine();			
-			if(!s.equals(":q")){			
-			for(int i=0;i<s.length();i++) {
-				System.out.println(s.charAt(i));
-				}
+			if(!s.equals(":q")){	
+				char[] x=new char[s.length()];
+				String v="";
+				for(int i=0;i<s.length();i++) {
+					System.out.println(s.charAt(i));
+					x[i]=s.charAt(i);
+					v+=s.charAt(i)+",";					
+					}
+				System.out.println(v);
+			System.out.println(Arrays.toString(x));
 			}
 		}		
 		System.out.println("Fine");
