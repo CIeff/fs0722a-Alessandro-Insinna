@@ -26,7 +26,8 @@ public class Esercizio3 {
 					x[i]=s.charAt(i);
 					v+=s.charAt(i)+",";					
 					}
-				System.out.println(v);
+				String vv=v.substring(0, v.length()-1);
+				System.out.println(vv);
 			System.out.println(Arrays.toString(x));
 			}
 		}		
