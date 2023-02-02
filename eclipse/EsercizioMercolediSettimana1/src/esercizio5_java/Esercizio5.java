@@ -12,15 +12,15 @@ public class Esercizio5 {
 		
 		Dipendente Gino= new Dipendente("ABC12SDV",Dipartimento.PRODUZIONE);		
 		calcolaPaga(Pino);
-		calcolaPaga(Pino,30);
+		calcolaPaga(Gino,30);
 		
 		Dipendente Rino= new Dipendente("ABC12SDR",1500,45,Livello.IMPIEGATO,Dipartimento.AMMINISTRAZIONE);		
 		//calcolaPaga(Pino);
 		//calcolaPaga(Pino,30);
 		
 		Dipendente Valeria= new Dipendente("FGX85NSS",2000,60,Livello.DIRIGENTE,Dipartimento.VENDITE);
-		//calcolaPaga(Valeria);
-		//calcolaPaga(Valeria,30);
+		calcolaPaga(Valeria);
+		calcolaPaga(Valeria,30);
 		
 		Pino.promuovi();
 		Rino.promuovi();
@@ -50,22 +50,22 @@ public class Esercizio5 {
 	}
 		
 	
-	static Dipendente[] caricaArrayPiuCalcolaPagaTotale(Dipendente[]ar,Dipendente Pino,Dipendente Gino, 	Dipendente 	Rino,Dipendente Valeria) {
+	static Dipendente[] caricaArrayPiuCalcolaPagaTotale(Dipendente[]ar,Dipendente x,Dipendente t, 	Dipendente 	y,Dipendente u) {
 		
 		int somma=0;
 		
 		for(int i=0;i<ar.length;i++) {
 			if(ar[0]==null) {
-				ar[0]=Pino;
+				ar[0]=x;
 				
 			}else if(ar[1]==null) {
-				ar[1]=Gino;
+				ar[1]=t;
 				
 			}else if(ar[2]==null) {
-				ar[2]=Rino;
+				ar[2]=y;
 				
 			}else if(ar[3]==null) {
-				ar[3]=Valeria;
+				ar[3]=u;
 				
 			}
 			ar[i].stampaDipendente();
