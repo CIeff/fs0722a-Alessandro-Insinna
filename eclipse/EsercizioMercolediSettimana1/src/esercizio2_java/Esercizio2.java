@@ -9,6 +9,9 @@ public class Esercizio2 {
 	
 	public static void stampaIntero(int n) {
 		switch(n) {
+		case 0:
+			System.out.print("zero");
+			break;
 		case 1:
 			System.out.println("uno");
 			break;
@@ -19,7 +22,7 @@ public class Esercizio2 {
 			System.out.println("tre");
 			break;
 		default:
-			System.out.println("Numeri validi : 1-2-3, numero inserito non valido");
+			System.out.println("Numeri validi : 0-1-2-3, numero inserito non valido");
 			break;
 		}
 	}

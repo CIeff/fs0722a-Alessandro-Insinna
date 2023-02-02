@@ -12,7 +12,7 @@ public class Dipendente {
 	
 	
 	public Dipendente(String matricola, double stipendio, double importoOrarioStraordinario,
-			esercizio5_java.Livello livello, Dipartimento dipartimento) {
+			Livello livello, Dipartimento dipartimento) {
 		super();
 		this.matricola = matricola;
 		this.stipendio = stipendio;

@@ -1,6 +1,6 @@
 package esercizio5_java;
 
- enum Livello {
+enum Livello {
 	OPERAIO,
 	IMPIEGATO,
 	QUADRO,
