@@ -19,7 +19,7 @@ public class ProgettoSettimanaleMain {
 	static ElementoMultimediale[] caricaArray(ElementoMultimediale[] arr) {
 		
 		int n=0;
-		while(n<5) {
+		while(n<arr.length) {
 		System.out.println("quale tipo di file vuoi inserire? (1 per video/ 2 per audio/ 3 per immagine)");
 		String res=scanner.nextLine();
 		if(res.equals("1") || res.equals("2") || res.equals("3")) {
