@@ -62,7 +62,7 @@ public class Esercizio3 {
                     testo2+=entry.getKey()+"@"+entry.getValue()+"#";
 		}
 		System.out.println(testo2);
-		FileUtils.writeStringToFile(registroPresenze, testo2);
+		FileUtils.writeStringToFile(registroPresenze, testo2,"UTF-8");
 		
 	}
 	
