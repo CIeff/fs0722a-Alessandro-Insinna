@@ -92,6 +92,7 @@ public class Catalogo_main {
 	            em.getTransaction().begin();
 	            em.persist(ut);
 	            em.getTransaction().commit();
+	            utenteAttivo=ut;
 	        } catch (NumberFormatException e) {
 	            System.out.println("Errore: formato numero tessera non valido");
 	            inizializzazioneUtente();
