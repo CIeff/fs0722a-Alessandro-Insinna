@@ -32,7 +32,7 @@ public class Rivista extends Lettura {
 
 	@Override
 	public String toString() {
-		return "Rivista --- periodicità=" + periodicità + "";
+		return "Rivista --- ISBN= "+getISBN()+" "+"periodicità=" + periodicità + "";
 	}
 	
 

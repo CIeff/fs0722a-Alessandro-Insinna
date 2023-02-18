@@ -19,7 +19,7 @@ public class Prestito {
 	@ManyToOne
 	@JoinColumn(name = "utente_id")
 	private Utente utente_id;	
-	private Rivista elementoPrestato;
+	private String elementoPrestato;
 	private Date dataInizioPrestito;
 	private Date dataRestituzionePrevista;
 	private Date dataRestituzioneEffettiva;
@@ -31,14 +31,26 @@ public class Prestito {
 	 
 	 
 	
+	public Prestito(Utente utente_id, String elementoPrestato, Date dataInizioPrestito,
+			Date dataRestituzionePrevista, Date dataRestituzioneEffettiva, Lettura lettura) {
+		super();
+		this.utente_id = utente_id;
+		this.elementoPrestato = elementoPrestato;
+		this.dataInizioPrestito = dataInizioPrestito;
+		this.dataRestituzionePrevista = dataRestituzionePrevista;
+		this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
+		this.lettura = lettura;
+	}
 	public Prestito() {
 		super();
 		// TODO Auto-generated constructor stub
+		
+		
 	}
 	public Utente getUtente() {
 		return utente_id;
 	}
-	public Rivista getElementoPrestato() {
+	public String getElementoPrestato() {
 		return elementoPrestato;
 	}
 	public Date getDataInizioPrestito() {
@@ -53,7 +65,7 @@ public class Prestito {
 	public void setUtente(Utente utente) {
 		this.utente_id = utente;
 	}
-	public void setElementoPrestato(Rivista elementoPrestato) {
+	public void setElementoPrestato(String elementoPrestato) {
 		this.elementoPrestato = elementoPrestato;
 	}
 	public void setDataInizioPrestito(Date dataInizioPrestito) {
@@ -64,6 +76,12 @@ public class Prestito {
 	}
 	public void setDataRestituzioneEffettiva(Date dataRestituzioneEffettiva) {
 		this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
+	}
+	public Lettura getLettura() {
+		return lettura;
+	}
+	public void setLettura(Lettura lettura) {
+		this.lettura = lettura;
 	}
 	
 	

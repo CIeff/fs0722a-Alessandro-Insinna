@@ -38,7 +38,7 @@ public class Libro extends Lettura{
 
 		@Override
 		public String toString() {
-			return "Libro --- titolo="+getTitolo()+" "+ "autore=" + autore + ", genere=" + genere + "";
+			return "Libro --- ISBN="+getISBN()+" "+"titolo="+getTitolo()+" "+ "autore=" + autore + ", genere=" + genere + "";
 		}
 	    
 }

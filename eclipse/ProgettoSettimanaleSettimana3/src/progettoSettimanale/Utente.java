@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -15,17 +16,17 @@ public class Utente {
 	private String cognome;
 	private LocalDate dataDiNascita;
 	@Id
+	@GeneratedValue
 	private int numeroTessera;
 	
 	@OneToMany(mappedBy = "utente_id")
     private List<Prestito> prestiti = new ArrayList<>();	
 	
-	public Utente(String nome, String cognome, LocalDate dataDiNascita, int numeroTessera, List<Prestito> prestiti) {
+	public Utente(String nome, String cognome, LocalDate dataDiNascita, List<Prestito> prestiti) {
 		super();
 		this.nome = nome;
 		this.cognome = cognome;
 		this.dataDiNascita = dataDiNascita;
-		this.numeroTessera = numeroTessera;
 		this.prestiti = prestiti;
 	}
 	public Utente() {

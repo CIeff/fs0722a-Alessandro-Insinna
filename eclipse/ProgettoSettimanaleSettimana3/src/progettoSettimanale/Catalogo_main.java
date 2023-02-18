@@ -6,6 +6,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -27,6 +29,8 @@ public class Catalogo_main {
 	
 	static Utente utenteAttivo;
 	static List<Utente> utenti = new ArrayList<Utente>();
+	static List<Lettura> lettureInPrestito= new ArrayList<Lettura>();
+	static List<Lettura> letture= new ArrayList<Lettura>();
 	
 	public static void main(String[] args) throws IOException {
 				
@@ -35,24 +39,34 @@ public class Catalogo_main {
 		List<Lettura> libreria = new ArrayList<Lettura>();
 		
 		getUtenti();
+		getLettura();
 		inizializzazioneUtente();
 		inizializzaLibreria(libreria);
 		modificaLibreria(libreria);
 	}	
 	
 	   public static List<Utente> getUtenti() {
-	        EntityManager em = emf.createEntityManager();
-	        utenti = new ArrayList<>();
-
 	        try {
 	            TypedQuery<Utente> query = em.createQuery("SELECT u FROM Utente u", Utente.class);
 	            utenti = query.getResultList();
 	        } finally {
-	            em.close();
+	           
 	        }
 
 	        return utenti;
 	    }
+	   
+	   
+	   public static List<Lettura> getLettura(){
+		   try {
+	            TypedQuery<Lettura> query = em.createQuery("SELECT l FROM Lettura l", Lettura.class);
+	            letture = query.getResultList();
+	        } finally {
+	           
+	        }
+		   return letture;
+	   }
+	   
 	public static List<Utente> inizializzazioneUtente() {
 	    System.out.println("Usare utente di default, crearne uno o usare un account esistente? (1- default / 2- crea utente / 3- scegli un account esistente)");
 	    String risposta = scanner.nextLine();		
@@ -73,9 +87,7 @@ public class Catalogo_main {
 	            System.out.println("Inserisci data di nascita -(AAAA/MM/GG)");
 	            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
 	            LocalDate dataDiNascita = LocalDate.parse(scanner.nextLine(), formatter);
-	            System.out.println("Inserisci numero tessera utente");
-	            int tessera = Integer.parseInt(scanner.nextLine());
-	            Utente ut = new Utente(nome, cognome, dataDiNascita, tessera, null);
+	            Utente ut = new Utente(nome, cognome, dataDiNascita, null);
 	            utenti.add(ut);
 	            em.getTransaction().begin();
 	            em.persist(ut);
@@ -148,7 +160,12 @@ public class Catalogo_main {
 		}
 		
 		for(Lettura lettura : libreria) {
-			System.out.println(lettura.toString());
+			System.out.println("elemento aggiunto: "+lettura.toString());
+		}
+		
+		System.out.println("Letture totali presenti-- ");
+		for (Lettura let : letture) {
+			System.out.println(let);
 		}
 
 		return libreria;
@@ -280,7 +297,7 @@ public class Catalogo_main {
 			System.out.println("Vuoi modificare la libreria? (y/n)");
 			risposta=scanner.nextLine();
 			if(risposta.equals("y")) {
-				System.out.println("Quale azione vuoi effettuare? (1- aggiunta elemento / 2- rimozione elemento tramite ISBN / 3- ricerca per isbn / 4- ricerca per anno di pubblicazione / 5- ricerca per autore / 6- ricerca per titolo (o parte di esso) / 7- ricerca letture attualmente in prestito da un utente specifico / 8- ricerca tutti i prestiti scaduti non ancora restituiti)");
+				System.out.println("Quale azione vuoi effettuare? (1- aggiunta elemento / 2- rimozione elemento tramite ISBN / 3- ricerca per isbn / 4- ricerca per anno di pubblicazione / 5- ricerca per autore / 6- ricerca per titolo (o parte di esso) / 7- ricerca letture attualmente in prestito da un utente specifico / 8- ricerca tutti i prestiti scaduti non ancora restituiti / 9-prendi in prestito una lettura / 10- restituisci lettura)");
 				String risposta2= scanner.nextLine();
 				switch(risposta2) {
 				case "1":
@@ -302,10 +319,16 @@ public class Catalogo_main {
 					ricercaTitolo();
 					break;
 				case "7":
-					//ricerca letture attualmente in prestito da un utente specifico
+					ricercaLetturePrestitoUtente();
 					break;
 				case "8":
-					//ricerca tutti i prestiti scaduti non ancora restituiti
+					ricercaPrestitiScaduti();
+					break;
+				case "9":
+					prendiInPrestito();
+					break;
+				case "10":
+					restituisciLettura();
 					break;
 				default:
 					System.out.println("Scelta non valida");
@@ -313,7 +336,7 @@ public class Catalogo_main {
 				}
 				
 			}else if(!risposta.equals("n")) {
-				System.out.println("Input non valido, riprovare (1- aggiunta elemento / 2- rimozione elemento tramite ISBN / 3- ricerca per isbn / 4- ricerca per anno di pubblicazione / 5- ricerca per autore / 6- ricerca per titolo (o parte di esso) / 7- ricerca letture attualmente in prestito da un utente specifico / 8- ricerca tutti i prestiti scaduti non ancora restituiti)");
+				System.out.println("Input non valido, riprovare (1- aggiunta elemento / 2- rimozione elemento tramite ISBN / 3- ricerca per isbn / 4- ricerca per anno di pubblicazione / 5- ricerca per autore / 6- ricerca per titolo (o parte di esso) / 7- ricerca letture attualmente in prestito da un utente specifico / 8- ricerca tutti i prestiti scaduti non ancora restituiti / 9-prendi in prestito una lettura / 10- restituisci lettura)");
 			}
 		}
 		System.out.println("Fine");
@@ -408,5 +431,66 @@ public class Catalogo_main {
 		return risultati;
 	}
 	
+	public static void prendiInPrestito(){
+		System.out.println("Inserisci isbn lettura da prendere in prestito- ");
+		String isbnLettura=scanner.nextLine();
+		Query q=em.createQuery("SELECT l FROM Libro l WHERE l.ISBN= :isbn", Libro.class);
+		q.setParameter("isbn", isbnLettura);
+		Lettura l=(Lettura) q.getSingleResult();
+		System.out.println(l);
+		lettureInPrestito.add(l);
+		Date data= new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(data);
+		cal.add(Calendar.MONTH, 1);
+		Date data2 = cal.getTime();
+		Prestito prestito = new Prestito(utenteAttivo,l.getTitolo(),data,data2,null,l);
+		em.getTransaction().begin();
+		em.persist(prestito);
+		em.getTransaction().commit();
+		System.out.println("Lettura presa in prestito con successo, ritornarla entro 1 mese");
+	}
+	
+	public static void restituisciLettura() {
+	    System.out.println("Inserisci ISBN lettura da restituire");
+	    String isbnRest= scanner.nextLine();
+	    TypedQuery<Prestito> q=em.createQuery("SELECT p FROM Prestito p WHERE p.lettura.ISBN = :isbn AND p.utente_id.numeroTessera = :numeroTessera", Prestito.class);
+	    q.setParameter("isbn", isbnRest);
+	    q.setParameter("numeroTessera", utenteAttivo.getNumeroTessera());
+	    List<Prestito> prestiti = q.getResultList();
+	    if(prestiti.isEmpty()) {
+	        System.out.println("Lettura non trovata in prestito.");
+	    } else {
+	        Prestito prestito = prestiti.get(0);
+	        prestito.setDataRestituzioneEffettiva(new Date());
+	        em.getTransaction().begin();
+	        em.merge(prestito);
+	        em.getTransaction().commit();
+	        System.out.println("Lettura restituita correttamente.");
+	        lettureInPrestito.remove(prestito.getLettura());
+	    }
+	}
+	
+	public static void ricercaLetturePrestitoUtente() {
+		int numeroTessera=utenteAttivo.getNumeroTessera();
+		Query q = em.createQuery("SELECT p.elementoPrestato FROM Prestito p WHERE p.utente_id.numeroTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL");
+		q.setParameter("numeroTessera", numeroTessera);
+		List<Lettura> risultati = q.getResultList();
+		System.out.println("Lista letture in prestito dell'account: "+utenteAttivo.getNome()+" "+utenteAttivo.getCognome());
+		System.out.println(risultati);
+	}
+	
+	public static void ricercaPrestitiScaduti() {
+		Query q = em.createQuery("SELECT p FROM Prestito p WHERE p.dataRestituzionePrevista < :dataOggi AND p.dataRestituzioneEffettiva IS NULL");
+		q.setParameter("dataOggi", null);
+		List<Prestito> risultati = q.getResultList();
+		  if(risultati.isEmpty()) {
+		        System.out.println("Nessuna lettura consegnata in ritardo");
+		    } else {
+		    	System.out.println("Lista letture con consegna scaduta (ancora da restituire): ");
+				System.out.println(risultati);
+		    }
+	
+	}
 	
 }
