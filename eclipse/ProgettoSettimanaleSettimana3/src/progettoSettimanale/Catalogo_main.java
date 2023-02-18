@@ -331,7 +331,8 @@ public class Catalogo_main {
 					restituisciLettura();
 					break;
 				default:
-					System.out.println("Scelta non valida");
+					System.out.println("Input non valido, riprovare (1- aggiunta elemento / 2- rimozione elemento tramite ISBN / 3- ricerca per isbn / 4- ricerca per anno di pubblicazione / 5- ricerca per autore / 6- ricerca per titolo (o parte di esso) / 7- ricerca letture attualmente in prestito da un utente specifico / 8- ricerca tutti i prestiti scaduti non ancora restituiti / 9-prendi in prestito una lettura / 10- restituisci lettura)");
+					modificaLibreria(libreria);
 					break;
 				}
 				
@@ -452,6 +453,13 @@ public class Catalogo_main {
 	}
 	
 	public static void restituisciLettura() {
+		Query controlloUtente = em.createQuery("SELECT p FROM Prestito p WHERE p.utente_id.numeroTessera = :numeroTessera");
+	    controlloUtente.setParameter("numeroTessera", utenteAttivo.getNumeroTessera());
+	    List<Prestito> prestitiUtente = controlloUtente.getResultList();
+	    if(prestitiUtente.isEmpty()) {
+	        System.out.println("L'account non ha letture in prestito.");
+	        return;
+	    }
 	    System.out.println("Inserisci ISBN lettura da restituire");
 	    String isbnRest= scanner.nextLine();
 	    TypedQuery<Prestito> q=em.createQuery("SELECT p FROM Prestito p WHERE p.lettura.ISBN = :isbn AND p.utente_id.numeroTessera = :numeroTessera", Prestito.class);
@@ -472,12 +480,16 @@ public class Catalogo_main {
 	}
 	
 	public static void ricercaLetturePrestitoUtente() {
-		int numeroTessera=utenteAttivo.getNumeroTessera();
-		Query q = em.createQuery("SELECT p.elementoPrestato FROM Prestito p WHERE p.utente_id.numeroTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL");
-		q.setParameter("numeroTessera", numeroTessera);
-		List<Lettura> risultati = q.getResultList();
-		System.out.println("Lista letture in prestito dell'account: "+utenteAttivo.getNome()+" "+utenteAttivo.getCognome());
-		System.out.println(risultati);
+	    int numeroTessera = utenteAttivo.getNumeroTessera();
+	    Query q = em.createQuery("SELECT p.elementoPrestato FROM Prestito p LEFT JOIN p.utente_id u WHERE u.numeroTessera = :numeroTessera AND p.dataRestituzioneEffettiva IS NULL");
+	    q.setParameter("numeroTessera", numeroTessera);
+	    List<Lettura> risultati = q.getResultList();
+	    if (risultati.isEmpty()) {
+	        System.out.println("L'account " + utenteAttivo.getNome() + " " + utenteAttivo.getCognome() + " non ha letture in prestito.");
+	    } else {
+	        System.out.println("Lista letture in prestito dell'account: " + utenteAttivo.getNome() + " " + utenteAttivo.getCognome());
+	        System.out.println(risultati);
+	    }
 	}
 	
 	public static void ricercaPrestitiScaduti() {
@@ -489,8 +501,7 @@ public class Catalogo_main {
 		    } else {
 		    	System.out.println("Lista letture con consegna scaduta (ancora da restituire): ");
 				System.out.println(risultati);
-		    }
-	
+		    }	
 	}
 	
 }
