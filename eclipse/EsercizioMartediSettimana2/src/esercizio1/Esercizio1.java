@@ -42,4 +42,6 @@ public class Esercizio1 {
 			System.out.println(x.toString());			
 	}
 
+	
+
 }
