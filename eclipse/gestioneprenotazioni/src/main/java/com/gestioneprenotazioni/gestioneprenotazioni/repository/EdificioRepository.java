@@ -11,12 +11,10 @@ import java.util.List;
 @Repository
 public interface EdificioRepository extends JpaRepository<Edificio,Long> {
     
-     
-    /* 
+      
     Edificio findByNome(String nome);
 
     List<Edificio> findByCitta(String citta);
- */
    
 
 }

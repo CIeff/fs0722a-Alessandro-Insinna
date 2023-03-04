@@ -16,15 +16,12 @@ import com.gestioneprenotazioni.gestioneprenotazioni.model.Utente;
 public interface PostazioneRepository extends JpaRepository<Postazione,Long> {
     
     List<Postazione> findByTipoAndEdificioCitta(TipoPostazione tipo, String citta);
-    
-   /* 
   
     List<Postazione> findByEdificioCitta(String citta);
 
     Postazione findByCodice(String codice);
     
     boolean existsByCodice(String codice);
-*/
    
     
 }

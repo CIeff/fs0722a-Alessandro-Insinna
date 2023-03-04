@@ -17,15 +17,11 @@ public interface PrenotazioneRepository extends JpaRepository<Prenotazione,Long>
     
    List<Prenotazione> findByUtente(Utente utente);
    Prenotazione findByPostazioneAndData(Postazione postazione, LocalDate data);
- /* 
+ 
     List<Prenotazione> findByData(LocalDate data);
 
-   // List<Prenotazione> findByUtenteUsername(String username);
-
-
-
-   
+   List<Prenotazione> findByUtenteUsername(String username);   
 
     boolean existsByPostazioneAndData(Postazione postazione, LocalDate data);
-   */
+   
 }
